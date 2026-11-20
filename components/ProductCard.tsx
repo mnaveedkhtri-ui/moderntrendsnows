@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { ExternalLink, Star, Bookmark, Eye, Zap, Check } from 'lucide-react';
+import { ExternalLink, Star, Bookmark, Eye, Check } from 'lucide-react';
 import { Product } from '../data/products';
 
 interface ProductCardProps {
@@ -23,116 +23,91 @@ export default function ProductCard({
   );
 
   return (
-    <article className="product-card group relative flex flex-col justify-between rounded-2xl border border-slate-800/90 bg-[#0d1017] p-4 overflow-hidden">
-      {/* Top Media Header */}
+    <div className="ecom-card group flex flex-col justify-between rounded-xl border border-white/10 bg-[#0d0f16] p-2.5 sm:p-4 text-left relative overflow-hidden">
       <div>
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-slate-900 border border-slate-800/60 mb-4">
+        {/* Product Image Container */}
+        <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-slate-900 border border-white/5 mb-3">
           <Image
             src={product.imageUrl}
             alt={product.title}
             fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-300 ease-out"
           />
 
-          {/* Floating Badges */}
-          <div className="absolute top-2.5 left-2.5 flex flex-col gap-1.5 items-start">
-            {product.badge && (
-              <span className="rounded-md bg-amber-400 text-slate-950 font-black text-[10px] px-2 py-0.5 shadow-md uppercase tracking-wider">
-                {product.badge}
-              </span>
-            )}
-            <span className="rounded-md bg-black/75 backdrop-blur-md text-emerald-400 font-bold text-[10px] px-2 py-0.5 border border-emerald-500/30 flex items-center gap-1">
-              <Zap className="h-2.5 w-2.5 fill-emerald-400" /> {product.viralScore}% Viral Index
+          {/* Badge */}
+          {product.badge && (
+            <span className="absolute top-2 left-2 rounded bg-amber-400 text-slate-950 font-black text-[9px] sm:text-[10px] px-1.5 py-0.5 shadow uppercase">
+              {product.badge}
             </span>
-          </div>
+          )}
 
-          {/* Floating Bookmark & Quick View Buttons */}
-          <div className="absolute top-2.5 right-2.5 flex items-center gap-1.5">
+          {/* Bookmark & Quick View */}
+          <div className="absolute top-2 right-2 flex items-center gap-1">
             <button
               onClick={() => onQuickView(product)}
-              className="p-1.5 rounded-lg bg-black/70 backdrop-blur-md text-slate-300 hover:text-white hover:bg-black/90 transition shadow-md"
-              title="Quick Specifications"
+              className="p-1 rounded bg-black/60 backdrop-blur-md text-slate-300 hover:text-white transition"
+              title="Quick view"
             >
-              <Eye className="h-4 w-4" />
+              <Eye className="h-3.5 w-3.5" />
             </button>
             <button
               onClick={() => onToggleSave(product.id)}
-              className={`p-1.5 rounded-lg backdrop-blur-md transition shadow-md ${
-                isSaved
-                  ? 'bg-amber-400 text-slate-950'
-                  : 'bg-black/70 text-slate-300 hover:text-white hover:bg-black/90'
+              className={`p-1 rounded backdrop-blur-md transition ${
+                isSaved ? 'bg-amber-400 text-slate-950' : 'bg-black/60 text-slate-300 hover:text-white'
               }`}
-              title={isSaved ? 'Remove from Saved' : 'Save Object'}
+              title="Save item"
             >
-              <Bookmark className={`h-4 w-4 ${isSaved ? 'fill-slate-950' : ''}`} />
+              <Bookmark className={`h-3.5 w-3.5 ${isSaved ? 'fill-slate-950' : ''}`} />
             </button>
           </div>
         </div>
 
-        {/* Category & Rating Row */}
-        <div className="flex items-center justify-between text-xs mb-1.5">
-          <span className="text-[11px] font-semibold text-amber-400/90 tracking-wide uppercase">
+        {/* Category & Rating */}
+        <div className="flex items-center justify-between text-[10px] sm:text-[11px] mb-1">
+          <span className="font-mono text-slate-400 uppercase tracking-wider truncate">
             {product.category}
           </span>
-          <div className="flex items-center gap-1 text-slate-400 text-[11px] font-medium">
+          <div className="flex items-center gap-1 text-slate-300 shrink-0">
             <Star className="h-3 w-3 text-amber-400 fill-amber-400" />
-            <span className="text-white font-bold">{product.rating}</span>
-            <span className="text-slate-500">({product.reviewsCount})</span>
+            <span className="font-bold">{product.rating}</span>
           </div>
         </div>
 
-        {/* Title */}
+        {/* Product Title */}
         <h3
           onClick={() => onQuickView(product)}
-          className="text-base font-bold text-white leading-snug group-hover:text-amber-300 transition-colors cursor-pointer"
+          className="text-xs sm:text-sm font-bold text-white line-clamp-2 leading-snug group-hover:text-amber-300 transition cursor-pointer"
         >
           {product.title}
         </h3>
 
-        {/* Editorial Tagline */}
-        <p className="mt-1.5 text-xs text-slate-300 leading-relaxed line-clamp-2">
-          {product.tagline}
-        </p>
-
-        {/* Key Materials Chips */}
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {product.specs.slice(0, 2).map((spec, i) => (
-            <span
-              key={i}
-              className="rounded-md bg-slate-800/80 px-2 py-0.5 text-[10px] font-medium text-slate-300 border border-slate-700/60"
-            >
-              {spec}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Pricing & Amazon Action Row */}
-      <div className="pt-4 mt-4 border-t border-slate-800/80">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-baseline gap-2">
-            <span className="text-lg font-black text-white">${product.price.toFixed(2)}</span>
-            <span className="text-xs text-slate-500 line-through">
-              ${product.compareAtPrice.toFixed(2)}
-            </span>
-          </div>
-          <span className="rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-black text-emerald-400 border border-emerald-500/20">
+        {/* Pricing */}
+        <div className="flex items-baseline gap-1.5 mt-2">
+          <span className="text-sm sm:text-base font-black text-white">
+            ${product.price.toFixed(2)}
+          </span>
+          <span className="text-[10px] sm:text-xs text-slate-500 line-through">
+            ${product.compareAtPrice.toFixed(2)}
+          </span>
+          <span className="text-[9px] sm:text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1 rounded ml-auto">
             Save {discountPercent}%
           </span>
         </div>
+      </div>
 
-        {/* Direct Action Button */}
+      {/* Buy Button */}
+      <div className="mt-3 pt-3 border-t border-white/5">
         <a
           href={product.amazonUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-size-200 py-2.5 text-xs font-black text-slate-950 shadow-lg shadow-amber-500/15 hover:shadow-amber-500/30 hover:scale-[1.01] active:scale-[0.98] transition-all duration-200"
+          className="w-full flex items-center justify-center gap-1.5 rounded-lg bg-white/10 hover:bg-amber-400 hover:text-slate-950 py-2 sm:py-2.5 text-xs font-bold text-white transition active:scale-95"
         >
-          <span>Check Availability on Amazon</span>
-          <ExternalLink className="h-3.5 w-3.5" />
+          <span>View on Amazon</span>
+          <ExternalLink className="h-3 w-3" />
         </a>
       </div>
-    </article>
+    </div>
   );
 }

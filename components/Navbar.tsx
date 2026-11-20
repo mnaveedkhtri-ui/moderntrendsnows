@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { Bookmark, Search, ShieldCheck, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Bookmark, Search, Menu, X, ShoppingBag, ArrowRight } from 'lucide-react';
 
 interface NavbarProps {
   savedCount: number;
@@ -19,89 +19,113 @@ export default function Navbar({
   selectedCategory,
   onSelectCategory,
 }: NavbarProps) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const categories = ['All Products', 'Workspace', 'Lighting', 'Living', 'Gadgets'];
+
   return (
-    <header className="sticky top-0 z-40 border-b border-white/10 bg-[#090b10]/90 backdrop-blur-xl transition-all">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        {/* Brand Lockup */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-slate-950 font-black text-lg shadow-xl group-hover:scale-105 transition-transform duration-300">
-            ✦
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-black text-lg tracking-tight text-white group-hover:text-amber-400 transition-colors">
+    <>
+      {/* Top Notification Bar */}
+      <div className="border-b border-white/10 bg-[#06070a] px-4 py-2 text-center text-[11px] text-slate-300 font-medium">
+        <span>⚡ Verified Amazon Prime 2-Day Shipping &nbsp;|&nbsp; 30-Day Hassle-Free Returns</span>
+      </div>
+
+      {/* Main Sticky Header */}
+      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#090a0f]/95 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
+            aria-label="Toggle Navigation"
+          >
+            {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+
+          {/* Logo / Brand Name */}
+          <Link href="/" className="flex items-center gap-2.5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-400 text-slate-950 font-black text-sm shadow-md">
+              ✦
+            </div>
+            <div className="text-left">
+              <span className="font-extrabold tracking-tight text-white text-base sm:text-lg block leading-none">
                 MODERN TRENDS NOW
               </span>
-              <span className="rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-mono font-bold text-amber-300 border border-white/15 uppercase">
-                Studio .Store
+              <span className="text-[10px] tracking-wider text-slate-400 font-mono block mt-0.5">
+                CURATED VIRAL FINDS
               </span>
             </div>
-            <p className="text-[10px] font-mono tracking-wider text-slate-400 uppercase -mt-0.5">
-              Curated Desktop & Living Archive
-            </p>
-          </div>
-        </Link>
+          </Link>
 
-        {/* Center Editorial Links */}
-        <nav className="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 backdrop-blur-md">
-          {['All Objects', 'Workspace', 'Lighting', 'Kinetic', 'Living'].map((cat) => {
-            const isActive = selectedCategory === cat;
-            return (
+          {/* Desktop Category Navigation */}
+          <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold">
+            {categories.map((cat) => {
+              const active = selectedCategory === cat;
+              return (
+                <button
+                  key={cat}
+                  onClick={() => onSelectCategory(cat)}
+                  className={`transition-colors py-1 ${
+                    active
+                      ? 'text-amber-400 border-b-2 border-amber-400 font-bold'
+                      : 'text-slate-300 hover:text-white'
+                  }`}
+                >
+                  {cat}
+                </button>
+              );
+            })}
+          </nav>
+
+          {/* Action Icons (Search + Saved) */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            <button
+              onClick={onOpenSearch}
+              className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
+              title="Search Products"
+            >
+              <Search className="h-4 w-4" />
+            </button>
+
+            <button
+              onClick={onOpenSaved}
+              className="relative p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
+              title="Saved Items"
+            >
+              <Bookmark className={`h-4 w-4 ${savedCount > 0 ? 'text-amber-400 fill-amber-400' : ''}`} />
+              {savedCount > 0 && (
+                <span className="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-slate-950">
+                  {savedCount}
+                </span>
+              )}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-white/10 bg-[#0c0e14] px-4 py-4 space-y-2 animate-in slide-in-from-top-2 duration-150 text-left">
+            <p className="text-[10px] font-mono uppercase text-slate-500 px-3 pb-1">Categories</p>
+            {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => onSelectCategory(cat)}
-                className={`rounded-full px-4 py-1.5 text-xs font-medium transition-all ${
-                  isActive
-                    ? 'bg-white text-slate-950 font-bold shadow-md'
-                    : 'text-slate-300 hover:text-white hover:bg-white/10'
+                onClick={() => {
+                  onSelectCategory(cat);
+                  setMobileMenuOpen(false);
+                }}
+                className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition ${
+                  selectedCategory === cat
+                    ? 'bg-amber-400/10 text-amber-400 font-bold'
+                    : 'text-slate-200 hover:bg-white/5'
                 }`}
               >
                 {cat}
               </button>
-            );
-          })}
-        </nav>
-
-        {/* Right Actions */}
-        <div className="flex items-center gap-2.5">
-          {/* Search Trigger */}
-          <button
-            onClick={onOpenSearch}
-            className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-300 hover:border-white/20 hover:text-white hover:bg-white/10 transition-all"
-            title="Search Products"
-          >
-            <Search className="h-4 w-4 text-slate-400" />
-            <span className="hidden sm:inline font-mono text-[11px]">Search...</span>
-            <kbd className="hidden sm:inline rounded bg-white/10 px-1.5 py-0.5 text-[9px] font-mono text-slate-400">
-              ⌘K
-            </kbd>
-          </button>
-
-          {/* Saved Wishlist Drawer Trigger */}
-          <button
-            onClick={onOpenSaved}
-            className="relative flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-slate-300 hover:border-amber-400/40 hover:text-white hover:bg-white/10 transition-all active:scale-95"
-            title="Saved Items"
-          >
-            <Bookmark className={`h-4 w-4 ${savedCount > 0 ? 'text-amber-400 fill-amber-400' : 'text-slate-400'}`} />
-            <span className="hidden sm:inline font-semibold">Saved</span>
-            {savedCount > 0 && (
-              <span className="flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[10px] font-black text-slate-950 animate-pulse">
-                {savedCount}
-              </span>
-            )}
-          </button>
-
-          {/* Direct Amazon Verified Action */}
-          <a
-            href="#catalog"
-            className="hidden sm:flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-xs font-black text-slate-950 hover:bg-amber-400 transition-colors shadow-lg active:scale-95"
-          >
-            <span>Shop Archive</span>
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          </a>
-        </div>
-      </div>
-    </header>
+            ))}
+          </div>
+        )}
+      </header>
+    </>
   );
 }

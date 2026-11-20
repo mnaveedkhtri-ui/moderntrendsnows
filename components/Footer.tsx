@@ -3,39 +3,50 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-800/80 bg-[#050608] py-12 text-xs text-slate-400">
+    <footer className="border-t border-white/10 bg-[#06070a] py-12 text-xs text-slate-400">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-800/60">
-          <div>
-            <div className="flex items-center gap-2 mb-1.5">
-              <span className="text-base font-extrabold text-white tracking-tight">
-                ModernTrends<span className="text-amber-400">Now</span>
-              </span>
-              <span className="rounded bg-amber-400/10 px-1.5 py-0.5 text-[9px] font-bold text-amber-300 border border-amber-400/20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-white/10 text-left">
+          
+          {/* Col 1 */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="font-extrabold text-white text-base">MODERN TRENDS NOW</span>
+              <span className="rounded bg-amber-400/10 px-1.5 py-0.5 text-[9px] font-mono text-amber-300 border border-amber-400/20">
                 .STORE
               </span>
             </div>
-            <p className="text-xs text-slate-500 max-w-md">
-              An independent archive dedicated to spatial refinement, tactile objects, and intelligent desktop environments.
+            <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
+              An independent curation of viral desk essentials, ambient smart lighting, and modern lifestyle technology. Every product verified for performance and design appeal.
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-6 text-xs text-slate-300">
-            <Link href="/" className="hover:text-amber-400 transition">All Curations</Link>
-            <a href="#curation-manifesto" className="hover:text-amber-400 transition">Editorial Manifesto</a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">
-              Pinterest Studio
-            </a>
-            <a href="mailto:curator@moderntrendsnow.store" className="hover:text-amber-400 transition">
-              Editorial Inquiries
-            </a>
+          {/* Col 2 */}
+          <div>
+            <h4 className="font-bold text-white uppercase text-[11px] tracking-wider mb-3">Categories</h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="#catalog" className="hover:text-amber-400 transition">Workspace Essentials</a></li>
+              <li><a href="#catalog" className="hover:text-amber-400 transition">Ambient Lighting</a></li>
+              <li><a href="#catalog" className="hover:text-amber-400 transition">Smart Living</a></li>
+              <li><a href="#catalog" className="hover:text-amber-400 transition">Unique Gadgets</a></li>
+            </ul>
+          </div>
+
+          {/* Col 3 */}
+          <div>
+            <h4 className="font-bold text-white uppercase text-[11px] tracking-wider mb-3">Community & Trust</h4>
+            <ul className="space-y-2 text-xs text-slate-400">
+              <li><a href="#reviews" className="hover:text-amber-400 transition">Customer Reviews</a></li>
+              <li><a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">Pinterest Hub</a></li>
+              <li><a href="mailto:support@moderntrendsnow.store" className="hover:text-amber-400 transition">Contact Support</a></li>
+              <li><span className="text-emerald-400">● 100% Secure Checkout</span></li>
+            </ul>
           </div>
         </div>
 
-        {/* Affiliate Disclosure & Legal Notice */}
-        <div className="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] text-slate-400">
+        {/* Affiliate Disclosure */}
+        <div className="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-[11px] text-slate-500 text-left">
           <p className="max-w-2xl leading-relaxed">
-            <strong>Amazon Associates Disclosure:</strong> Modern Trends Now is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com. Prices, ratings, and availability are subject to change.
+            <strong>Affiliate Disclosure:</strong> Modern Trends Now is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com. We independently test and select all featured products.
           </p>
           <div className="shrink-0 text-slate-400">
             © 2026 Modern Trends Now. All rights reserved.

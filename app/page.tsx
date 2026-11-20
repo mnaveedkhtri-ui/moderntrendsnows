@@ -1,37 +1,28 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
-import TopMarquee from '../components/TopMarquee';
 import Navbar from '../components/Navbar';
-import HeroSpotlight from '../components/HeroSpotlight';
-import CategoryShowcase from '../components/CategoryShowcase';
-import InteractiveSetup from '../components/InteractiveSetup';
+import HeroBanner from '../components/HeroBanner';
 import CatalogGrid from '../components/CatalogGrid';
-import EditorialManifesto from '../components/EditorialManifesto';
-import JournalSection from '../components/JournalSection';
-import Newsletter from '../components/Newsletter';
+import Testimonials from '../components/Testimonials';
+import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+import ProductModal from '../components/ProductModal';
 import SearchModal from '../components/SearchModal';
 import SavedDrawer from '../components/SavedDrawer';
-import ProductModal from '../components/ProductModal';
 import { PRODUCTS, Product } from '../data/products';
 import { Check } from 'lucide-react';
 
 export default function HomePage() {
   const [products] = useState<Product[]>(PRODUCTS);
-  const [selectedCategory, setSelectedCategory] = useState<string>('All Objects');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All Products');
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [activeModalProduct, setActiveModalProduct] = useState<Product | null>(null);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isSavedDrawerOpen, setIsSavedDrawerOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
-  // Spotlight Product (First product)
-  const spotlightProduct = useMemo(() => {
-    return products.find((p) => p.isSpotlight) || products[0];
-  }, [products]);
-
-  // Saved Products Array
+  // Saved items list
   const savedProducts = useMemo(() => {
     return products.filter((p) => savedIds.includes(p.id));
   }, [products, savedIds]);
@@ -41,37 +32,34 @@ export default function HomePage() {
     setToastMessage(msg);
     setTimeout(() => {
       setToastMessage(null);
-    }, 2400);
+    }, 2200);
   };
 
-  // Toggle Save / Bookmark
+  // Toggle Save item
   const handleToggleSave = (id: string) => {
     setSavedIds((prev) => {
       const exists = prev.includes(id);
       if (exists) {
-        triggerToast('Removed from saved collection');
+        triggerToast('Removed from saved list');
         return prev.filter((item) => item !== id);
       } else {
-        triggerToast('Saved to your private collection');
+        triggerToast('Saved to your wishlist');
         return [...prev, id];
       }
     });
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#07080b] text-slate-100 selection:bg-amber-400 selection:text-black">
+    <div className="min-h-screen flex flex-col bg-[#07090e] text-slate-100 selection:bg-amber-400 selection:text-black">
       {/* Toast Feedback */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-xl bg-amber-400 text-slate-950 px-4 py-2.5 text-xs font-black shadow-2xl animate-in slide-in-from-bottom-3 duration-200">
+        <div className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-xl bg-amber-400 text-slate-950 px-4 py-2.5 text-xs font-black shadow-2xl animate-in slide-in-from-bottom-2 duration-150">
           <Check className="h-4 w-4" />
           <span>{toastMessage}</span>
         </div>
       )}
 
-      {/* 1. Top Architectural Marquee */}
-      <TopMarquee />
-
-      {/* 2. Primary Navigation */}
+      {/* 1. Navbar */}
       <Navbar
         savedCount={savedIds.length}
         onOpenSaved={() => setIsSavedDrawerOpen(true)}
@@ -84,24 +72,14 @@ export default function HomePage() {
       />
 
       <main className="flex-1">
-        {/* 3. Hero Spotlight Section */}
-        <HeroSpotlight
-          spotlightProduct={spotlightProduct}
-          onQuickView={(p) => setActiveModalProduct(p)}
+        {/* 2. Hero Banner */}
+        <HeroBanner
+          onShopClick={() => {
+            document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+          }}
         />
 
-        {/* 4. Curated Disciplines Category Cards */}
-        <CategoryShowcase
-          onSelectCategory={(cat) => setSelectedCategory(cat)}
-        />
-
-        {/* 5. Interactive "Shop The Studio Desk" Lookbook */}
-        <InteractiveSetup
-          products={products}
-          onQuickView={(p) => setActiveModalProduct(p)}
-        />
-
-        {/* 6. Complete Curated Catalog Grid */}
+        {/* 3. Catalog Grid */}
         <CatalogGrid
           products={products}
           selectedCategory={selectedCategory}
@@ -111,20 +89,25 @@ export default function HomePage() {
           onQuickView={(p) => setActiveModalProduct(p)}
         />
 
-        {/* 7. Curatorial Standard & Philosophy */}
-        <EditorialManifesto />
+        {/* 4. Verified Community Reviews */}
+        <Testimonials />
 
-        {/* 8. Studio Notes / Field Journal */}
-        <JournalSection />
-
-        {/* 9. VIP Drop Newsletter */}
-        <Newsletter />
+        {/* 5. FAQs */}
+        <FAQSection />
       </main>
 
-      {/* 10. Comprehensive Footer */}
+      {/* 6. Footer */}
       <Footer />
 
-      {/* Modal 1: Search Modal */}
+      {/* Quick View Modal */}
+      <ProductModal
+        product={activeModalProduct}
+        onClose={() => setActiveModalProduct(null)}
+        isSaved={activeModalProduct ? savedIds.includes(activeModalProduct.id) : false}
+        onToggleSave={handleToggleSave}
+      />
+
+      {/* Search Modal */}
       <SearchModal
         isOpen={isSearchOpen}
         onClose={() => setIsSearchOpen(false)}
@@ -132,7 +115,7 @@ export default function HomePage() {
         onSelectProduct={(p) => setActiveModalProduct(p)}
       />
 
-      {/* Modal 2: Saved Collection Drawer */}
+      {/* Saved Drawer */}
       <SavedDrawer
         isOpen={isSavedDrawerOpen}
         onClose={() => setIsSavedDrawerOpen(false)}
@@ -142,14 +125,6 @@ export default function HomePage() {
           setSavedIds([]);
           triggerToast('Saved collection cleared');
         }}
-      />
-
-      {/* Modal 3: Deep Technical Specs Quick View */}
-      <ProductModal
-        product={activeModalProduct}
-        onClose={() => setActiveModalProduct(null)}
-        isSaved={activeModalProduct ? savedIds.includes(activeModalProduct.id) : false}
-        onToggleSave={handleToggleSave}
       />
     </div>
   );
