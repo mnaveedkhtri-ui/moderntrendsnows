@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Bookmark, Search, Menu, X, ShoppingBag, ArrowRight } from 'lucide-react';
+import { Bookmark, Search, Menu, X, ArrowRight } from 'lucide-react';
+import Logo from './Logo';
 
 interface NavbarProps {
   savedCount: number;
@@ -44,19 +45,7 @@ export default function Navbar({
           </button>
 
           {/* Logo / Brand Name */}
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-400 text-slate-950 font-black text-sm shadow-md">
-              ✦
-            </div>
-            <div className="text-left">
-              <span className="font-extrabold tracking-tight text-white text-base sm:text-lg block leading-none">
-                MODERN TRENDS NOW
-              </span>
-              <span className="text-[10px] tracking-wider text-slate-400 font-mono block mt-0.5">
-                CURATED VIRAL FINDS
-              </span>
-            </div>
-          </Link>
+          <Logo size="md" />
 
           {/* Desktop Category Navigation */}
           <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold">

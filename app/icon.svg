@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#090a10" />
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="none" stroke="rgba(245, 158, 11, 0.3)" stroke-width="2" />
+  <!-- Architectural Monogram M -->
+  <path d="M18 46V18L32 34L46 18V46" stroke="#f59e0b" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Apex Optical Dot -->
+  <circle cx="32" cy="22" r="3.2" fill="#ffffff" />
+  <!-- Precision Base Bar -->
+  <path d="M24 46H40" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round" opacity="0.75" />
+</svg>

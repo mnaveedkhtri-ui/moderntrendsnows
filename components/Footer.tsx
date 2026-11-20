@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 export default function Footer() {
   return (
@@ -9,11 +10,8 @@ export default function Footer() {
           
           {/* Col 1 */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="font-extrabold text-white text-base">MODERN TRENDS NOW</span>
-              <span className="rounded bg-amber-400/10 px-1.5 py-0.5 text-[9px] font-mono text-amber-300 border border-amber-400/20">
-                .STORE
-              </span>
+            <div className="mb-3">
+              <Logo size="sm" showTagline={false} />
             </div>
             <p className="text-xs text-slate-400 max-w-sm leading-relaxed">
               An independent curation of viral desk essentials, ambient smart lighting, and modern lifestyle technology. Every product verified for performance and design appeal.

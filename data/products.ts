@@ -26,7 +26,7 @@ export const PRODUCTS: Product[] = [
     compareAtPrice: 79.99,
     rating: 4.8,
     reviewsCount: 1240,
-    imageUrl: 'https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
     amazonUrl: 'https://www.amazon.com/s?k=anti+gravity+water+drop+lamp&tag=moderntrends-20',
     badge: 'Best Seller',
     isBestSeller: true,
