@@ -3,6 +3,15 @@ import { PRODUCTS } from '@/data/products';
 
 export const dynamic = 'force-dynamic';
 
+function escapeXml(unsafe: string): string {
+  return unsafe
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
 export async function GET() {
   const baseUrl = 'https://moderntrendsnow.store';
 
@@ -10,6 +19,7 @@ export async function GET() {
     // Generate staggered publication dates over the last few days
     const date = new Date(Date.now() - index * 3600 * 1000 * 6).toUTCString();
     const cleanDescription = `${product.tagline} ${product.description} Tested for build integrity and direct Amazon Prime delivery. Specs: ${product.specs.join(', ')}. #desksetup #techgadgets #aestheticdesk #workspace #moderntrends #${product.category.toLowerCase()}`;
+    const safeImageUrl = escapeXml(product.imageUrl);
 
     return `    <item>
       <title><![CDATA[${product.title}]]></title>
@@ -17,8 +27,8 @@ export async function GET() {
       <guid isPermaLink="false">${product.id}-2026</guid>
       <pubDate>${date}</pubDate>
       <description><![CDATA[${cleanDescription}]]></description>
-      <enclosure url="${product.imageUrl}" length="0" type="image/jpeg" />
-      <media:content url="${product.imageUrl}" medium="image" />
+      <enclosure url="${safeImageUrl}" length="0" type="image/jpeg" />
+      <media:content url="${safeImageUrl}" medium="image" />
     </item>`;
   }).join('\n');
 
