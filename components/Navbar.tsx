@@ -65,6 +65,12 @@ export default function Navbar({
                 </button>
               );
             })}
+            <a
+              href="#journal"
+              className="text-amber-400/90 hover:text-amber-400 transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
+            >
+              <span>Field Guides</span>
+            </a>
           </nav>
 
           {/* Action Icons (Search + Saved) */}
@@ -112,6 +118,14 @@ export default function Navbar({
                 {cat}
               </button>
             ))}
+            <a
+              href="#journal"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-amber-400 hover:bg-amber-400/10 flex items-center justify-between"
+            >
+              <span>Field Guides & Journal</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">New</span>
+            </a>
           </div>
         )}
       </header>

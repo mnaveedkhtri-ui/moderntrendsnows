@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { getStructuredData } from '../lib/structuredData';
 
 export const metadata: Metadata = {
   title: 'Modern Trends Now | Curated Aesthetic Living & Workspace Tech',
@@ -39,12 +40,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const structuredData = getStructuredData();
+
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
         <meta name="google-site-verification" content="JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o" />
         <meta name="p:domain_verify" content="a8d45f72fc74186b14b460995c711d27" />
         <link rel="preconnect" href="https://images.unsplash.com" />
+        {structuredData.map((schema, index) => (
+          <script
+            key={index}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        ))}
       </head>
       <body className="min-h-screen bg-[#08090d] text-slate-100 antialiased selection:bg-amber-400 selection:text-black">
         {children}

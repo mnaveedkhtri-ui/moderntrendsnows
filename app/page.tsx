@@ -6,6 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import MarqueeTicker from '../components/MarqueeTicker';
 import StandardsBento from '../components/StandardsBento';
 import CatalogGrid from '../components/CatalogGrid';
+import JournalSection from '../components/JournalSection';
 import Testimonials from '../components/Testimonials';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
@@ -97,7 +98,12 @@ export default function HomePage() {
           onQuickView={(p) => setActiveModalProduct(p)}
         />
 
-        {/* 6. Verified Community Reviews */}
+        {/* 6. Studio Journal & Architectural Buying Guides */}
+        <JournalSection
+          onQuickViewProduct={(p) => setActiveModalProduct(p)}
+        />
+
+        {/* 7. Verified Community Reviews */}
         <Testimonials />
 
         {/* 7. FAQs */}
