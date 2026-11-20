@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://moderntrendsnow.store'),
   other: {
     'p:domain_verify': 'a8d45f72fc74186b14b460995c711d27',
+    'google-site-verification': 'JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o',
   },
   openGraph: {
     title: 'Modern Trends Now | Curated Modern Living & Tech',
@@ -41,6 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
+        <meta name="google-site-verification" content="JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o" />
         <meta name="p:domain_verify" content="a8d45f72fc74186b14b460995c711d27" />
         <link rel="preconnect" href="https://images.unsplash.com" />
       </head>
