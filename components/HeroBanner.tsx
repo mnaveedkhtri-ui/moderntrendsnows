@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { ArrowRight, Sparkles, CheckCircle2, ShieldCheck, ExternalLink, Zap, Star } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, ExternalLink, Star } from 'lucide-react';
 import { Product } from '../data/products';
 
 interface HeroBannerProps {
@@ -62,51 +62,53 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
 
   return (
     <section className="relative border-b border-white/10 bg-[#07090e] overflow-hidden">
-      {/* Background Subtle Gradient Glow */}
-      <div className="absolute top-0 right-1/4 -z-10 h-96 w-96 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
+      {/* Background Architectural Blueprint Grid & Subtle Amber Glow */}
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+      <div className="absolute top-0 right-1/4 -z-10 h-72 w-72 rounded-full bg-amber-500/10 blur-3xl pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      {/* Hero Container with Tight, Compact Padding */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-5 pb-10 sm:pt-7 sm:pb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
           
           {/* Left Hero Storytelling */}
           <div className="lg:col-span-7 text-left">
             
             {/* Human Editorial Kicker */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3.5 py-1 text-xs font-semibold text-amber-300 mb-5">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-300 mb-4">
               <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
               <span className="font-mono uppercase tracking-wider text-[11px]">Vol. 2026 // Editorial Drop</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-black text-white tracking-tight leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-[50px] font-black text-white tracking-tight leading-[1.12]">
               Tactile Tech & Spatial Objects for the Modern Space.
             </h1>
 
             {/* Humanized Subtitle */}
-            <p className="mt-5 text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
+            <p className="mt-4 text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl">
               An independent archive of viral desk architecture, ambient lighting, and everyday utility. We screen out cheap generic plastic to curate objects celebrated for genuine build integrity, tactile feel, and direct Amazon Prime fulfillment.
             </p>
 
             {/* CTAs */}
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <button
                 onClick={onShopClick}
-                className="flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 text-xs sm:text-sm font-bold text-slate-950 hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 active:scale-95"
+                className="group flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 text-xs sm:text-sm font-bold text-slate-950 hover:bg-amber-300 transition-all shadow-lg shadow-amber-400/20 active:scale-95"
               >
                 <span>Explore 2026 Collection</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </button>
 
               <a
                 href="#reviews"
-                className="rounded-xl border border-white/15 bg-white/5 px-5 py-3.5 text-xs sm:text-sm font-semibold text-slate-200 hover:text-white hover:bg-white/10 transition"
+                className="rounded-xl border border-white/15 bg-white/5 px-5 py-3.5 text-xs sm:text-sm font-semibold text-slate-200 hover:text-white hover:bg-white/10 transition active:scale-95"
               >
                 Verified Buyer Reviews
               </a>
             </div>
 
-            {/* Real Quality & Shipping Commitments */}
-            <div className="mt-10 pt-6 border-t border-white/10 grid grid-cols-3 gap-3 text-left">
+            {/* Quality & Shipping Commitments */}
+            <div className="mt-8 pt-5 border-t border-white/10 grid grid-cols-3 gap-3 text-left">
               <div>
                 <p className="text-white font-bold text-xs sm:text-sm flex items-center gap-1.5">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400 shrink-0" />
@@ -138,14 +140,14 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
           <div className="lg:col-span-5">
             
             {/* Artifact Selector Tabs */}
-            <div className="flex items-center gap-1.5 mb-3 overflow-x-auto pb-1 no-scrollbar">
+            <div className="flex items-center gap-1.5 mb-2.5 overflow-x-auto pb-1 no-scrollbar">
               {HERO_HIGHLIGHTS.map((item, idx) => (
                 <button
                   key={item.id}
                   onClick={() => setSelectedHeroIndex(idx)}
-                  className={`text-[11px] font-mono px-3 py-1.5 rounded-lg transition whitespace-nowrap ${
+                  className={`text-[11px] font-mono px-3 py-1.5 rounded-lg transition-all whitespace-nowrap ${
                     selectedHeroIndex === idx
-                      ? 'bg-amber-400 text-slate-950 font-bold shadow'
+                      ? 'bg-amber-400 text-slate-950 font-bold shadow-md shadow-amber-400/20 scale-[1.02]'
                       : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
                   }`}
                 >
@@ -155,7 +157,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
             </div>
 
             {/* Visual Showcase Card */}
-            <div className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#0e1017] shadow-2xl transition duration-300">
+            <div className="group relative rounded-2xl overflow-hidden border border-white/15 bg-[#0e1017] shadow-2xl transition duration-300 hover:border-amber-400/40 hover:shadow-amber-500/10">
               
               {/* Product Photo */}
               <div className="relative aspect-[4/3] sm:aspect-square w-full overflow-hidden bg-slate-900">
@@ -180,7 +182,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
               </div>
 
               {/* Product Details Container */}
-              <div className="p-4 sm:p-5 text-left border-t border-white/10 bg-[#0c0e15]">
+              <div className="p-4 text-left border-t border-white/10 bg-[#0c0e15]">
                 <div className="flex items-center justify-between gap-2 mb-1.5">
                   <span className="text-[10px] font-mono text-amber-400 uppercase tracking-wider">
                     {currentHero.category}
@@ -192,7 +194,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                   </div>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-white leading-snug">
                   {currentHero.title}
                 </h3>
 
@@ -201,7 +203,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                 </p>
 
                 {/* Spec Pills */}
-                <div className="flex flex-wrap gap-1.5 mt-3">
+                <div className="flex flex-wrap gap-1.5 mt-2.5">
                   {currentHero.tags.map((tag) => (
                     <span
                       key={tag}
@@ -213,10 +215,10 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                 </div>
 
                 {/* Pricing & Amazon Button */}
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between gap-3">
+                <div className="mt-3.5 pt-3 border-t border-white/10 flex items-center justify-between gap-3">
                   <div>
                     <div className="flex items-baseline gap-2">
-                      <span className="text-xl sm:text-2xl font-black text-white">
+                      <span className="text-lg sm:text-xl font-black text-white">
                         ${currentHero.price.toFixed(2)}
                       </span>
                       <span className="text-xs text-slate-500 line-through">
@@ -232,7 +234,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                     href={currentHero.amazonUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 rounded-xl bg-amber-400 px-4 py-2.5 text-xs font-bold text-slate-950 hover:bg-amber-300 transition active:scale-95 shadow-md shadow-amber-400/10 shrink-0"
+                    className="flex items-center gap-1.5 rounded-xl bg-amber-400 px-4 py-2 text-xs font-bold text-slate-950 hover:bg-amber-300 transition active:scale-95 shadow-md shadow-amber-400/10 shrink-0"
                   >
                     <span>View on Amazon</span>
                     <ExternalLink className="h-3.5 w-3.5" />

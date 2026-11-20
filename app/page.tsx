@@ -3,6 +3,8 @@
 import React, { useState, useMemo } from 'react';
 import Navbar from '../components/Navbar';
 import HeroBanner from '../components/HeroBanner';
+import MarqueeTicker from '../components/MarqueeTicker';
+import StandardsBento from '../components/StandardsBento';
 import CatalogGrid from '../components/CatalogGrid';
 import Testimonials from '../components/Testimonials';
 import FAQSection from '../components/FAQSection';
@@ -72,14 +74,20 @@ export default function HomePage() {
       />
 
       <main className="flex-1">
-        {/* 2. Hero Banner */}
+        {/* 2. Hero Banner (No dead gap, tight alignment) */}
         <HeroBanner
           onShopClick={() => {
             document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
           }}
         />
 
-        {/* 3. Catalog Grid */}
+        {/* 3. Infinite Smooth Marquee Ticker */}
+        <MarqueeTicker />
+
+        {/* 4. Hardware Lab & Standards Bento Grid */}
+        <StandardsBento />
+
+        {/* 5. Catalog Grid */}
         <CatalogGrid
           products={products}
           selectedCategory={selectedCategory}
@@ -89,14 +97,14 @@ export default function HomePage() {
           onQuickView={(p) => setActiveModalProduct(p)}
         />
 
-        {/* 4. Verified Community Reviews */}
+        {/* 6. Verified Community Reviews */}
         <Testimonials />
 
-        {/* 5. FAQs */}
+        {/* 7. FAQs */}
         <FAQSection />
       </main>
 
-      {/* 6. Footer */}
+      {/* 8. Footer */}
       <Footer />
 
       {/* Quick View Modal */}
