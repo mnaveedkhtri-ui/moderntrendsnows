@@ -15,7 +15,10 @@ export const metadata: Metadata = {
     'cozy room gadgets 2026'
   ],
   authors: [{ name: 'Modern Trends Now Editorial Studio' }],
-  metadataBase: new URL('https://moderntrendsnow.store'),
+  metadataBase: new URL('https://www.moderntrendsnow.store'),
+  alternates: {
+    canonical: 'https://www.moderntrendsnow.store',
+  },
   other: {
     'p:domain_verify': 'a8d45f72fc74186b14b460995c711d27',
     'google-site-verification': 'JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o',
@@ -23,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Modern Trends Now | Curated Modern Living & Tech',
     description: 'Minimalist desk setups, ambient luminaires, and kinetic desk sculptures. Curated daily.',
-    url: 'https://moderntrendsnow.store',
+    url: 'https://www.moderntrendsnow.store',
     siteName: 'Modern Trends Now',
     locale: 'en_US',
     type: 'website',

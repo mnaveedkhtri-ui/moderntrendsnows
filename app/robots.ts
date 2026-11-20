@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://moderntrendsnow.store/sitemap.xml',
+    sitemap: 'https://www.moderntrendsnow.store/sitemap.xml',
   };
 }

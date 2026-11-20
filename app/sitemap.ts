@@ -1,23 +1,38 @@
 import { MetadataRoute } from 'next';
-import { PRODUCTS } from '@/data/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://moderntrendsnow.store';
-
-  const productUrls = PRODUCTS.map((product) => ({
-    url: `${baseUrl}#catalog`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }));
+  const baseUrl = 'https://www.moderntrendsnow.store';
 
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'daily' as const,
+      changeFrequency: 'daily',
       priority: 1.0,
     },
-    ...productUrls,
+    {
+      url: `${baseUrl}/#catalog`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#journal`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/#reviews`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/rss.xml`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.7,
+    },
   ];
 }

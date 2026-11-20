@@ -13,7 +13,7 @@ function escapeXml(unsafe: string): string {
 }
 
 export async function GET() {
-  const baseUrl = 'https://moderntrendsnow.store';
+  const baseUrl = 'https://www.moderntrendsnow.store';
 
   const itemsXml = PRODUCTS.map((product, index) => {
     // Generate staggered publication dates over the last few days
