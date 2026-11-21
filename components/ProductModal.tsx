@@ -28,14 +28,28 @@ export default function ProductModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-150">
       <div className="relative w-full max-w-xl rounded-2xl border border-white/10 bg-[#0d0f16] p-4 sm:p-6 shadow-2xl text-left my-6">
         
-        {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute right-3.5 top-3.5 p-1.5 rounded-lg bg-white/5 text-slate-400 hover:text-white transition"
-          aria-label="Close modal"
-        >
-          <X className="h-5 w-5" />
-        </button>
+        {/* Action Controls: Bookmark & Close */}
+        <div className="absolute right-3.5 top-3.5 flex items-center gap-1.5">
+          <button
+            onClick={() => onToggleSave(product.id)}
+            className={`p-1.5 rounded-lg transition ${
+              isSaved
+                ? 'bg-amber-400 text-slate-950 shadow-md'
+                : 'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10'
+            }`}
+            title={isSaved ? 'Saved in wishlist' : 'Save to wishlist'}
+            aria-label="Save product"
+          >
+            <Bookmark className={`h-4 w-4 ${isSaved ? 'fill-slate-950' : ''}`} />
+          </button>
+          <button
+            onClick={onClose}
+            className="p-1.5 rounded-lg bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition"
+            aria-label="Close modal"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-start mt-2">
           {/* Image */}
