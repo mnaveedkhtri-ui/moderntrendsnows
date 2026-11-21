@@ -27,7 +27,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 1240,
     imageUrl: 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=anti+gravity+water+drop+lamp&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=anti+gravity+water+drop+lamp&tag=moderntren08b-20',
     badge: 'Best Seller',
     isBestSeller: true,
     specs: ['Built-in Cool Mist Humidifier', 'Whisper-Quiet 25dB Operation', 'Touch Button Power & Nightlight Mode', 'Auto Waterless Shutoff']
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 890,
     imageUrl: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=3+in+1+magsafe+charging+station&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=3+in+1+magsafe+charging+station&tag=moderntren08b-20',
     badge: 'Staff Pick',
     isBestSeller: true,
     specs: ['Fast 15W Qi Magnetic Charging', 'Weighted Anti-Slip Base', 'Matte Space Gray Aluminum', 'Works with MagSafe Cases']
@@ -59,7 +59,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 2150,
     imageUrl: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=flame+air+diffuser+humidifier&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=flame+air+diffuser+humidifier&tag=moderntren08b-20',
     badge: 'Trending',
     isBestSeller: true,
     specs: ['Two Flame Colors (Amber / Blue)', '8-Hour Runtime Tank', 'Essential Oil Aromatherapy Safe', 'Timer & Auto-Off Protection']
@@ -75,7 +75,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewsCount: 1640,
     imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=modular+hexagon+lights&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=modular+hexagon+lights&tag=moderntren08b-20',
     badge: 'Popular',
     specs: ['Music Sync Rhythm Mode', '16 Million RGB Colors', 'Modular Expandable Panels', 'No-Drill Wall Mount Pads']
   },
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 3020,
     imageUrl: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=monitor+screenbar+light&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=monitor+screenbar+light&tag=moderntren08b-20',
     badge: 'Ergonomic',
     isBestSeller: true,
     specs: ['Asymmetric Optical Anti-Glare Beam', 'Touch-Controlled Brightness & Color Temp', 'USB Powered from PC or Monitor', 'Fits Curved & Flat Screens']
@@ -106,7 +106,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 910,
     imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=pixel+art+desk+clock&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=pixel+art+desk+clock&tag=moderntren08b-20',
     badge: 'Unique Find',
     specs: ['10,000+ Free Online Pixel Art Gallery', 'Built-in Bluetooth Speaker', 'Mechanical Clicky Controls', 'Clock, Alarms & Planner']
   },
@@ -121,7 +121,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 1840,
     imageUrl: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=leather+desk+mat+xxl&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=leather+desk+mat+xxl&tag=moderntren08b-20',
     specs: ['Extra Large 36 x 17 Inch Size', 'Waterproof & Easy to Clean', 'Smooth Mouse Gliding Surface', 'Double-Stitched Edge Durability']
   },
   {
@@ -135,7 +135,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewsCount: 580,
     imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=kinetic+desk+sculpture+motion&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=kinetic+desk+sculpture+motion&tag=moderntren08b-20',
     specs: ['Low-Friction Precision Pivot Rings', 'Silent Electromagnetic Motion', 'Polished Chrome Finish', 'Battery Powered (No Cables)']
   },
   {
@@ -149,7 +149,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 1420,
     imageUrl: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=smart+mug+warmer+set&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=smart+mug+warmer+set&tag=moderntren08b-20',
     badge: 'Customer Favorite',
     specs: ['Maintains 135°F (55°C) Consistently', 'High-Grade Food-Safe Ceramic Mug', 'Coaster Doubles as Phone Wireless Charger', 'Auto Shut-Off Safety Sensor']
   },
@@ -164,7 +164,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 3890,
     imageUrl: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=sunset+lamp+projector&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=sunset+lamp+projector&tag=moderntren08b-20',
     specs: ['360-Degree Swivel Flexible Head', 'High-Transmission Optical Glass Lens', 'Weighted Anti-Tip Metal Base', 'USB Powered with Inline Switch']
   },
   {
@@ -178,7 +178,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 760,
     imageUrl: 'https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=mechanical+switch+calculator&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=mechanical+switch+calculator&tag=moderntren08b-20',
     specs: ['Authentic Clicky Mechanical Blue Switches', '12-Digit Tilted High-Contrast Display', 'Removable Keycaps for Cleaning', 'Auto-Sleep Battery Conservation']
   },
   {
@@ -192,7 +192,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 680,
     imageUrl: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=under+desk+cable+spine+management&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=under+desk+cable+spine+management&tag=moderntren08b-20',
     specs: ['Heavy Magnetic Anchor Base', '30 Snap-Together Flexible Vertebrae', 'Four Individual Cable Isolation Channels', 'Fits Sit-Stand and Fixed Desks']
   },
   {
@@ -206,7 +206,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 1480,
     imageUrl: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=vertical+laptop+stand+dual+aluminum&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=vertical+laptop+stand+dual+aluminum&tag=moderntren08b-20',
     badge: 'Space Saver',
     specs: ['Dual Gravity Docking Bays', 'Precision CNC 6063 Aluminum', 'Anti-Scratch Protective Silicone', 'Universal 0.5 to 1.7 Inch Width']
   },
@@ -221,7 +221,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 2340,
     imageUrl: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=magnetic+levitating+floating+globe+led&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=magnetic+levitating+floating+globe+led&tag=moderntren08b-20',
     badge: 'Viral Tech',
     isBestSeller: true,
     specs: ['Active Magnetic Levitation System', 'Auto-Adsorption Power-Loss Safety', 'Atmospheric Circular LED Ring', 'Silent 360-Degree Perpetual Spin']
@@ -237,7 +237,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 870,
     imageUrl: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=transparent+mechanical+numpad+rgb+macro&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=transparent+mechanical+numpad+rgb+macro&tag=moderntren08b-20',
     badge: 'Staff Pick',
     specs: ['Hot-Swappable 3/5-Pin Switch Sockets', 'CNC Polished Transparent Acrylic', 'Multi-Function Aluminum Dial Knob', 'South-Facing Per-Key RGB Lighting']
   },
@@ -252,7 +252,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 620,
     imageUrl: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=concrete+valet+tray+wireless+charger&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=concrete+valet+tray+wireless+charger&tag=moderntren08b-20',
     badge: 'Architectural',
     specs: ['Hand-Poured High-Density Concrete', '15W Fast Qi Magnetic Charging Pad', 'Solid Brushed Brass Structural Divider', 'Protective Non-Slip Cork Base']
   },
@@ -267,7 +267,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 3420,
     imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=moving+sand+art+liquid+motion+lamp&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=moving+sand+art+liquid+motion+lamp&tag=moderntren08b-20',
     badge: 'Customer Favorite',
     isBestSeller: true,
     specs: ['360-Degree Smooth Rotation Glass Disc', 'Touch-Controlled 3 Color Temperatures', 'High-Transmission Lead-Free Glass', 'Hypnotic Deep-Relaxation Motion']
@@ -283,7 +283,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 1120,
     imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=ips+nixie+tube+clock+cyberpunk&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=ips+nixie+tube+clock+cyberpunk&tag=moderntren08b-20',
     badge: 'Collector Item',
     specs: ['6 Full-Color IPS Display Tubes', 'Over 20+ Retro and Cyberpunk Clock Faces', 'Anodized Aluminum Alloy Base with RGB', 'High-Precision RTC Real-Time Clock Chip']
   },
@@ -298,7 +298,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 2890,
     imageUrl: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=walnut+wood+aluminum+headphone+stand&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=walnut+wood+aluminum+headphone+stand&tag=moderntren08b-20',
     badge: 'Crafted Wood',
     isBestSeller: true,
     specs: ['Solid North American Walnut Timber', 'Curved Headband Pressure-Relief Arch', 'Heavy Anodized Aluminum Upright Pole', 'Non-Slip Microfiber Protective Base Pad']
@@ -314,7 +314,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.7,
     reviewsCount: 1750,
     imageUrl: 'https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=levitating+magnetic+plant+pot+bonsai&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=levitating+magnetic+plant+pot+bonsai&tag=moderntren08b-20',
     badge: 'Living Decor',
     specs: ['Zero-Gravity Magnetic Suspension', 'Continuous Smooth 360-Degree Rotation', 'Durable Lightweight Faceted Planter Pot', 'Silent Induction Power Technology']
   },
@@ -329,7 +329,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.8,
     reviewsCount: 3190,
     imageUrl: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=electric+compressed+air+duster+130000+rpm&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=electric+compressed+air+duster+130000+rpm&tag=moderntren08b-20',
     badge: 'High Power',
     specs: ['130,000 RPM Ultra-High-Speed Motor', 'Peak 52 m/s Focused Jet Velocity', 'Type-C Fast Charging Lithium Battery', 'Aerospace Metal Alloy CNC Chassis']
   },
@@ -344,7 +344,7 @@ export const PRODUCTS: Product[] = [
     rating: 4.9,
     reviewsCount: 940,
     imageUrl: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80',
-    amazonUrl: 'https://www.amazon.com/s?k=kinetic+desk+toy+optical+illusion+spinner&tag=moderntrends-20',
+    amazonUrl: 'https://www.amazon.com/s?k=kinetic+desk+toy+optical+illusion+spinner&tag=moderntren08b-20',
     badge: 'Focus Tool',
     specs: ['Solid CNC Aerospace Aluminum Billet', 'Ultra-Low Friction R188 Hybrid Bearing', 'Over 180 Seconds Spin Time per Flick', 'Silent Hypnotic Stress Relief Motion']
   }
