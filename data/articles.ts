@@ -140,5 +140,42 @@ export const JOURNAL_ARTICLES: JournalArticle[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'tactile-mechanics-walnut-grain-deep-focus',
+    title: 'Tactile Mechanics vs Digital Fatigue: Why Modern Desks Are Embracing Clicky Switches and Walnut Grain',
+    tag: 'NEUROERGONOMICS & MATERIALS',
+    readTime: '5 MIN READ',
+    publishedDate: '2026-02-21',
+    author: 'Modern Trends Now Material Lab',
+    summary: 'How physical resistance, authentic North American walnut, and rotating kinetic spheres ground the nervous system against digital cognitive fatigue.',
+    coverImage: 'https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=1200&q=80',
+    featuredProductIds: ['retro-mechanical-calculator', 'transparent-mechanical-numpad', 'walnut-headphone-stand', 'kinetic-desk-spinner'],
+    sections: [
+      {
+        heading: 'The Sensory Deprivation of Glass Screens',
+        paragraphs: [
+          'Modern knowledge workers spend between 8 and 14 hours tapping smooth, frictionless capacitive glass. In neurobiology, this lack of tactile feedback is associated with higher mental fatigue because your brain receives no physical confirmation of completed tasks.',
+          'Physical mechanical switches with tactile leaf springs and acoustic clicks provide immediate neuro-sensory feedback. Your fingers feel the actuation point, creating a subconscious boundary between thought and execution.'
+        ],
+        takeaways: [
+          'Tactile actuation reduces typing strain and unconscious over-pressing.',
+          'Acoustic mechanical feedback provides satisfying auditory closure for high-focus tasks.',
+          'Physical numpads separate complex spreadsheet calculation from laptop keyboards.'
+        ]
+      },
+      {
+        heading: 'Organic Timber: The Biophilic Antidote to Cold Aluminum',
+        paragraphs: [
+          'An all-metal desk setup can quickly feel sterile and industrial. Integrating organic materials like solid North American walnut and hand-cast stone re-introduces biophilic balance to your field of vision.',
+          'The Solid Walnut and Anodized Aluminum Headphone Rest bridges this exact gap: combining aircraft-grade structure with warm, natural wood grain that ages gracefully and develops a rich patina over years of daily use.'
+        ],
+        takeaways: [
+          'Biophilic wood textures reduce workplace stress markers and blood pressure.',
+          'Curved wooden headrests preserve expensive memory foam headphone cushions.',
+          'Heavy weighted bases keep heavy studio headphones stable when grabbing with one hand.'
+        ]
+      }
+    ]
   }
 ];
