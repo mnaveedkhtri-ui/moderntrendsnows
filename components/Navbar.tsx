@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Bookmark, Search, Menu, X, ArrowRight } from 'lucide-react';
+import { Bookmark, Search, Menu, X, ArrowRight, Sparkles, Volume2, VolumeX } from 'lucide-react';
 import Logo from './Logo';
+import { sound } from '../lib/sound';
 
 interface NavbarProps {
   savedCount: number;
@@ -21,6 +22,16 @@ export default function Navbar({
   onSelectCategory,
 }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  useEffect(() => {
+    setIsMuted(sound.getMuted());
+  }, []);
+
+  const handleToggleSound = () => {
+    const next = sound.toggleMute();
+    setIsMuted(next);
+  };
 
   const categories = ['All Products', 'Workspace', 'Lighting', 'Living', 'Gadgets'];
 
@@ -54,7 +65,10 @@ export default function Navbar({
               return (
                 <button
                   key={cat}
-                  onClick={() => onSelectCategory(cat)}
+                  onClick={() => {
+                    sound.playTick();
+                    onSelectCategory(cat);
+                  }}
                   className={`transition-colors py-1 ${
                     active
                       ? 'text-amber-400 border-b-2 border-amber-400 font-bold'
@@ -66,17 +80,37 @@ export default function Navbar({
               );
             })}
             <a
+              href="#setup-builder"
+              className="text-amber-400 hover:text-amber-300 transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
+            >
+              <Sparkles className="h-3 w-3 text-amber-400" />
+              <span>Setup Studio</span>
+            </a>
+            <a
               href="#journal"
-              className="text-amber-400/90 hover:text-amber-400 transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
+              className="text-slate-400 hover:text-white transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
             >
               <span>Field Guides</span>
             </a>
           </nav>
 
-          {/* Action Icons (Search + Saved) */}
+          {/* Action Icons (Sound + Search + Saved) */}
           <div className="flex items-center gap-1 sm:gap-2">
+            {/* Desktop Audio Toggle */}
             <button
-              onClick={onOpenSearch}
+              onClick={handleToggleSound}
+              className="hidden sm:flex p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition"
+              title={isMuted ? 'Unmute Tactile Sound' : 'Mute Tactile Sound'}
+              aria-label="Toggle Sound"
+            >
+              {isMuted ? <VolumeX className="h-4 w-4 text-rose-400" /> : <Volume2 className="h-4 w-4 text-emerald-400" />}
+            </button>
+
+            <button
+              onClick={() => {
+                sound.playTick();
+                onOpenSearch();
+              }}
               className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
               title="Search Products"
             >
@@ -84,7 +118,10 @@ export default function Navbar({
             </button>
 
             <button
-              onClick={onOpenSaved}
+              onClick={() => {
+                sound.playTick();
+                onOpenSaved();
+              }}
               className="relative p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
               title="Saved Items"
             >
@@ -106,6 +143,7 @@ export default function Navbar({
               <button
                 key={cat}
                 onClick={() => {
+                  sound.playTick();
                   onSelectCategory(cat);
                   setMobileMenuOpen(false);
                 }}
@@ -119,12 +157,23 @@ export default function Navbar({
               </button>
             ))}
             <a
-              href="#journal"
+              href="#setup-builder"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-amber-400 hover:bg-amber-400/10 flex items-center justify-between"
             >
+              <span className="flex items-center gap-1.5">
+                <Sparkles className="h-4 w-4 text-amber-400" />
+                <span>Custom Setup Studio</span>
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">Interactive</span>
+            </a>
+            <a
+              href="#journal"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-white/5 flex items-center justify-between"
+            >
               <span>Field Guides & Journal</span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">New</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-slate-400">Guides</span>
             </a>
           </div>
         )}

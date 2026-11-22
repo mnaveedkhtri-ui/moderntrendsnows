@@ -1,9 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { X, ExternalLink, Star, CheckCircle, Truck, ShieldCheck, Bookmark } from 'lucide-react';
+import { X, ExternalLink, Star, CheckCircle, Truck, ShieldCheck, Bookmark, Share2, Check } from 'lucide-react';
 import { Product } from '../data/products';
+import { sound } from '../lib/sound';
 
 interface ProductModalProps {
   product: Product | null;
@@ -18,20 +19,44 @@ export default function ProductModal({
   isSaved,
   onToggleSave,
 }: ProductModalProps) {
+  const [copied, setCopied] = useState(false);
+
   if (!product) return null;
 
   const discountPercent = Math.round(
     ((product.compareAtPrice - product.price) / product.compareAtPrice) * 100
   );
 
+  const handleShare = () => {
+    sound.playPop();
+    const url = typeof window !== 'undefined' ? `${window.location.origin}/#catalog` : '';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(`${product.title} - ${url}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
+  };
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-150">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md overflow-y-auto animate-in fade-in duration-150">
       <div className="relative w-full max-w-xl rounded-2xl border border-white/10 bg-[#0d0f16] p-4 sm:p-6 shadow-2xl text-left my-6">
         
-        {/* Action Controls: Bookmark & Close */}
-        <div className="absolute right-3.5 top-3.5 flex items-center gap-1.5">
+        {/* Action Controls: Share, Bookmark & Close */}
+        <div className="absolute right-3.5 top-3.5 flex items-center gap-1.5 z-20">
           <button
-            onClick={() => onToggleSave(product.id)}
+            onClick={handleShare}
+            className="p-1.5 rounded-lg bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition"
+            title="Share object"
+            aria-label="Share product"
+          >
+            {copied ? <Check className="h-4 w-4 text-emerald-400" /> : <Share2 className="h-4 w-4" />}
+          </button>
+
+          <button
+            onClick={() => {
+              sound.playPop();
+              onToggleSave(product.id);
+            }}
             className={`p-1.5 rounded-lg transition ${
               isSaved
                 ? 'bg-amber-400 text-slate-950 shadow-md'
@@ -42,8 +67,12 @@ export default function ProductModal({
           >
             <Bookmark className={`h-4 w-4 ${isSaved ? 'fill-slate-950' : ''}`} />
           </button>
+
           <button
-            onClick={onClose}
+            onClick={() => {
+              sound.playTick();
+              onClose();
+            }}
             className="p-1.5 rounded-lg bg-white/5 text-slate-400 hover:text-white hover:bg-white/10 transition"
             aria-label="Close modal"
           >
@@ -83,7 +112,7 @@ export default function ProductModal({
                   <Star className="h-3.5 w-3.5 fill-amber-400" />
                 </div>
                 <span className="font-bold">{product.rating}</span>
-                <span className="text-slate-500 text-[11px]">({product.reviewsCount} reviews)</span>
+                <span className="text-slate-500 text-[11px]">({product.reviewsCount} verified reviews)</span>
               </div>
 
               <p className="text-xs text-slate-300 leading-relaxed mb-4">
@@ -115,9 +144,10 @@ export default function ProductModal({
                 href={product.amazonUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => sound.playChime()}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-amber-400 hover:bg-amber-300 py-3 text-xs font-black text-slate-950 transition shadow-lg active:scale-95"
               >
-                <span>View Product on Amazon</span>
+                <span>Check Live Price on Amazon</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
 
@@ -126,7 +156,7 @@ export default function ProductModal({
                   <Truck className="h-3 w-3 text-emerald-400" /> Prime 2-Day Delivery
                 </span>
                 <span className="flex items-center gap-1">
-                  <ShieldCheck className="h-3 w-3 text-emerald-400" /> 30-Day Returns
+                  <ShieldCheck className="h-3 w-3 text-emerald-400" /> 30-Day Free Returns
                 </span>
               </div>
             </div>

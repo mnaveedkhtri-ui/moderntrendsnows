@@ -10,6 +10,8 @@ import JournalSection from '../components/JournalSection';
 import Testimonials from '../components/Testimonials';
 import FAQSection from '../components/FAQSection';
 import Footer from '../components/Footer';
+import SetupBuilder from '../components/SetupBuilder';
+import MobileActionDock from '../components/MobileActionDock';
 import ProductModal from '../components/ProductModal';
 import SearchModal from '../components/SearchModal';
 import SavedDrawer from '../components/SavedDrawer';
@@ -88,6 +90,12 @@ export default function HomePage() {
         {/* 4. Hardware Lab & Standards Bento Grid */}
         <StandardsBento />
 
+        {/* 4b. Interactive Spatial Desk Setup Builder */}
+        <SetupBuilder
+          products={products}
+          onQuickView={(p) => setActiveModalProduct(p)}
+        />
+
         {/* 5. Catalog Grid */}
         <CatalogGrid
           products={products}
@@ -138,6 +146,19 @@ export default function HomePage() {
         onClearAll={() => {
           setSavedIds([]);
           triggerToast('Saved collection cleared');
+        }}
+      />
+
+      {/* Floating Mobile Thumb Navigation Dock */}
+      <MobileActionDock
+        savedCount={savedIds.length}
+        onOpenSaved={() => setIsSavedDrawerOpen(true)}
+        onOpenSearch={() => setIsSearchOpen(true)}
+        onScrollToCatalog={() => {
+          document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+        onScrollToBuilder={() => {
+          document.getElementById('setup-builder')?.scrollIntoView({ behavior: 'smooth' });
         }}
       />
     </div>

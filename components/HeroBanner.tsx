@@ -85,7 +85,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
               <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
               <span className="font-mono uppercase tracking-wider text-[11px]">Vol. 2026 : Curated Desk Archive</span>
               <span className="text-amber-400/50 hidden sm:inline">•</span>
-              <span className="text-amber-200/80 text-[11px] font-mono hidden sm:inline">22 Verified Objects</span>
+              <span className="text-amber-200/80 text-[11px] font-mono hidden sm:inline">38 Verified Objects</span>
             </div>
 
             {/* Main Headline */}
