@@ -20,6 +20,11 @@ export default function ProductModal({
   onToggleSave,
 }: ProductModalProps) {
   const [copied, setCopied] = useState(false);
+  const [modalImg, setModalImg] = useState(product?.imageUrl || '');
+
+  React.useEffect(() => {
+    if (product?.imageUrl) setModalImg(product.imageUrl);
+  }, [product?.imageUrl]);
 
   if (!product) return null;
 
@@ -84,10 +89,13 @@ export default function ProductModal({
           {/* Image */}
           <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-slate-900 border border-white/5">
             <Image
-              src={product.imageUrl}
+              src={modalImg}
               alt={product.title}
               fill
               className="object-cover"
+              onError={() => {
+                setModalImg('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80');
+              }}
             />
             {product.badge && (
               <span className="absolute top-2.5 left-2.5 rounded bg-amber-400 text-slate-950 font-black text-[10px] px-2 py-0.5 uppercase">

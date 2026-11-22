@@ -18,6 +18,12 @@ export default function ProductCard({
   onToggleSave,
   onQuickView,
 }: ProductCardProps) {
+  const [imgSrc, setImgSrc] = React.useState(product.imageUrl);
+
+  React.useEffect(() => {
+    setImgSrc(product.imageUrl);
+  }, [product.imageUrl]);
+
   const discountPercent = Math.round(
     ((product.compareAtPrice - product.price) / product.compareAtPrice) * 100
   );
@@ -29,11 +35,14 @@ export default function ProductCard({
         {/* Product Image Container */}
         <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-slate-900 border border-white/5 mb-3 shadow-inner">
           <Image
-            src={product.imageUrl}
+            src={imgSrc}
             alt={product.title}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-cover object-center group-hover:scale-108 transition-transform duration-500 ease-out"
+            onError={() => {
+              setImgSrc('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80');
+            }}
           />
 
           {/* Badge */}
