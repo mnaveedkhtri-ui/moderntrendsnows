@@ -7,20 +7,20 @@ import Logo from './Logo';
 import { sound } from '../lib/sound';
 
 interface NavbarProps {
-  savedCount: number;
-  onOpenSaved: () => void;
-  onOpenSearch: () => void;
-  selectedCategory: string;
-  onSelectCategory: (cat: string) => void;
+  savedCount?: number;
+  onOpenSaved?: () => void;
+  onOpenSearch?: () => void;
+  selectedCategory?: string;
+  onSelectCategory?: (cat: string) => void;
 }
 
 export default function Navbar({
-  savedCount,
+  savedCount = 0,
   onOpenSaved,
   onOpenSearch,
-  selectedCategory,
+  selectedCategory = 'All Products',
   onSelectCategory,
-}: NavbarProps) {
+}: NavbarProps = {}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
 
@@ -34,6 +34,33 @@ export default function Navbar({
   };
 
   const categories = ['All Products', 'Workspace', 'Lighting', 'Living', 'Gadgets'];
+
+  const handleCategorySelect = (cat: string) => {
+    sound.playTick();
+    if (onSelectCategory) {
+      onSelectCategory(cat);
+    } else {
+      window.location.href = '/#catalog';
+    }
+  };
+
+  const handleSearchClick = () => {
+    sound.playTick();
+    if (onOpenSearch) {
+      onOpenSearch();
+    } else {
+      window.location.href = '/#catalog';
+    }
+  };
+
+  const handleSavedClick = () => {
+    sound.playTick();
+    if (onOpenSaved) {
+      onOpenSaved();
+    } else {
+      window.location.href = '/#catalog';
+    }
+  };
 
   return (
     <>
@@ -65,10 +92,7 @@ export default function Navbar({
               return (
                 <button
                   key={cat}
-                  onClick={() => {
-                    sound.playTick();
-                    onSelectCategory(cat);
-                  }}
+                  onClick={() => handleCategorySelect(cat)}
                   className={`transition-colors py-1 ${
                     active
                       ? 'text-amber-400 border-b-2 border-amber-400 font-bold'
@@ -80,18 +104,18 @@ export default function Navbar({
               );
             })}
             <a
-              href="#setup-builder"
+              href="/#setup-builder"
               className="text-amber-400 hover:text-amber-300 transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
             >
               <Sparkles className="h-3 w-3 text-amber-400" />
               <span>Setup Studio</span>
             </a>
-            <a
-              href="#journal"
+            <Link
+              href="/blog"
               className="text-slate-400 hover:text-white transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
             >
               <span>Field Guides</span>
-            </a>
+            </Link>
           </nav>
 
           {/* Action Icons (Sound + Search + Saved) */}
@@ -107,10 +131,7 @@ export default function Navbar({
             </button>
 
             <button
-              onClick={() => {
-                sound.playTick();
-                onOpenSearch();
-              }}
+              onClick={handleSearchClick}
               className="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
               title="Search Products"
             >
@@ -118,10 +139,7 @@ export default function Navbar({
             </button>
 
             <button
-              onClick={() => {
-                sound.playTick();
-                onOpenSaved();
-              }}
+              onClick={handleSavedClick}
               className="relative p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition"
               title="Saved Items"
             >
@@ -143,8 +161,7 @@ export default function Navbar({
               <button
                 key={cat}
                 onClick={() => {
-                  sound.playTick();
-                  onSelectCategory(cat);
+                  handleCategorySelect(cat);
                   setMobileMenuOpen(false);
                 }}
                 className={`w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition ${
@@ -157,7 +174,7 @@ export default function Navbar({
               </button>
             ))}
             <a
-              href="#setup-builder"
+              href="/#setup-builder"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-amber-400 hover:bg-amber-400/10 flex items-center justify-between"
             >
@@ -167,14 +184,14 @@ export default function Navbar({
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">Interactive</span>
             </a>
-            <a
-              href="#journal"
+            <Link
+              href="/blog"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-slate-300 hover:bg-white/5 flex items-center justify-between"
             >
-              <span>Field Guides & Journal</span>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-slate-400">Guides</span>
-            </a>
+              <span>Field Guides &amp; Research</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">Blog</span>
+            </Link>
           </div>
         )}
       </header>

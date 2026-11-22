@@ -26,7 +26,7 @@ export default function Footer() {
               <li><a href="#catalog" className="hover:text-amber-400 transition">Ambient Lighting</a></li>
               <li><a href="#catalog" className="hover:text-amber-400 transition">Smart Living</a></li>
               <li><a href="#catalog" className="hover:text-amber-400 transition">Unique Gadgets</a></li>
-              <li><a href="#journal" className="hover:text-amber-400 transition text-amber-400/90 font-medium">Field Guides & Research</a></li>
+              <li><Link href="/blog" className="hover:text-amber-400 transition text-amber-400/90 font-medium">Field Guides &amp; Research</Link></li>
             </ul>
           </div>
 

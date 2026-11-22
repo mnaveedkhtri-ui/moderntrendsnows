@@ -511,7 +511,7 @@ export const PRODUCTS: Product[] = [
     compareAtPrice: 50,
     rating: 4.9,
     reviewsCount: 1120,
-    imageUrl: 'https://images.unsplash.com/photo-1583485088034-697b5bc54ccd?auto=format&fit=crop&w=800&q=80',
+    imageUrl: 'https://images.unsplash.com/photo-1569683795645-b62e50fbf103?auto=format&fit=crop&w=800&q=80',
     amazonUrl: 'https://www.amazon.com/s?k=titanium+bolt+action+pen+edc&tag=moderntren08b-20',
     badge: 'Everyday Carry',
     specs: ["Grade 5 Ti-6Al-4V Aerospace Titanium Billet","Smooth-Action Mechanical L-Track Bolt Mechanism","Accepts Standard Parker G2 & Fisher Space Refills","Corrosion-Proof with Integrated Tungsten Glass Breaker"]

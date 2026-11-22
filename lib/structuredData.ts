@@ -1,5 +1,5 @@
 import { PRODUCTS } from '../data/products';
-import { JOURNAL_ARTICLES } from '../data/articles';
+import { BLOG_POSTS } from '../data/blog-posts';
 
 export function getStructuredData() {
   const organizationSchema = {
@@ -109,34 +109,35 @@ export function getStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: 'Modern Trends Now Field Guides & Research',
-    numberOfItems: JOURNAL_ARTICLES.length,
-    itemListElement: JOURNAL_ARTICLES.map((article, index) => ({
+    numberOfItems: BLOG_POSTS.length,
+    itemListElement: BLOG_POSTS.map((article, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
         '@type': 'BlogPosting',
         headline: article.title,
-        description: article.summary,
+        description: article.metaDescription,
         image: article.coverImage,
         datePublished: article.publishedDate,
         author: {
-          '@type': 'Organization',
-          name: article.author
+          '@type': 'Person',
+          name: article.author.name,
+          jobTitle: article.author.role,
         },
         publisher: {
           '@type': 'Organization',
           name: 'Modern Trends Now',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://www.moderntrendsnow.store/icon.svg'
-          }
+            url: 'https://www.moderntrendsnow.store/icon.svg',
+          },
         },
         mainEntityOfPage: {
           '@type': 'WebPage',
-          '@id': `https://www.moderntrendsnow.store/#journal`
-        }
-      }
-    }))
+          '@id': `https://www.moderntrendsnow.store/blog/${article.slug}`,
+        },
+      },
+    })),
   };
 
   return [organizationSchema, websiteSchema, productCatalogSchema, faqSchema, articlesSchema];

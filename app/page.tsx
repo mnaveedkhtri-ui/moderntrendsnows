@@ -107,9 +107,7 @@ export default function HomePage() {
         />
 
         {/* 6. Studio Journal & Architectural Buying Guides */}
-        <JournalSection
-          onQuickViewProduct={(p) => setActiveModalProduct(p)}
-        />
+        <JournalSection />
 
         {/* 7. Verified Community Reviews */}
         <Testimonials />
