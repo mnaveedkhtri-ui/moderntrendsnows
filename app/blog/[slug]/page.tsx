@@ -99,9 +99,13 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.metaDescription,
-    image: post.coverImage,
+    image: [
+      post.coverImage,
+      ...(post.inArticleImages ? post.inArticleImages.map((img) => img.url) : []),
+    ],
     datePublished: post.publishedDate,
     dateModified: post.publishedDate,
+    keywords: post.focusKeywords?.join(', '),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': pageUrl,
@@ -110,7 +114,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       '@type': 'Person',
       name: post.author.name,
       jobTitle: post.author.role,
-      url: 'https://naveed-portfolio-kappa.vercel.app/',
+      url: 'https://www.moderntrendsnow.store/about',
     },
     publisher: {
       '@type': 'Organization',
@@ -263,6 +267,38 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                   className="prose prose-invert prose-amber max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:leading-relaxed prose-a:text-amber-400 hover:prose-a:underline text-slate-300"
                   dangerouslySetInnerHTML={{ __html: post.contentHtml }}
                 />
+
+                {/* Author E-E-A-T Box */}
+                <div className="mt-12 p-6 rounded-2xl border border-white/10 bg-[#0c0f18] flex flex-col sm:flex-row items-center sm:items-start gap-5 text-left">
+                  <div className="relative w-16 h-16 rounded-full overflow-hidden bg-slate-900 border-2 border-amber-400 shrink-0 shadow-lg">
+                    <Image
+                      src={post.author.avatar}
+                      alt={post.author.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="space-y-1 text-center sm:text-left">
+                    <div className="flex items-center justify-center sm:justify-start gap-2">
+                      <span className="text-sm font-bold text-white font-mono">{post.author.name}</span>
+                      <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-400/20 text-amber-300 font-bold">
+                        Verified Curator
+                      </span>
+                    </div>
+                    <div className="text-xs text-amber-400 font-mono">{post.author.role}</div>
+                    <p className="text-xs text-slate-300 font-light leading-relaxed pt-1">
+                      Researches biomechanics, optical lux physics, and architectural desktop ergonomics. Founder of Modern Trends Now and passionate advocate for clutter-free creative workspaces.
+                    </p>
+                    <div className="pt-2 flex items-center justify-center sm:justify-start gap-4 text-xs font-mono text-slate-400">
+                      <Link href="/about" className="hover:text-amber-400 transition underline">
+                        Full Editorial Bio &rarr;
+                      </Link>
+                      <Link href="/contact" className="hover:text-amber-400 transition underline">
+                        Contact Author
+                      </Link>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Embedded Featured Products Showcase */}
                 {resolvedProducts.length > 0 && (
