@@ -264,7 +264,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               {/* Left / Center: Main Text (8 Cols) */}
               <div className="lg:col-span-8">
                 <div
-                  className="prose prose-invert prose-amber max-w-none prose-headings:font-black prose-headings:tracking-tight prose-p:leading-relaxed prose-a:text-amber-400 hover:prose-a:underline text-slate-300"
+                  className="blog-prose prose prose-invert prose-amber max-w-none text-slate-300"
                   dangerouslySetInnerHTML={{ __html: post.contentHtml }}
                 />
 
@@ -302,7 +302,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* Embedded Featured Products Showcase */}
                 {resolvedProducts.length > 0 && (
-                  <div className="mt-12 pt-8 border-t border-white/10 space-y-6">
+                  <div id="curated-anchors" className="mt-14 pt-8 border-t border-white/10 space-y-6 scroll-mt-24">
                     <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">
                       <Sparkles className="h-3.5 w-3.5" />
                       <span>Lab Tested Hardware Anchors</span>
@@ -372,7 +372,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
                 {/* FAQ Section */}
                 {post.faqs.length > 0 && (
-                  <section className="mt-14 pt-8 border-t border-white/10 space-y-4">
+                  <section id="expert-faq" className="mt-14 pt-8 border-t border-white/10 space-y-4 scroll-mt-24">
                     <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
                       <HelpCircle className="h-3.5 w-3.5 text-amber-400" />
                       <span>Frequently Asked Questions</span>

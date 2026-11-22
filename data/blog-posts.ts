@@ -153,185 +153,185 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     contentHtml: `
-      <div id="ai-overview" className="my-6 p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/05 to-transparent border border-amber-400/20 text-left">
-        <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">
+      <div id="ai-overview" class="my-6 p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-400/20 text-left">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">
           <span>AI Overview &amp; Quick Scientific Takeaway</span>
         </div>
-        <p className="text-sm text-slate-200 leading-relaxed font-light">
+        <p class="text-sm text-slate-200 leading-relaxed font-light">
           <strong>The Golden Ergonomic Desk Rule:</strong> Standard commercially sold office desks are fixed at 29 to 30 inches (74 to 76 cm), an industrial dimension originally engineered for 19th-century mechanical typewriters. For over 85% of modern computer users, this height forces the shoulders into continuous elevation (trapezius fatigue) and tilts the wrists into severe extension. 
           To achieve neutral zero-strain alignment:
         </p>
-        <ul className="mt-2 list-disc pl-5 text-xs text-slate-300 space-y-1">
+        <ul class="mt-2 list-disc pl-5 text-xs text-slate-300 space-y-1">
           <li><strong>Seated Desk Height:</strong> Should match your resting elbow height (typically 24 to 28 inches for adults between 5ft 2in and 6ft 2in).</li>
           <li><strong>Standing Desk Height:</strong> Measure floor to bent elbow; subtract 1 inch for keyboard deck height.</li>
           <li><strong>Monitor Height:</strong> Top third of active pixels must level with horizontal gaze, angled back 10 to 15 degrees.</li>
         </ul>
       </div>
 
-      <h2 id="anatomy-of-desk-height" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="anatomy-of-desk-height" class="text-2xl font-black text-white mt-10 mb-4">
         The Anatomy of Desk Height: Why 29 Inches Fails 85% of Adults
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Every human body possesses unique anthropometric proportions: femur length, torso height, and humerus-to-forearm ratios. Yet, the global contract furniture industry settled on a single standard desktop height of <strong>29.5 inches (75 cm)</strong> during the mid-20th century.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         According to anthropometric data compiled by the <em>Human Factors and Ergonomics Society (HFES)</em>, a 29.5-inch fixed desk fits only individuals who stand approximately <strong>6 feet 2 inches (188 cm) or taller</strong>. When someone measuring 5 feet 8 inches sits at a 29.5-inch surface, two compensation injuries inevitably occur:
       </p>
-      <ol className="list-decimal pl-5 text-sm text-slate-300 space-y-2 mb-6">
+      <ol class="list-decimal pl-5 text-sm text-slate-300 space-y-2 mb-6">
         <li><strong>Shoulder Shrugging (Trapezius Hypertonicity):</strong> To bring forearms parallel to the elevated desk surface, the upper trapezius and levator scapulae muscles must remain semi-contracted all day, resulting in tension headaches, cervicogenic pain, and thoracic outlet pressure.</li>
         <li><strong>Wrist Extension (Carpal Tunnel Compression):</strong> If the chair is lowered so feet touch the floor, the keyboard sits above elbow level. The user rests palms on the desk edge, bending wrists backward at a 25-degree extension angle, pinching the median nerve inside the carpal tunnel canal.</li>
       </ol>
 
-      <h2 id="height-chart" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="height-chart" class="text-2xl font-black text-white mt-10 mb-4">
         Complete 2026 Ergonomic Height Matrix (5ft 0in to 6ft 4in)
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Below is the master calibration chart developed using ISO 9241-5 and OSHA workstation principles. Values assume wear of standard flat shoes (0.75-inch sole).
       </p>
 
-      <div className="overflow-x-auto my-6 rounded-2xl border border-white/10 bg-[#0c0f18] p-1">
-        <table className="w-full text-left text-xs font-mono">
+      <div class="overflow-x-auto my-6 rounded-2xl border border-white/10 bg-[#0c0f18] p-1">
+        <table class="w-full text-left text-xs font-mono">
           <thead>
-            <tr className="border-b border-white/10 bg-white/5 text-amber-400 font-bold">
-              <th className="p-3">User Height</th>
-              <th className="p-3">Seated Desk Height</th>
-              <th className="p-3">Standing Desk Height</th>
-              <th className="p-3">Monitor Center Level</th>
+            <tr class="border-b border-white/10 bg-white/5 text-amber-400 font-bold">
+              <th class="p-3">User Height</th>
+              <th class="p-3">Seated Desk Height</th>
+              <th class="p-3">Standing Desk Height</th>
+              <th class="p-3">Monitor Center Level</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/05 text-slate-300">
+          <tbody class="divide-y divide-white/5 text-slate-300">
             <tr>
-              <td className="p-3 font-bold text-white">5ft 0in (152 cm)</td>
-              <td className="p-3">22.5 - 23.5 in</td>
-              <td className="p-3">37.0 - 38.5 in</td>
-              <td className="p-3">39.0 in from floor</td>
+              <td class="p-3 font-bold text-white">5ft 0in (152 cm)</td>
+              <td class="p-3">22.5 - 23.5 in</td>
+              <td class="p-3">37.0 - 38.5 in</td>
+              <td class="p-3">39.0 in from floor</td>
             </tr>
-            <tr className="bg-white/[0.02]">
-              <td className="p-3 font-bold text-white">5ft 4in (163 cm)</td>
-              <td className="p-3">24.0 - 25.0 in</td>
-              <td className="p-3">39.5 - 41.0 in</td>
-              <td className="p-3">42.0 in from floor</td>
-            </tr>
-            <tr>
-              <td className="p-3 font-bold text-white">5ft 8in (173 cm)</td>
-              <td className="p-3">25.5 - 26.5 in</td>
-              <td className="p-3">42.0 - 43.5 in</td>
-              <td className="p-3">45.0 in from floor</td>
-            </tr>
-            <tr className="bg-amber-400/10 text-amber-200">
-              <td className="p-3 font-bold text-amber-400">5ft 10in (178 cm)</td>
-              <td className="p-3 font-bold">26.5 - 27.5 in</td>
-              <td className="p-3 font-bold">43.5 - 45.0 in</td>
-              <td className="p-3 font-bold">46.5 in from floor</td>
+            <tr class="bg-white/[0.02]">
+              <td class="p-3 font-bold text-white">5ft 4in (163 cm)</td>
+              <td class="p-3">24.0 - 25.0 in</td>
+              <td class="p-3">39.5 - 41.0 in</td>
+              <td class="p-3">42.0 in from floor</td>
             </tr>
             <tr>
-              <td className="p-3 font-bold text-white">6ft 0in (183 cm)</td>
-              <td className="p-3">27.5 - 28.5 in</td>
-              <td className="p-3">45.0 - 46.5 in</td>
-              <td className="p-3">48.0 in from floor</td>
+              <td class="p-3 font-bold text-white">5ft 8in (173 cm)</td>
+              <td class="p-3">25.5 - 26.5 in</td>
+              <td class="p-3">42.0 - 43.5 in</td>
+              <td class="p-3">45.0 in from floor</td>
             </tr>
-            <tr className="bg-white/[0.02]">
-              <td className="p-3 font-bold text-white">6ft 4in (193 cm)</td>
-              <td className="p-3">29.0 - 30.5 in</td>
-              <td className="p-3">47.5 - 49.0 in</td>
-              <td className="p-3">51.0 in from floor</td>
+            <tr class="bg-amber-400/10 text-amber-200">
+              <td class="p-3 font-bold text-amber-400">5ft 10in (178 cm)</td>
+              <td class="p-3 font-bold">26.5 - 27.5 in</td>
+              <td class="p-3 font-bold">43.5 - 45.0 in</td>
+              <td class="p-3 font-bold">46.5 in from floor</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">6ft 0in (183 cm)</td>
+              <td class="p-3">27.5 - 28.5 in</td>
+              <td class="p-3">45.0 - 46.5 in</td>
+              <td class="p-3">48.0 in from floor</td>
+            </tr>
+            <tr class="bg-white/[0.02]">
+              <td class="p-3 font-bold text-white">6ft 4in (193 cm)</td>
+              <td class="p-3">29.0 - 30.5 in</td>
+              <td class="p-3">47.5 - 49.0 in</td>
+              <td class="p-3">51.0 in from floor</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1000&q=80"
           alt="Ergonomic dual monitor arrangement elevated on heavy gauge aluminum riser shelf to align with natural horizontal eye level"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 1: Elevating your primary visual display by 3.5 to 4 inches brings the top third of the panel directly in line with resting gaze, preventing forward cervical spine flexion.
         </figcaption>
       </figure>
 
-      <h2 id="monitor-elevation" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="monitor-elevation" class="text-2xl font-black text-white mt-10 mb-4">
         Optical Line-of-Sight &amp; Cervical Spine Mechanics
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         The average adult head weighs between <strong>10 and 12 pounds (4.5 to 5.4 kg)</strong> in a neutral vertical posture. Research published by spine surgeon Dr. Kenneth Hansraj demonstrated that when the neck flexes forward by just 15 degrees, gravitational force across the cervical vertebrae spikes to <strong>27 pounds (12 kg)</strong>. At 30 degrees, it hits <strong>40 pounds (18 kg)</strong>.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         When monitors rest flat on standard desk surfaces, users look downward at a 25 to 35 degree angle. Over months of 8-hour daily coding or writing sessions, this produces chronic "text neck", disc degeneration, and suboccipital muscular spasms.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
-        The architectural solution is simple: raise the display using a rigid aluminum monitor shelf (such as our <a href="/#catalog" className="text-amber-400 underline font-medium">Curved Matte Black Aluminum Monitor Riser Shelf</a>) so that your resting horizontal eye line intersects the upper 30% border of the monitor glass.
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
+        The architectural solution is simple: raise the display using a rigid aluminum monitor shelf (such as our <a href="/#catalog" class="text-amber-400 underline font-medium">Curved Matte Black Aluminum Monitor Riser Shelf</a>) so that your resting horizontal eye line intersects the upper 30% border of the monitor glass.
       </p>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=1000&q=80"
           alt="Ergonomic mechanical keyboard setup with split aluminum wrist rests supporting neutral tendon posture"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 2: A bead-blasted aluminum split wrist rest prevents carpal tunnel compression by maintaining a neutral 0-degree angle between the forearm and palm.
         </figcaption>
       </figure>
 
-      <h2 id="wrist-mechanics" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="wrist-mechanics" class="text-2xl font-black text-white mt-10 mb-4">
         Carpal Tunnel Prevention &amp; Split Wrist Support
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Modern mechanical keyboards feature thick cases and Cherry/Gateron switch profiles that sit anywhere from 18mm to 24mm above the desk mat. Resting bare wrists on the desk surface while typing on high-profile mechanical switches forces wrists into severe upward angle extension (dorsiflexion).
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
-        By introducing a precision-machined <a href="/#catalog" className="text-amber-400 underline font-medium">Aerospace Aluminum Split Wrist Rest</a>, you bridge that 18mm elevation delta. The palm rests gently on a smooth anodized bead-blasted surface while the finger pads drop naturally onto keycaps in a relaxed, neutral arc, completely decompressing the transverse carpal ligament.
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
+        By introducing a precision-machined <a href="/#catalog" class="text-amber-400 underline font-medium">Aerospace Aluminum Split Wrist Rest</a>, you bridge that 18mm elevation delta. The palm rests gently on a smooth anodized bead-blasted surface while the finger pads drop naturally onto keycaps in a relaxed, neutral arc, completely decompressing the transverse carpal ligament.
       </p>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1000&q=80"
           alt="Clean vertical dual slot CNC aluminum laptop stand decluttering desktop real estate"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 3: Stowing primary compute hardware in a dual-slot CNC vertical dock reclaims 78% of desk real estate while facilitating 360-degree convection cooling.
         </figcaption>
       </figure>
 
-      <h2 id="cable-management" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="cable-management" class="text-2xl font-black text-white mt-10 mb-4">
         Under-Desk Kinetic Flow &amp; Cable Articulation
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Standing desks present a mechanical challenge that static desks never faced: vertical travel range. When an electric sit-stand desk moves through 18 inches of vertical travel, rigid zip-ties and cheap adhesive clips yank power bricks, unplug monitor display cables, or drape cords in messy floor loops.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
-        An <a href="/#catalog" className="text-amber-400 underline font-medium">Articulated Magnetic Under-Desk Cable Organizer</a> uses independent vertebral quad-channels that snake effortlessly up and down. The magnetic mounting base anchors firmly to steel desk legs without drilling, maintaining a pristine, architectural zero-cable aesthetic at all heights.
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
+        An <a href="/#catalog" class="text-amber-400 underline font-medium">Articulated Magnetic Under-Desk Cable Organizer</a> uses independent vertebral quad-channels that snake effortlessly up and down. The magnetic mounting base anchors firmly to steel desk legs without drilling, maintaining a pristine, architectural zero-cable aesthetic at all heights.
       </p>
 
-      <div className="my-8 p-5 rounded-2xl border border-amber-400/30 bg-amber-400/05 text-left">
-        <h3 className="text-sm font-bold font-mono uppercase text-amber-400 tracking-wider mb-2">
+      <div class="my-8 p-5 rounded-2xl border border-amber-400/30 bg-amber-400/5 text-left">
+        <h3 class="text-sm font-bold font-mono uppercase text-amber-400 tracking-wider mb-2">
           ⚡ Interactive Setup Recommendation
         </h3>
-        <p className="text-xs text-slate-300 leading-relaxed font-light mb-3">
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
           Want to test how these physical objects harmonize together on your exact desk dimension? Use our interactive 3-Piece Setup Studio to bundle monitor risers, split wrist rests, and ambient optical light bars with live price calculation:
         </p>
         <a
           href="/#setup-builder"
-          className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
+          class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
         >
           <span>Launch Interactive 3-Piece Setup Studio &rarr;</span>
         </a>
       </div>
 
-      <h2 id="scientific-references" className="text-2xl font-black text-white mt-12 mb-4">
+      <h2 id="scientific-references" class="text-2xl font-black text-white mt-12 mb-4">
         Scientific References &amp; Industry Standards
       </h2>
-      <ul className="space-y-2 text-xs font-mono text-slate-400 pl-4 border-l-2 border-amber-400/40">
-        <li>[1] OSHA Computer Workstations eTool: Evaluation Checklist &amp; Anthropometry (<a href="https://www.osha.gov/etools/computer-workstations" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">osha.gov</a>)</li>
-        <li>[2] ISO 9241-5:1998 Ergonomic Requirements for Office Work with Visual Display Terminals (<a href="https://www.iso.org/standard/25263.html" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">iso.org</a>)</li>
+      <ul class="space-y-2 text-xs font-mono text-slate-400 pl-4 border-l-2 border-amber-400/40">
+        <li>[1] OSHA Computer Workstations eTool: Evaluation Checklist &amp; Anthropometry (<a href="https://www.osha.gov/etools/computer-workstations" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">osha.gov</a>)</li>
+        <li>[2] ISO 9241-5:1998 Ergonomic Requirements for Office Work with Visual Display Terminals (<a href="https://www.iso.org/standard/25263.html" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">iso.org</a>)</li>
         <li>[3] Hansraj KK. Assessment of Stresses in the Cervical Spine Caused by Posture and Position of the Head. <em>Surg Technol Int</em>. 2014;25:277-279.</li>
-        <li>[4] Cornell University Ergonomics Web (CUErgo): 10 Principles of Ergonomic Workstation Design (<a href="https://ergo.human.cornell.edu" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">cornell.edu</a>)</li>
+        <li>[4] Cornell University Ergonomics Web (CUErgo): 10 Principles of Ergonomic Workstation Design (<a href="https://ergo.human.cornell.edu" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">cornell.edu</a>)</li>
       </ul>
     `,
     faqs: [
@@ -463,178 +463,178 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
     contentHtml: `
-      <div id="ai-overview" className="my-6 p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/05 to-transparent border border-amber-400/20 text-left">
-        <div className="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">
+      <div id="ai-overview" class="my-6 p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-400/5 to-transparent border border-amber-400/20 text-left">
+        <div class="flex items-center gap-2 text-xs font-mono font-bold text-amber-400 uppercase tracking-widest mb-2">
           <span>AI Overview &amp; Optical Physics Summary</span>
         </div>
-        <p className="text-sm text-slate-200 leading-relaxed font-light">
+        <p class="text-sm text-slate-200 leading-relaxed font-light">
           <strong>The Fundamental Optical Problem:</strong> Traditional desk lamps emit omnidirectional light. According to the law of reflection (angle of incidence equals angle of reflection), light striking a glass or matte computer monitor reflects directly into the user's retinas as <em>discomfort glare</em>. 
           A monitor light bar solves this through <strong>asymmetric optical refraction</strong>: an internal elliptical reflector directs light strictly downward at a 45-degree angle in front of the screen, creating a focused 500 Lux task zone on the desk while keeping the display glass completely glare-free.
         </p>
       </div>
 
-      <h2 id="snell-law-specular-glare" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="snell-law-specular-glare" class="text-2xl font-black text-white mt-10 mb-4">
         Snell Law &amp; Specular Reflection: Why Traditional Lamps Blind Screens
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         To understand why standard gooseneck and architectural desk lamps cause eye fatigue during computer work, we must examine the physics of light reflection. When a ray of light strikes an interface between two media (air and display glass), reflection occurs according to Fresnel equations.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Traditional desk lamps position the luminous element either to the side or behind the monitor. Because traditional lamps broadcast light across a wide 120-degree cone, rays inevitably hit the monitor panel. Even on high-end anti-glare matte displays, these photons undergo diffuse scattering, washing out black levels, destroying contrast ratios, and causing the ciliary muscles inside the human eye to constantly strain to resolve blurry text.
       </p>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1000&q=80"
           alt="Curved monitor screenbar casting focused asymmetric beam onto workspace with zero screen reflection"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 1: Asymmetric optical refraction directs all photons forward and downward, creating a 500 Lux task zone while leaving the LCD panel in optical shadow.
         </figcaption>
       </figure>
 
-      <h2 id="contrast-ratio-fatigue" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="contrast-ratio-fatigue" class="text-2xl font-black text-white mt-10 mb-4">
         The 1:3 Contrast Ratio &amp; Pupillary Oscillation Fatigue
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Many professionals attempt to fix glare by turning off all room lights and working in pitch darkness with only the bright monitor illuminating their faces. From an ophthalmological perspective, this is the most damaging setup possible.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         The human pupil adjusts its aperture based on the total ambient luminance in your field of view. When your monitor blasts 250 nits of light into your central fovea while your peripheral field is at 0 nits, your pupil experiences <strong>pupillary oscillation (hippus)</strong>: your iris muscles expand and contract hundreds of times per hour as you look between your bright screen, your dark keyboard, and your surroundings.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         The <em>Illuminating Engineering Society (IES)</em> recommends a maximum luminance ratio of <strong>1:3</strong> between the task area (desk surface) and immediate surroundings. A mounted ScreenBar elevates your desktop illuminance to 500 Lux, matching monitor brightness and allowing your iris muscles to rest in a stable, relaxed state.
       </p>
 
-      <h2 id="comparison-matrix" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="comparison-matrix" class="text-2xl font-black text-white mt-10 mb-4">
         Optical Comparison Matrix: ScreenBar vs Desk Lamp vs Ceiling Light
       </h2>
 
-      <div className="overflow-x-auto my-6 rounded-2xl border border-white/10 bg-[#0c0f18] p-1">
-        <table className="w-full text-left text-xs font-mono">
+      <div class="overflow-x-auto my-6 rounded-2xl border border-white/10 bg-[#0c0f18] p-1">
+        <table class="w-full text-left text-xs font-mono">
           <thead>
-            <tr className="border-b border-white/10 bg-white/5 text-amber-400 font-bold">
-              <th className="p-3">Optical Metric</th>
-              <th className="p-3">Asymmetric ScreenBar</th>
-              <th className="p-3">Traditional Desk Lamp</th>
-              <th className="p-3">Ceiling Recessed Can</th>
+            <tr class="border-b border-white/10 bg-white/5 text-amber-400 font-bold">
+              <th class="p-3">Optical Metric</th>
+              <th class="p-3">Asymmetric ScreenBar</th>
+              <th class="p-3">Traditional Desk Lamp</th>
+              <th class="p-3">Ceiling Recessed Can</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-white/05 text-slate-300">
+          <tbody class="divide-y divide-white/5 text-slate-300">
             <tr>
-              <td className="p-3 font-bold text-white">Screen Glare / Reflection</td>
-              <td className="p-3 font-bold text-emerald-400">0% (Completely Glare-Free)</td>
-              <td className="p-3 text-rose-400">High (Direct &amp; Diffuse Glare)</td>
-              <td className="p-3 text-amber-300">Moderate (Top Glass Reflection)</td>
+              <td class="p-3 font-bold text-white">Screen Glare / Reflection</td>
+              <td class="p-3 font-bold text-emerald-400">0% (Completely Glare-Free)</td>
+              <td class="p-3 text-rose-400">High (Direct &amp; Diffuse Glare)</td>
+              <td class="p-3 text-amber-300">Moderate (Top Glass Reflection)</td>
             </tr>
-            <tr className="bg-white/[0.02]">
-              <td className="p-3 font-bold text-white">Desktop Illuminance</td>
-              <td className="p-3 font-bold text-white">450 - 550 Lux (IES Target)</td>
-              <td className="p-3">200 - 800 Lux (Uneven Hotspot)</td>
-              <td className="p-3">150 - 250 Lux (Insufficient Task Light)</td>
-            </tr>
-            <tr>
-              <td className="p-3 font-bold text-white">Color Rendering Index (CRI)</td>
-              <td className="p-3 font-bold text-emerald-400">Ra 95+ (True Color Fidelity)</td>
-              <td className="p-3">Ra 75 - 85 (Color Distortion)</td>
-              <td className="p-3">Ra 80 (Standard Commercial)</td>
-            </tr>
-            <tr className="bg-white/[0.02]">
-              <td className="p-3 font-bold text-white">Desk Real Estate Reclaimed</td>
-              <td className="p-3 font-bold text-emerald-400">100% (Mounted on Monitor)</td>
-              <td className="p-3 text-rose-400">Takes 20 - 45 sq inches of desk</td>
-              <td className="p-3">100%</td>
+            <tr class="bg-white/[0.02]">
+              <td class="p-3 font-bold text-white">Desktop Illuminance</td>
+              <td class="p-3 font-bold text-white">450 - 550 Lux (IES Target)</td>
+              <td class="p-3">200 - 800 Lux (Uneven Hotspot)</td>
+              <td class="p-3">150 - 250 Lux (Insufficient Task Light)</td>
             </tr>
             <tr>
-              <td className="p-3 font-bold text-white">Flicker Metric (Pst LM)</td>
-              <td className="p-3 font-bold text-emerald-400">&lt; 0.05 (Constant-Current DC)</td>
-              <td className="p-3 text-rose-400">Variable (PWM Stroboscopic)</td>
-              <td className="p-3 text-amber-300">Variable (AC 50/60Hz Ripple)</td>
+              <td class="p-3 font-bold text-white">Color Rendering Index (CRI)</td>
+              <td class="p-3 font-bold text-emerald-400">Ra 95+ (True Color Fidelity)</td>
+              <td class="p-3">Ra 75 - 85 (Color Distortion)</td>
+              <td class="p-3">Ra 80 (Standard Commercial)</td>
+            </tr>
+            <tr class="bg-white/[0.02]">
+              <td class="p-3 font-bold text-white">Desk Real Estate Reclaimed</td>
+              <td class="p-3 font-bold text-emerald-400">100% (Mounted on Monitor)</td>
+              <td class="p-3 text-rose-400">Takes 20 - 45 sq inches of desk</td>
+              <td class="p-3">100%</td>
+            </tr>
+            <tr>
+              <td class="p-3 font-bold text-white">Flicker Metric (Pst LM)</td>
+              <td class="p-3 font-bold text-emerald-400">&lt; 0.05 (Constant-Current DC)</td>
+              <td class="p-3 text-rose-400">Variable (PWM Stroboscopic)</td>
+              <td class="p-3 text-amber-300">Variable (AC 50/60Hz Ripple)</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80"
           alt="Warm amber sunset atmosphere projection creating diffused bias lighting on back wall"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 2: Projecting warm 2700K ambient bias illumination behind displays balances the luminance ratio, relieving iris muscle contraction in dark rooms.
         </figcaption>
       </figure>
 
-      <h2 id="curved-vs-flat" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="curved-vs-flat" class="text-2xl font-black text-white mt-10 mb-4">
         Curved vs Flat Monitors: The Geometry of ScreenBar Clamps
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         As ultrawide curved monitors (1000R, 1500R, and 1800R curvatures) became popular among software engineers and financial analysts, standard straight light bars faced a geometric obstacle: because the edges of a curved monitor arc inward toward the user, a straight light bar would illuminate the top left and right corners of the monitor glass.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
-        Our recommended <a href="/#catalog" className="text-amber-400 underline font-medium">Curved ScreenBar Monitor Desk Light</a> solves this through an engineered 1000R arc curvature that mirrors your display's contour. The weighted gravity pivot clamp rests securely on back bezels from 0.4 to 1.8 inches thick without putting mechanical pressure on fragile LCD panels.
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
+        Our recommended <a href="/#catalog" class="text-amber-400 underline font-medium">Curved ScreenBar Monitor Desk Light</a> solves this through an engineered 1000R arc curvature that mirrors your display's contour. The weighted gravity pivot clamp rests securely on back bezels from 0.4 to 1.8 inches thick without putting mechanical pressure on fragile LCD panels.
       </p>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1000&q=80"
           alt="Sound reactive RGB flow rhythm bar providing soft peripheral accent illumination"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 3: Synchronized 32-bit peripheral spectrum lighting breaks harsh monitor edge contrast without causing specular glare.
         </figcaption>
       </figure>
 
-      <h2 id="color-temp-melatonin" className="text-2xl font-black text-white mt-10 mb-4">
+      <h2 id="color-temp-melatonin" class="text-2xl font-black text-white mt-10 mb-4">
         Kelvin Color Temperature &amp; Circadian Rhythm Protection
       </h2>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Your eyes contain intrinsically photosensitive retinal ganglion cells (ipRGCs) that regulate melatonin synthesis and circadian timing. These cells are extraordinarily sensitive to short-wavelength blue photons peaking around 460nm to 480nm.
       </p>
-      <p className="text-sm text-slate-300 leading-relaxed font-light mb-4">
+      <p class="text-sm text-slate-300 leading-relaxed font-light mb-4">
         Working under 6500K daylight white after 7:00 PM halts melatonin secretion, delaying REM sleep cycles by up to 2.5 hours. High-end monitor screenbars feature dual-color temperature LED matrices that smoothly transition from an energizing 6000K crisp cool white during daytime focus blocks down to a soothing 2700K candle warm amber at night.
       </p>
 
-      <figure className="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
+      <figure class="my-8 rounded-2xl overflow-hidden border border-white/10 bg-[#0d101b]">
         <img
           src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1000&q=80"
           alt="Ultrasonic fireplace flame mist aroma diffuser humidifying dry desktop workspace"
-          className="w-full h-auto object-cover"
+          class="w-full h-auto object-cover"
           loading="lazy"
         />
-        <figcaption className="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
+        <figcaption class="p-3 text-xs text-slate-400 font-mono text-center border-t border-white/10">
           Figure 4: Computer users experience a 66% reduction in blink rate. Ultrasonic mist diffusion maintains 45% ambient humidity, combating tear film evaporation.
         </figcaption>
       </figure>
 
-      <div className="my-8 p-5 rounded-2xl border border-amber-400/30 bg-amber-400/05 text-left">
-        <h3 className="text-sm font-bold font-mono uppercase text-amber-400 tracking-wider mb-2">
+      <div class="my-8 p-5 rounded-2xl border border-amber-400/30 bg-amber-400/5 text-left">
+        <h3 class="text-sm font-bold font-mono uppercase text-amber-400 tracking-wider mb-2">
           ⚡ Companion Setup Guide
         </h3>
-        <p className="text-xs text-slate-300 leading-relaxed font-light mb-3">
+        <p class="text-xs text-slate-300 leading-relaxed font-light mb-3">
           Perfect lighting is only half the battle. Pair your asymmetric lighting setup with our complete ergonomic desk height blueprint to eliminate neck strain and wrist fatigue:
         </p>
         <a
           href="/blog/ergonomic-desk-height-calculator-workspace-architecture-guide"
-          className="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
+          class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
         >
           <span>Read The 2026 Ergonomic Desk Height Blueprint &rarr;</span>
         </a>
       </div>
 
-      <h2 id="scientific-references" className="text-2xl font-black text-white mt-12 mb-4">
+      <h2 id="scientific-references" class="text-2xl font-black text-white mt-12 mb-4">
         Scientific References &amp; Optical Standards
       </h2>
-      <ul className="space-y-2 text-xs font-mono text-slate-400 pl-4 border-l-2 border-amber-400/40">
-        <li>[1] IES RP-1-20: Recommended Practice for Office Lighting. Illuminating Engineering Society (<a href="https://www.ies.org" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">ies.org</a>)</li>
+      <ul class="space-y-2 text-xs font-mono text-slate-400 pl-4 border-l-2 border-amber-400/40">
+        <li>[1] IES RP-1-20: Recommended Practice for Office Lighting. Illuminating Engineering Society (<a href="https://www.ies.org" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">ies.org</a>)</li>
         <li>[2] Blehm C, Vishnu S, Khattak A, Mitra S, Yee RW. Computer Vision Syndrome: A Review. <em>Surv Ophthalmol</em>. 2005;50(3):253-262.</li>
-        <li>[3] CIE 117-1995: Discomfort Glare in Interior Lighting. International Commission on Illumination (<a href="https://cie.co.at" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline">cie.co.at</a>)</li>
+        <li>[3] CIE 117-1995: Discomfort Glare in Interior Lighting. International Commission on Illumination (<a href="https://cie.co.at" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">cie.co.at</a>)</li>
         <li>[4] Brainard GC, Hanifin JP, Greeson JM, et al. Action Spectrum for Melatonin Regulation in Humans. <em>J Neurosci</em>. 2001;21(16):6405-6412.</li>
       </ul>
     `,

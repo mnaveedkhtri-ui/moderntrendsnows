@@ -7,6 +7,10 @@
   --foreground: #f4f5f7;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
@@ -57,3 +61,222 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* World-Class Editorial Blog Typography & Component Styling */
+.blog-prose {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  font-weight: 300;
+}
+
+.blog-prose h2 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  scroll-margin-top: 6rem;
+  letter-spacing: -0.025em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .blog-prose h2 {
+    font-size: 2.15rem;
+  }
+}
+
+.blog-prose h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #fbbf24;
+  margin-top: 2.25rem;
+  margin-bottom: 0.85rem;
+  scroll-margin-top: 6rem;
+  letter-spacing: -0.015em;
+}
+
+.blog-prose p {
+  margin-bottom: 1.35rem;
+  color: #cbd5e1;
+}
+
+.blog-prose strong,
+.blog-prose b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.blog-prose a {
+  color: #fbbf24;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.blog-prose a:hover {
+  color: #fde68a;
+}
+
+.blog-prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.75;
+}
+
+.blog-prose li strong {
+  color: #fbbf24;
+}
+
+.blog-prose blockquote {
+  margin: 1.75rem 0;
+  padding: 1.15rem 1.35rem;
+  border-left: 4px solid #f59e0b;
+  background-color: rgba(245, 158, 11, 0.06);
+  border-radius: 0 0.85rem 0.85rem 0;
+  font-style: italic;
+  color: #e2e8f0;
+}
+
+.blog-prose figure {
+  margin: 2.5rem 0;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #0c0e16;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.7);
+}
+
+.blog-prose figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-prose figure:hover img {
+  transform: scale(1.015);
+}
+
+.blog-prose figcaption {
+  padding: 0.85rem 1.15rem;
+  font-size: 0.78rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: #94a3b8;
+  background-color: #080a11;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  line-height: 1.5;
+}
+
+.blog-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.blog-prose th {
+  padding: 0.9rem 1.15rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fbbf24;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-prose td {
+  padding: 0.9rem 1.15rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.blog-prose tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.blog-prose tr:hover {
+  background-color: rgba(245, 158, 11, 0.04);
+}
+
+/* AI Overview Hero Callout */
+.blog-prose #ai-overview {
+  margin: 2rem 0 2.5rem 0;
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(12, 15, 24, 0.95) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  box-shadow: 0 12px 30px -10px rgba(245, 158, 11, 0.2);
+}
+
+.blog-prose #ai-overview span {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #fbbf24;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.blog-prose #ai-overview p {
+  color: #f1f5f9;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-prose #ai-overview ul {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.blog-prose #ai-overview li {
+  color: #e2e8f0;
+  font-size: 0.92rem;
+  margin-bottom: 0.45rem;
+}
+
+.blog-prose #ai-overview li strong {
+  color: #fbbf24;
+}
+
+/* Scientific Reference List */
+.blog-prose ol {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.blog-prose ol li {
+  margin-bottom: 0.75rem;
+}
+
+.blog-prose ol a {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
+
