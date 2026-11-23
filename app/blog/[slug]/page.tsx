@@ -166,6 +166,39 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     })),
   };
 
+  const imageGallerySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageGallery',
+    name: `${post.title} - Visual Architecture and Diagrams`,
+    url: pageUrl,
+    image: [
+      {
+        '@type': 'ImageObject',
+        contentUrl: post.coverImage,
+        name: post.coverImageAlt,
+        description: post.coverImageAlt,
+        width: 1200,
+        height: 630,
+        author: {
+          '@type': 'Person',
+          name: post.author.name,
+        },
+      },
+      ...(post.inArticleImages ? post.inArticleImages.map((img) => ({
+        '@type': 'ImageObject',
+        contentUrl: img.url,
+        name: img.alt,
+        description: img.caption,
+        width: img.width,
+        height: img.height,
+        author: {
+          '@type': 'Person',
+          name: post.author.name,
+        },
+      })) : []),
+    ],
+  };
+
   const howToSchema = post.slug === 'standing-desk-cable-management-tray-guide' ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -226,6 +259,10 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGallerySchema) }}
       />
       {post.faqs.length > 0 && (
         <script
