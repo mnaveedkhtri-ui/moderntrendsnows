@@ -47,7 +47,7 @@ export async function GET() {
 
     return `    <item>
       <title><![CDATA[${safeTitle}]]></title>
-      <link>${baseUrl}#catalog</link>
+      <link>${baseUrl}/#product-${product.id}</link>
       <guid isPermaLink="false">${product.id}-2026</guid>
       <pubDate>${date}</pubDate>
       <description><![CDATA[${cleanDescription}]]></description>

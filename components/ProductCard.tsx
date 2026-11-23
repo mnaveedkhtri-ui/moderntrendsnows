@@ -29,7 +29,10 @@ export default function ProductCard({
   );
 
   return (
-    <div className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c0f18] p-3 sm:p-4 text-left transition-all duration-300 hover:border-amber-400/50 hover:bg-[#101422] hover:shadow-2xl hover:shadow-amber-500/10">
+    <div 
+      id={`product-${product.id}`}
+      className="group relative flex flex-col justify-between rounded-2xl border border-white/10 bg-[#0c0f18] p-3 sm:p-4 text-left transition-all duration-300 hover:border-amber-400/50 hover:bg-[#101422] hover:shadow-2xl hover:shadow-amber-500/10 scroll-mt-28"
+    >
       
       <div>
         {/* Product Image Container */}

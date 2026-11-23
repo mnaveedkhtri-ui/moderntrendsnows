@@ -50,7 +50,7 @@ productMatches.forEach(p => {
     imageUrl,
     board,
     cleanDesc,
-    `https://www.moderntrendsnow.store#catalog`
+    `https://www.moderntrendsnow.store/#product-${id}`
   ]);
 });
 
