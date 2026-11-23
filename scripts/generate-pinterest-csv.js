@@ -10,7 +10,7 @@ const blogTs = fs.readFileSync(blogPath, 'utf8');
 
 // Simple regex parser for products and blog posts to ensure robust execution without ts-node
 const productMatches = [...productsTs.matchAll(/id:\s*'([^']+)',\s*title:\s*'([^']+)',\s*category:\s*'([^']+)',\s*tagline:\s*'([^']+)',\s*description:\s*'([^']+)',[\s\S]*?imageUrl:\s*'([^']+)',/g)];
-const blogMatches = [...blogTs.matchAll(/slug:\s*'([^']+)',\s*title:\s*'([^']+)',[\s\S]*?metaDescription:\s*'([^']+)',[\s\S]*?coverImage:\s*'([^']+)',/g)];
+const blogMatches = [...blogTs.matchAll(/["']?slug["']?:\s*['"]([^'"]+)['"],\s*["']?title["']?:\s*['"]([^'"]+)['"],[\s\S]*?["']?metaDescription["']?:\s*['"]([^'"]+)['"],[\s\S]*?["']?coverImage["']?:\s*['"]([^'"]+)['"],/g)];
 
 console.log(`Parsed ${productMatches.length} products and ${blogMatches.length} blogs.`);
 
