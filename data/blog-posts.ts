@@ -79,7 +79,7 @@ export const BLOG_POSTS: BlogPost[] = [
     inArticleImages: [
       {
         id: 'monitor-riser-posture',
-        url: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=80',
         alt: 'Ergonomic dual monitor arrangement elevated on heavy gauge aluminum riser shelf to align with natural horizontal eye level',
         caption: 'Figure 1: Elevating your primary visual display by 3.5 to 4 inches brings the top third of the panel directly in line with resting gaze, preventing forward cervical spine flexion.',
         width: 1000,
@@ -95,7 +95,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         id: 'vertical-dock-airflow',
-        url: 'https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1000&q=80',
         alt: 'Clean vertical dual slot CNC aluminum laptop stand decluttering desktop real estate',
         caption: 'Figure 3: Stowing primary compute hardware in a dual-slot CNC vertical dock reclaims 78% of desk real estate while facilitating 360-degree convection cooling.',
         width: 1000,
@@ -384,7 +384,7 @@ export const BLOG_POSTS: BlogPost[] = [
       role: 'Principal Spatial Curator & Software Architect',
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
     },
-    coverImage: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1200&q=85',
+    coverImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1200&q=85',
     coverImageAlt: 'Asymmetric curved monitor screenbar casting focused warm luminous beam across mechanical keyboard with zero glare on display',
     aiOverviewSnippet: 'A monitor light bar (ScreenBar) prevents eye strain far better than a traditional desk lamp because of asymmetric optical beam engineering. Unlike traditional lamps that radiate omnidirectional light causing intense specular reflection and glare on glass screens, a ScreenBar utilizes an angled precision reflector (typically 45 degrees) that casts light exclusively downward onto the desk surface, with zero direct rays striking the monitor panel. This maintains an optimal 1:3 luminance ratio between screen and surroundings, preventing pupillary oscillation fatigue.',
     focusKeywords: [
@@ -405,7 +405,7 @@ export const BLOG_POSTS: BlogPost[] = [
       },
       {
         id: 'ambient-bias-lighting',
-        url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80',
+        url: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1000&q=80',
         alt: 'Warm amber sunset atmosphere projection creating diffused bias lighting on back wall',
         caption: 'Figure 2: Projecting warm 2700K ambient bias illumination behind displays balances the luminance ratio, relieving iris muscle contraction in dark rooms.',
         width: 1000,
@@ -704,7 +704,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "role": "Principal Spatial Curator and Software Architect",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
     },
-    "coverImage": "https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1200&q=85",
+    "coverImage": "https://images.unsplash.com/photo-1616469829941-c7200edec809?auto=format&fit=crop&w=1200&q=85",
     "coverImageAlt": "Clean under-desk standing desk workstation with organized cables routed through magnetic spine and steel raceway tray",
     "aiOverviewSnippet": "To properly organize cables on a standing desk, you must transition all desktop peripherals into a single under-desk cable management tray and use an articulated cable spine for the single wall power drop. Raise your desk to maximum standing height (typically 48 inches) before measuring cable length. Maintain an 18 to 22 inch slack loop near the floor to ensure cords never stretch, tug, or disconnect electric motors when transitioning between seated and standing positions.",
     "focusKeywords": [
@@ -845,7 +845,7 @@ export const BLOG_POSTS: BlogPost[] = [
       "role": "Principal Spatial Curator and Software Architect",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"
     },
-    "coverImage": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=1200&q=85",
+    "coverImage": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=1200&q=85",
     "coverImageAlt": "Premium full-grain leather desk mat and suede microfiber tech valet on solid walnut workstation",
     "aiOverviewSnippet": "The primary difference between leather and suede lies in the layer of animal hide used: leather (top-grain or full-grain) utilizes the outer epidermal grain containing tightly packed collagen fibers, making it waterproof, smooth, and easy to clean. Suede is crafted from the inner flesh split layer of the hide, featuring an open, velvety nap that provides superior acoustic dampening and tactile warmth but is highly susceptible to liquid stains and oil absorption. For computer workspaces, dual-sided desk mats offering smooth leather on top and suede felt underneath provide the ideal balance between mouse glide and desk grip.",
     "focusKeywords": [
