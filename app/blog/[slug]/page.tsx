@@ -92,8 +92,8 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     return acc;
   }, []);
 
-  // Related posts
-  const relatedPosts = BLOG_POSTS.filter((p) => post.relatedSlugs.includes(p.slug) || p.slug !== post.slug).slice(0, 2);
+  // Related posts (complete topic cluster mesh)
+  const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug && (post.relatedSlugs?.includes(p.slug) || true)).slice(0, 3);
 
   // Structured Data Schemas
   const articleSchema = {
@@ -515,6 +515,46 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                             {faq.answer}
                           </p>
                         </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {/* Authoritative Citations & Standards (E-E-A-T) */}
+                {post.externalReferences && post.externalReferences.length > 0 && (
+                  <section className="mt-14 pt-8 border-t border-white/10 space-y-4">
+                    <div className="flex items-center gap-2 text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
+                      <BookOpen className="h-3.5 w-3.5 text-amber-400" />
+                      <span>Academic Standards &amp; Regulatory Citations (E-E-A-T)</span>
+                    </div>
+
+                    <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
+                      Official Literature &amp; Benchmarks
+                    </h3>
+
+                    <p className="text-xs text-slate-400 leading-relaxed font-light mb-4">
+                      Modern Trends Now architectural guides are synthesized from verified industrial standards, peer-reviewed ergonomic datasets, and international regulatory testing frameworks.
+                    </p>
+
+                    <div className="space-y-3">
+                      {post.externalReferences.map((ref, i) => (
+                        <a
+                          key={i}
+                          href={ref.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-start justify-between gap-4 p-4 rounded-xl border border-white/10 bg-[#0c0f18] hover:border-amber-400/40 hover:bg-[#121624] transition group"
+                        >
+                          <div>
+                            <span className="text-[10px] font-mono text-amber-400 font-bold uppercase block mb-0.5">
+                              {ref.institution}
+                            </span>
+                            <span className="text-xs sm:text-sm font-semibold text-slate-200 group-hover:text-white transition">
+                              {ref.title}
+                            </span>
+                          </div>
+                          <ExternalLink className="h-4 w-4 text-slate-500 group-hover:text-amber-400 transition shrink-0 mt-0.5" />
+                        </a>
                       ))}
                     </div>
                   </section>
