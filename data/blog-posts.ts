@@ -324,6 +324,22 @@ export const BLOG_POSTS: BlogPost[] = [
         </a>
       </div>
 
+      
+      <div class="my-8 p-5 rounded-2xl border border-amber-400/30 bg-[#0c0f18] text-left">
+        <h4 class="text-xs font-mono font-bold uppercase text-amber-400 mb-1">
+          Related Engineering Blueprint:
+        </h4>
+        <p class="text-xs text-slate-300 font-light leading-relaxed mb-3">
+          Once your sit-stand desk is set to the correct ergonomic height, prevent power cables from tearing out during elevation with our comprehensive wire management guide.
+        </p>
+        <a
+          href="/blog/standing-desk-cable-management-tray-guide"
+          class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
+        >
+          <span>Read The Standing Desk Cable Management Tray Blueprint &rarr;</span>
+        </a>
+      </div>
+  
       <h2 id="scientific-references" class="text-2xl font-black text-white mt-12 mb-4">
         Scientific References &amp; Industry Standards
       </h2>
@@ -352,7 +368,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: 'Your elbows should form an angle between 90 degrees and 105 degrees (slightly open), with upper arms resting relaxed against your torso. Your forearms should run parallel to the floor, never reaching upward or slumping downward.',
       },
     ],
-    relatedSlugs: ['monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide'],
+    relatedSlugs: ['standing-desk-cable-management-tray-guide', 'monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide'],
   },
   {
     slug: 'monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide',
@@ -632,6 +648,22 @@ export const BLOG_POSTS: BlogPost[] = [
         Scientific References &amp; Optical Standards
       </h2>
       <ul class="space-y-2 text-xs font-mono text-slate-400 pl-4 border-l-2 border-amber-400/40">
+        
+      <div class="my-8 p-5 rounded-2xl border border-amber-400/30 bg-[#0c0f18] text-left">
+        <h4 class="text-xs font-mono font-bold uppercase text-amber-400 mb-1">
+          Related Material Architecture:
+        </h4>
+        <p class="text-xs text-slate-300 font-light leading-relaxed mb-3">
+          Pair your glare-free screenbar lighting with an acoustic focus surface: compare liquid resistance, mouse glide, and typing sound in our material comparison.
+        </p>
+        <a
+          href="/blog/leather-vs-suede-desk-mat-material-comparison-guide"
+          class="inline-flex items-center gap-1.5 text-xs font-mono font-bold text-white hover:text-amber-300 transition"
+        >
+          <span>Read Leather vs Suede: Material Science &amp; Desk Mat Guide &rarr;</span>
+        </a>
+      </div>
+  
         <li>[1] IES RP-1-20: Recommended Practice for Office Lighting. Illuminating Engineering Society (<a href="https://www.ies.org" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">ies.org</a>)</li>
         <li>[2] Blehm C, Vishnu S, Khattak A, Mitra S, Yee RW. Computer Vision Syndrome: A Review. <em>Surv Ophthalmol</em>. 2005;50(3):253-262.</li>
         <li>[3] CIE 117-1995: Discomfort Glare in Interior Lighting. International Commission on Illumination (<a href="https://cie.co.at" target="_blank" rel="noopener noreferrer" class="text-amber-400 underline">cie.co.at</a>)</li>
@@ -656,7 +688,7 @@ export const BLOG_POSTS: BlogPost[] = [
         answer: 'Working in the dark creates an extreme contrast ratio between your 250-nit monitor screen and the 0-nit room darkness. Your pupil dilates and constricts rapidly (pupillary oscillation) every time your gaze shifts, leading to ocular muscle exhaustion, dry corneas, and tension headaches.',
       },
     ],
-    relatedSlugs: ['ergonomic-desk-height-calculator-workspace-architecture-guide'],
+    relatedSlugs: ['leather-vs-suede-desk-mat-material-comparison-guide', 'ergonomic-desk-height-calculator-workspace-architecture-guide'],
   },
   {
     "slug": "standing-desk-cable-management-tray-guide",
