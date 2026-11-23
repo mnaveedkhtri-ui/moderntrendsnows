@@ -56,10 +56,47 @@ export function getStructuredData() {
           priceCurrency: 'USD',
           price: product.price.toFixed(2),
           availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          priceValidUntil: '2027-12-31',
           url: product.amazonUrl,
           seller: {
             '@type': 'Organization',
             name: 'Amazon'
+          },
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'US',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+            merchantReturnDays: 30,
+            returnMethod: 'https://schema.org/ReturnByMail',
+            returnFees: 'https://schema.org/FreeReturn'
+          },
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0.00',
+              currency: 'USD'
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'US'
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 1,
+                unitCode: 'd'
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 1,
+                maxValue: 3,
+                unitCode: 'd'
+              }
+            }
           }
         }
       }
