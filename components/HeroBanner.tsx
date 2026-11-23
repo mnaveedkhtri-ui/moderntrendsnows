@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, ShieldCheck, ExternalLink, Star, Sparkles } from 'lucide-react';
-import { Product } from '../data/products';
+import { Product, PRODUCTS } from '../data/products';
 
 interface HeroBannerProps {
   onShopClick: () => void;
@@ -20,7 +20,7 @@ const HERO_HIGHLIGHTS = [
     rating: 4.9,
     reviewsCount: 890,
     tagline: 'Precision-milled CNC aluminum dock for iPhone StandBy, Apple Watch & AirPods.',
-    imageUrl: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=1200&q=85',
+    imageUrl: 'https://m.media-amazon.com/images/I/71+ykdh2v7L._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=3+in+1+magsafe+charging+station&tag=moderntren08b-20',
     tags: ['CNC 6063 Aluminum', '15W Fast Qi Coils', 'Weighted Anti-Slip Base'],
     reviewer: 'Marcus V. : Austin, TX',
@@ -35,7 +35,7 @@ const HERO_HIGHLIGHTS = [
     rating: 4.8,
     reviewsCount: 3020,
     tagline: 'Zero-glare asymmetric optical beam with stepless touch color temperature control.',
-    imageUrl: 'https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1200&q=85',
+    imageUrl: 'https://m.media-amazon.com/images/I/51p1Ui5sa7L._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=monitor+screenbar+light&tag=moderntren08b-20',
     tags: ['Anti-Reflective Optics', 'Stepless Color Temp', 'USB-C Powered'],
     reviewer: 'David K. : Denver, CO',
@@ -50,7 +50,7 @@ const HERO_HIGHLIGHTS = [
     rating: 4.8,
     reviewsCount: 2150,
     tagline: 'Realistic flickering fireplace flame vapor simulation with soothing essential oils.',
-    imageUrl: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1200&q=85',
+    imageUrl: 'https://m.media-amazon.com/images/I/71tYIoCqXtL._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=flame+air+diffuser+humidifier&tag=moderntren08b-20',
     tags: ['Dual Amber/Blue Flame', 'Ultra-Quiet 20dB', '8-Hour Auto-Off'],
     reviewer: 'Sarah L. : Seattle, WA',
@@ -85,7 +85,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
               <span className="flex h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
               <span className="font-mono uppercase tracking-wider text-[11px]">Vol. 2026 : Curated Desk Archive</span>
               <span className="text-amber-400/50 hidden sm:inline">•</span>
-              <span className="text-amber-200/80 text-[11px] font-mono hidden sm:inline">38 Verified Objects</span>
+              <span className="text-amber-200/80 text-[11px] font-mono hidden sm:inline">{PRODUCTS.length} Verified Objects</span>
             </div>
 
             {/* Main Headline */}
@@ -134,7 +134,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                 onClick={onShopClick}
                 className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-xs sm:text-sm tracking-wide shadow-xl shadow-amber-500/20 hover:from-amber-300 hover:to-amber-400 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2"
               >
-                <span>EXPLORE ALL 22 PRODUCTS</span>
+                <span>EXPLORE ALL {PRODUCTS.length} PRODUCTS</span>
                 <ArrowRight className="h-4 w-4" />
               </button>
 
