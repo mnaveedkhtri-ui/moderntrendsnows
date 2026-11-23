@@ -19,9 +19,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.moderntrendsnow.store',
   },
-  other: {
-    'p:domain_verify': 'a8d45f72fc74186b14b460995c711d27',
-    'google-site-verification': 'JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o',
+  verification: {
+    google: 'JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o',
+    other: {
+      'p:domain_verify': 'a8d45f72fc74186b14b460995c711d27',
+    },
   },
   openGraph: {
     title: 'Modern Trends Now | Curated Modern Living & Tech',
@@ -47,10 +49,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark scroll-smooth">
-      <head>
-        <meta name="google-site-verification" content="JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o" />
-        <meta name="p:domain_verify" content="a8d45f72fc74186b14b460995c711d27" />
-        <link rel="preconnect" href="https://images.unsplash.com" />
+      <body className="min-h-screen bg-[#08090d] text-slate-100 antialiased selection:bg-amber-400 selection:text-black">
         {structuredData.map((schema, index) => (
           <script
             key={index}
@@ -58,8 +57,6 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
-      </head>
-      <body className="min-h-screen bg-[#08090d] text-slate-100 antialiased selection:bg-amber-400 selection:text-black">
         {children}
       </body>
     </html>
