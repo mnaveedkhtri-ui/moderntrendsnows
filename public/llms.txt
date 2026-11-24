@@ -1,0 +1,16 @@
+# ModernTrendsNow
+
+> ModernTrendsNow is an editorial research and product intelligence archive dedicated to minimalist workspace technology, ergonomic desk setups, and acoustic mechanical keyboard peripherals.
+
+## Platform Overview
+ModernTrendsNow evaluates workspace productivity hardware through empirical testing, ergonomic posture guidelines, and durability metrics. All product recommendations are independently researched and curated with real-time Amazon affiliate availability.
+
+## Curated Authority Workspace Guides
+- [Minimalist Desk Setup Gift Guide 2026](https://www.moderntrendsnow.store/guides/minimalist-desk-setup-gift-guide-black-friday-2026): Comprehensive evaluation of top workspace productivity gifts, acoustic accessories, and cable organizers.
+- [Desk Shelf vs Monitor Arm Guide](https://www.moderntrendsnow.store/guides/dual-monitor-desk-shelf-vs-monitor-arm-ergonomics): Deep ergonomic comparison between solid hardwood desk risers and gas-spring dynamic monitor arms.
+- [Mechanical Keyboard Switch Acoustics Guide](https://www.moderntrendsnow.store/guides/mechanical-keyboard-switch-acoustics-thock-vs-clack): Comprehensive analysis of linear, tactile, and clicky switch acoustic signatures, plate materials, and workplace sound levels.
+- [Curved Monitor ScreenBar Light Guide](https://www.moderntrendsnow.store/guides/curved-monitor-screenbar-light-asymmetric-glare-guide): Empirical optical review of asymmetric front-projection desk light bars, CRI 95 color rendering, and eye strain mitigation.
+- [Under-Desk Cable Management Tray Guide](https://www.moderntrendsnow.store/guides/under-desk-cable-management-tray-no-drill-clamp-guide): Structural review of steel mesh no-drill clamp trays, power brick thermal dissipation, and high-load safety standards.
+
+## Editorial Standards & Affiliate Disclosure
+ModernTrendsNow participates in the Amazon Services LLC Associates Program. When readers purchase through our verified product links, we may earn an affiliate commission at no additional cost to the buyer (Tracking ID: moderntren08b-20). Recommendations are never influenced by manufacturer sponsorship.
