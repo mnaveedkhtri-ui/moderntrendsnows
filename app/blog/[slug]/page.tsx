@@ -199,7 +199,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     ],
   };
 
-  const howToSchema = post.slug === 'standing-desk-cable-management-tray-guide' ? {
+  const howToSchema = (post.slug === 'standing-desk-cable-management-tray-guide' || post.slug === 'under-desk-cable-management-steel-tray-vs-mesh-raceway-guide') ? {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: 'How to Route Standing Desk Cables with Zero Slack and Zero Motor Strain',
@@ -365,7 +365,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 />
 
                 {/* Interactive Dynamic Calculator Tools */}
-                {post.slug === 'standing-desk-cable-management-tray-guide' && <CableSlackCalculator />}
+                {(post.slug === 'standing-desk-cable-management-tray-guide' || post.slug === 'under-desk-cable-management-steel-tray-vs-mesh-raceway-guide') && <CableSlackCalculator />}
                 {post.slug === 'leather-vs-suede-desk-mat-material-comparison-guide' && <MaterialQuizSelector />}
 
                 {/* Editorial Testing & E-E-A-T Rigor Badge */}
