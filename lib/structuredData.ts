@@ -58,6 +58,7 @@ export function getStructuredData() {
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',
           priceValidUntil: '2027-12-31',
+          validFrom: '2026-01-01',
           url: product.amazonUrl,
           seller: {
             '@type': 'Organization',
