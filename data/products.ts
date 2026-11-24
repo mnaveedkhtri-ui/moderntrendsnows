@@ -683,6 +683,132 @@ export const PRODUCTS: Product[] = [
     amazonUrl: 'https://www.amazon.com/s?k=aula+f75+wireless+mechanical+keyboard&tag=moderntren08b-20',
     badge: 'Viral Sound Profile',
     specs: ["True Gasket-Mounted Structure with Flex-Cut PC Plate", "Factory-Lubed Linear Switches with Deep Acoustic Thock", "Multi-Function CNC Metal Rotary Volume Control Knob", "4000mAh Battery Supporting 2.4G, Bluetooth and Wired Modes"]
+  },
+  {
+    "id": "foldable-travel-magsafe-charger",
+    "title": "4-in-1 Foldable Travel Magnetic Wireless Charging Station",
+    "category": "Workspace",
+    "tagline": "Ultra-compact folding travel dock with 15W MagSafe, Apple Watch, and AirPods charging.",
+    "description": "Precision hinge mechanism folds flat into a palm-sized package for travel. Features dual magnetic wireless coils, certified Qi fast charging, and a weighted non-slip silicon base.",
+    "price": 44.95,
+    "compareAtPrice": 69.99,
+    "rating": 4.9,
+    "reviewsCount": 890,
+    "imageUrl": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=foldable+3+in+1+magsafe+travel+charger&tag=moderntren08b-20",
+    "badge": "Holiday Pick",
+    "isBestSeller": true,
+    "specs": [
+      "15W MagSafe Fast Wireless Charging",
+      "Folds Flat to 0.8-inch Profile",
+      "Dedicated Apple Watch Fast Puck",
+      "Thermal Overheat Protection"
+    ]
+  },
+  {
+    "id": "smart-rgb-flow-light-bars",
+    "title": "Smart Flow RGB Ambient Light Bars Pair",
+    "category": "Lighting",
+    "tagline": "Synchronized dynamic LED backlighting bars with music rhythm and voice app control.",
+    "description": "Elevate desktop aesthetics and reduce visual eye strain with 16 million colors and fluid lighting effects. Mount vertically beside displays or lay flat behind monitor desk risers.",
+    "price": 36,
+    "compareAtPrice": 55,
+    "rating": 4.8,
+    "reviewsCount": 1420,
+    "imageUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=smart+flow+rgb+light+bars+pc+desk&tag=moderntren08b-20",
+    "badge": "Ambient Essential",
+    "isBestSeller": true,
+    "specs": [
+      "16 Million Colors with Dynamic Scenes",
+      "Built-in Acoustic Sound Sync Mic",
+      "App & Voice Smart Home Integration",
+      "Dual Vertical & Horizontal Mounts"
+    ]
+  },
+  {
+    "id": "solid-walnut-keyboard-wrist-rest",
+    "title": "Ergonomic Solid Black Walnut Keyboard Wrist Rest",
+    "category": "Workspace",
+    "tagline": "Kiln-dried American walnut palm rest machined to natural 8-degree ergonomic typing angle.",
+    "description": "Hand-sanded solid walnut treated with organic beeswax oil. Matches 75%, TKL, and full-size mechanical keyboards to keep wrists in neutral carpal alignment during long programming sessions.",
+    "price": 24.95,
+    "compareAtPrice": 39.99,
+    "rating": 4.9,
+    "reviewsCount": 760,
+    "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=solid+walnut+wood+keyboard+wrist+rest&tag=moderntren08b-20",
+    "badge": "Ergonomic Choice",
+    "isBestSeller": false,
+    "specs": [
+      "Solid American Black Walnut Wood",
+      "Natural 8-Degree Ergonomic Slope",
+      "High-Grip Anti-Slip Rubber Feet",
+      "Smooth Hand-Finished Organic Oil"
+    ]
+  },
+  {
+    "id": "ergonomic-active-standing-mat",
+    "title": "Active-Standing Ergonomic Desk Balance Mat",
+    "category": "Living",
+    "tagline": "High-density polyurethane contour mat with calculated acupressure massage mounds.",
+    "description": "Engineered for sit-to-stand desk warriors. Encourages dynamic micro-movements, stimulates calf circulation, and cushions spinal vertebrae during extended standing work.",
+    "price": 49,
+    "compareAtPrice": 79,
+    "rating": 4.8,
+    "reviewsCount": 680,
+    "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=active+standing+desk+anti+fatigue+mat&tag=moderntren08b-20",
+    "badge": "Wellness Essential",
+    "isBestSeller": false,
+    "specs": [
+      "Commercial Grade High-Density PU Foam",
+      "Active Terrain Massage Mounds",
+      "Puncture & Stain Resistant Surface",
+      "Zero Curling Beveled Edges"
+    ]
+  },
+  {
+    "id": "orbit-alloy-cable-anchors",
+    "title": "Precision Alloy Desktop Magnetic Cable Anchors",
+    "category": "Workspace",
+    "tagline": "Weighted CNC aluminum magnetic docking blocks that lock charging cords to the desk edge.",
+    "description": "Stop cables from tumbling behind desks. Weighted alloy dock adheres with residue-free micro-suction gel and secures braided USB-C, Lightning, and audio cables in clean alignment.",
+    "price": 22.5,
+    "compareAtPrice": 34,
+    "rating": 4.8,
+    "reviewsCount": 520,
+    "imageUrl": "https://images.unsplash.com/photo-1588508065123-287b28e013da?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=magnetic+desk+cable+clips+weighted+base&tag=moderntren08b-20",
+    "badge": "Organization Hero",
+    "isBestSeller": false,
+    "specs": [
+      "Solid CNC Anodized Alloy Base",
+      "Includes 3 Universal Magnetic Cable Collars",
+      "Washable Reusable Micro-Suction Pad",
+      "Accommodates Cables Up to 4.5mm"
+    ]
+  },
+  {
+    "id": "cordless-mini-desk-vacuum",
+    "title": "Rechargeable High-Speed Micro Desk Vacuum",
+    "category": "Gadgets",
+    "tagline": "Handheld 6000Pa suction vacuum and keyboard air duster with washable HEPA filtration.",
+    "description": "Keep your mechanical keyboard, felt desk pad, and workspace pristine. Ultra-quiet high-speed motor pulls crumbs, dust, and debris from tight keyboard switch crevices with ease.",
+    "price": 28,
+    "compareAtPrice": 42,
+    "rating": 4.9,
+    "reviewsCount": 940,
+    "imageUrl": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=800&q=80",
+    "amazonUrl": "https://www.amazon.com/s?k=mini+desk+vacuum+rechargeable+keyboard+cleaner&tag=moderntren08b-20",
+    "badge": "Top Rated Gadget",
+    "isBestSeller": true,
+    "specs": [
+      "6000Pa High-Efficiency Suction",
+      "Rechargeable USB-C 2000mAh Battery",
+      "Dual Flat Crevice & Brush Nozzles",
+      "Washable Reusable HEPA Filter"
+    ]
   }
 ];
 
@@ -693,3 +819,4 @@ export const CATEGORIES = [
   'Living',
   'Gadgets',
 ] as const;
+
