@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.moderntrendsnow.store'),
   alternates: {
     canonical: 'https://www.moderntrendsnow.store',
+    types: {
+      'application/rss+xml': 'https://www.moderntrendsnow.store/rss.xml',
+    },
   },
   verification: {
     google: 'JRt7V8qXjJiQM5nW4YmsTcSPwQe_4Mh96AORRorQr0o',

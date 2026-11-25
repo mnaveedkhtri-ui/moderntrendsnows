@@ -477,7 +477,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                             <a
                               href={product.amazonUrl}
                               target="_blank"
-                              rel="noopener noreferrer"
+                              rel="nofollow sponsored noopener noreferrer"
                               className="w-full flex items-center justify-center gap-1.5 rounded-xl bg-amber-400 hover:bg-amber-300 py-2.5 text-xs font-black text-slate-950 transition active:scale-95"
                             >
                               <span>View on Amazon Prime</span>

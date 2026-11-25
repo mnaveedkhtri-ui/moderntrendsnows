@@ -151,7 +151,7 @@ export default function ProductModal({
               <a
                 href={product.amazonUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow sponsored noopener noreferrer"
                 onClick={() => sound.playChime()}
                 className="w-full flex items-center justify-center gap-2 rounded-xl bg-amber-400 hover:bg-amber-300 py-3 text-xs font-black text-slate-950 transition shadow-lg active:scale-95"
               >

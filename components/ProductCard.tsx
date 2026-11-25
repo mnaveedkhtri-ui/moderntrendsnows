@@ -130,7 +130,7 @@ export default function ProductCard({
         <a
           href={product.amazonUrl}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="nofollow sponsored noopener noreferrer"
           className="px-2.5 py-1.5 rounded-lg bg-amber-400/15 hover:bg-amber-400 text-amber-300 hover:text-slate-950 text-[11px] font-mono font-bold flex items-center gap-1 transition-all active:scale-95"
         >
           <span>Amazon</span>

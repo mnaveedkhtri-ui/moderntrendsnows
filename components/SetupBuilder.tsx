@@ -288,7 +288,7 @@ export default function SetupBuilder({ products, onQuickView }: SetupBuilderProp
             <a
               href={selectedLight.amazonUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener noreferrer"
               className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono transition flex items-center gap-1.5"
             >
               <span>Item 1 ({selectedLight.price.toFixed(0)}$)</span>
@@ -297,7 +297,7 @@ export default function SetupBuilder({ products, onQuickView }: SetupBuilderProp
             <a
               href={selectedTech.amazonUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener noreferrer"
               className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono transition flex items-center gap-1.5"
             >
               <span>Item 2 ({selectedTech.price.toFixed(0)}$)</span>
@@ -306,7 +306,7 @@ export default function SetupBuilder({ products, onQuickView }: SetupBuilderProp
             <a
               href={selectedLiving.amazonUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="nofollow sponsored noopener noreferrer"
               className="px-3.5 py-2 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white text-xs font-mono transition flex items-center gap-1.5"
             >
               <span>Item 3 ({selectedLiving.price.toFixed(0)}$)</span>
