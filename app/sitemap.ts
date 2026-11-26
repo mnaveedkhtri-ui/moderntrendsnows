@@ -3,7 +3,7 @@ import { BLOG_POSTS } from '../data/blog-posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.moderntrendsnow.store';
-  const coreUpdateDate = new Date('2026-11-25T00:00:00Z');
+  const coreUpdateDate = new Date('2026-11-26T00:00:00Z');
   const legalUpdateDate = new Date('2026-11-01T00:00:00Z');
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -14,6 +14,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/tools`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/tools/ergonomic-desk-height-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/tools/monitor-viewing-distance-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/tools/desk-mat-keyboard-fit-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: coreUpdateDate,
       changeFrequency: 'weekly',
@@ -21,19 +45,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: legalUpdateDate,
+      lastModified: coreUpdateDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: legalUpdateDate,
+      lastModified: coreUpdateDate,
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: legalUpdateDate,
+      lastModified: coreUpdateDate,
       changeFrequency: 'yearly',
       priority: 0.5,
     },
@@ -45,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/disclaimer`,
-      lastModified: legalUpdateDate,
+      lastModified: coreUpdateDate,
       changeFrequency: 'yearly',
       priority: 0.5,
     },

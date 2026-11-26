@@ -81,9 +81,9 @@ export default function ContactPage() {
                     <div className="flex items-start gap-3">
                       <Mail className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
                       <div>
-                        <div className="font-mono text-slate-400 text-[11px]">Founder Direct</div>
-                        <a href="mailto:naveed@smartratecalcs.com" className="text-white hover:text-amber-300 transition font-mono">
-                          naveed@smartratecalcs.com
+                        <div className="font-mono text-slate-400 text-[11px]">Editorial &amp; Partnerships</div>
+                        <a href="mailto:support@moderntrendsnow.store" className="text-white hover:text-amber-300 transition font-mono">
+                          support@moderntrendsnow.store
                         </a>
                       </div>
                     </div>

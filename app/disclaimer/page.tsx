@@ -113,7 +113,7 @@ export default function DisclaimerPage() {
                 <div className="p-4 rounded-xl border border-white/10 bg-[#0c0f18] text-xs font-mono space-y-1">
                   <div>Modern Trends Now Compliance Desk</div>
                   <div>Email: support@moderntrendsnow.store</div>
-                  <div>Lead Curator: Muhammad Naveed Khatri (naveed@smartratecalcs.com)</div>
+                  <div>Lead Curator: Muhammad Naveed Khatri</div>
                 </div>
               </section>
 

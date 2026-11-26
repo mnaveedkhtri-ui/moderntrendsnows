@@ -158,6 +158,9 @@ export default function ProductModal({
                 <span>Check Live Price on Amazon</span>
                 <ExternalLink className="h-3.5 w-3.5" />
               </a>
+              <p className="mt-2 text-[10px] text-slate-500 text-center font-mono">
+                Reference price only. Verify real-time pricing and Prime eligibility on Amazon.
+              </p>
 
               <div className="flex items-center justify-center gap-4 text-[10px] text-slate-400 mt-2.5">
                 <span className="flex items-center gap-1">

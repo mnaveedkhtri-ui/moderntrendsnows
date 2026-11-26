@@ -7,11 +7,20 @@ export function getStructuredData() {
     '@type': 'Organization',
     name: 'Modern Trends Now',
     url: 'https://www.moderntrendsnow.store',
-    logo: 'https://www.moderntrendsnow.store/icon.svg',
-    description: 'Curated architectural archive of viral modern workspace tech, ambient lighting, and aesthetic spatial gadgets.',
-    sameAs: [
-      'https://www.pinterest.com/moderntrendsnowstore/'
-    ]
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.moderntrendsnow.store/brand-logo.png',
+      width: 512,
+      height: 512,
+    },
+    description:
+      'Independent editorial archive and workspace engineering toolkit curating modern desk setups, ambient lighting, and ergonomic hardware.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'support@moderntrendsnow.store',
+      contactType: 'customer support',
+    },
+    sameAs: ['https://www.pinterest.com/moderntrendsnowstore/'],
   };
 
   const websiteSchema = {
@@ -22,86 +31,29 @@ export function getStructuredData() {
     potentialAction: {
       '@type': 'SearchAction',
       target: 'https://www.moderntrendsnow.store/?s={search_term_string}',
-      'query-input': 'required name=search_term_string'
-    }
+      'query-input': 'required name=search_term_string',
+    },
   };
 
-  const productCatalogSchema = {
+  // Editorial ItemList without unverified merchant Offer/AggregateRating claims
+  const curatedCatalogSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Curated Modern Living & Workspace Tech Collection',
+    name: 'Curated Modern Living & Workspace Tech Archive',
+    description:
+      'Editorially researched desk architecture gadgets, ambient lighting, and ergonomic accessories linked to Amazon fulfillment.',
     numberOfItems: PRODUCTS.length,
     itemListElement: PRODUCTS.map((product, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       item: {
-        '@type': 'Product',
+        '@type': 'Thing',
         name: product.title,
-        description: product.description,
+        description: product.tagline,
         image: product.imageUrl,
-        sku: product.id,
-        brand: {
-          '@type': 'Brand',
-          name: 'Modern Trends Now'
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: product.rating.toString(),
-          reviewCount: product.reviewsCount.toString(),
-          bestRating: '5',
-          worstRating: '1'
-        },
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'USD',
-          price: product.price.toFixed(2),
-          availability: 'https://schema.org/InStock',
-          itemCondition: 'https://schema.org/NewCondition',
-          priceValidUntil: '2027-12-31',
-          validFrom: '2026-01-01',
-          url: product.amazonUrl,
-          seller: {
-            '@type': 'Organization',
-            name: 'Amazon'
-          },
-          hasMerchantReturnPolicy: {
-            '@type': 'MerchantReturnPolicy',
-            applicableCountry: 'US',
-            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
-            merchantReturnDays: 30,
-            returnMethod: 'https://schema.org/ReturnByMail',
-            returnFees: 'https://schema.org/FreeReturn'
-          },
-          shippingDetails: {
-            '@type': 'OfferShippingDetails',
-            shippingRate: {
-              '@type': 'MonetaryAmount',
-              value: '0.00',
-              currency: 'USD'
-            },
-            shippingDestination: {
-              '@type': 'DefinedRegion',
-              addressCountry: 'US'
-            },
-            deliveryTime: {
-              '@type': 'ShippingDeliveryTime',
-              handlingTime: {
-                '@type': 'QuantitativeValue',
-                minValue: 0,
-                maxValue: 1,
-                unitCode: 'd'
-              },
-              transitTime: {
-                '@type': 'QuantitativeValue',
-                minValue: 1,
-                maxValue: 3,
-                unitCode: 'd'
-              }
-            }
-          }
-        }
-      }
-    }))
+        url: `https://www.moderntrendsnow.store/#product-${product.id}`,
+      },
+    })),
   };
 
   const faqSchema = {
@@ -113,40 +65,40 @@ export function getStructuredData() {
         name: 'How does shipping and order fulfillment work?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'All orders featured on Modern Trends Now route directly through verified Amazon Prime fulfillment centers. This ensures fast 2-day delivery across the United States, complete with real-time courier tracking and insured shipping.'
-        }
+          text: 'All orders featured on Modern Trends Now route directly through Amazon fulfillment centers. Eligibility for 2-day Prime delivery, courier tracking, and insured shipping is verified at Amazon checkout.',
+        },
       },
       {
         '@type': 'Question',
         name: 'What is your return and refund policy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Every product comes backed by Amazon 30-day no-questions-asked return guarantee. If an item arrives damaged, defective, or simply does not match your setup, you can initiate a free return and receive a 100% full refund.'
-        }
+          text: 'Purchases made through our outbound Amazon affiliate links follow Amazon standard 30-day return and refund guarantees as stated on the seller listing at checkout.',
+        },
       },
       {
         '@type': 'Question',
-        name: 'How does the editorial team test and verify products?',
+        name: 'How does the editorial team evaluate featured products?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We evaluate hundreds of viral social media products every month. We filter out cheap hollow plastics and test build durability, noise levels in dB, thermal heat dissipation, and genuine user ratings before featuring any object in our archive.'
-        }
+          text: 'Our editorial team benchmarks materials, optical glare specs, acoustic dampening properties, and long-term user feedback against ISO 9241-5 and ANSI/BIFMA workspace standards.',
+        },
       },
       {
         '@type': 'Question',
-        name: 'Are these products covered by a warranty?',
+        name: 'Are these products covered by a manufacturer warranty?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. All verified brand manufacturers provide a minimum 12-month hardware warranty against defects. Extended protection plans are also selectable during Amazon checkout.'
-        }
-      }
-    ]
+          text: 'Manufacturer hardware warranties and optional protection plans vary by brand and are displayed directly on the official Amazon product page before purchase.',
+        },
+      },
+    ],
   };
 
   const articlesSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Modern Trends Now Field Guides & Research',
+    name: 'Modern Trends Now Field Guides & Engineering Tools',
     numberOfItems: BLOG_POSTS.length,
     itemListElement: BLOG_POSTS.map((article, index) => ({
       '@type': 'ListItem',
@@ -161,13 +113,16 @@ export function getStructuredData() {
           '@type': 'Person',
           name: article.author.name,
           jobTitle: article.author.role,
+          url: 'https://www.moderntrendsnow.store/about',
         },
         publisher: {
           '@type': 'Organization',
           name: 'Modern Trends Now',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://www.moderntrendsnow.store/icon.svg',
+            url: 'https://www.moderntrendsnow.store/brand-logo.png',
+            width: 512,
+            height: 512,
           },
         },
         mainEntityOfPage: {
@@ -178,5 +133,5 @@ export function getStructuredData() {
     })),
   };
 
-  return [organizationSchema, websiteSchema, productCatalogSchema, faqSchema, articlesSchema];
+  return [organizationSchema, websiteSchema, curatedCatalogSchema, faqSchema, articlesSchema];
 }

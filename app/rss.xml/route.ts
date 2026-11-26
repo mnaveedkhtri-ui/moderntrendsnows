@@ -16,6 +16,41 @@ function escapeXml(unsafe: string): string {
 export async function GET() {
   const baseUrl = 'https://www.moderntrendsnow.store';
 
+  // 0. Interactive Engineering Tools RSS Items
+  const toolsList = [
+    {
+      title: 'Ergonomic Desk Height & Eye-Level Calculator (ISO 9241-5)',
+      url: `${baseUrl}/tools/ergonomic-desk-height-calculator`,
+      desc: 'Calculate exact seated desk height, motorized standing desk preset, chair seat elevation, and monitor riser clearance for your stature.',
+      img: `${baseUrl}/blog/ergonomic-desk-height-chart.png`,
+    },
+    {
+      title: 'Monitor Viewing Distance, PPI & Desk Load Calculator',
+      url: `${baseUrl}/tools/monitor-viewing-distance-calculator`,
+      desc: 'Verify Retina optical clarity distance and C-clamp desktop load safety across 24-inch, 27-inch, 32-inch, 34-inch, and 49-inch monitors.',
+      img: `${baseUrl}/blog/monitor-distance-load-chart.png`,
+    },
+    {
+      title: 'Desk Width, Keyboard Size & XXL Mat Fit Planner',
+      url: `${baseUrl}/tools/desk-mat-keyboard-fit-calculator`,
+      desc: 'Plan horizontal desktop clearance across 40 to 72-inch desks with 60%, 75%, TKL, and full keyboards plus XXL leather/felt mats.',
+      img: `${baseUrl}/blog/desk-mat-fit-blueprint.png`,
+    },
+  ];
+
+  const toolItemsXml = toolsList.map((tool) => {
+    const pubDate = new Date('2026-11-26T00:00:00Z').toUTCString();
+    return `    <item>
+      <title><![CDATA[${tool.title}]]></title>
+      <link>${tool.url}</link>
+      <guid isPermaLink="true">${tool.url}</guid>
+      <pubDate>${pubDate}</pubDate>
+      <description><![CDATA[${tool.desc}]]></description>
+      <enclosure url="${escapeXml(tool.img)}" length="0" type="image/png" />
+      <media:content url="${escapeXml(tool.img)}" medium="image" />
+    </item>`;
+  }).join('\n');
+
   // 1. Blog Post RSS Items
   const blogItemsXml = BLOG_POSTS.map((post) => {
     const pubDate = new Date(post.publishedDate).toUTCString();
@@ -56,7 +91,7 @@ export async function GET() {
     </item>`;
   }).join('\n');
 
-  const allItemsXml = `${blogItemsXml}\n${productItemsXml}`;
+  const allItemsXml = `${toolItemsXml}\n${blogItemsXml}\n${productItemsXml}`;
 
   const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom">

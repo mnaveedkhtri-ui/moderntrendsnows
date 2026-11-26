@@ -10,6 +10,9 @@ import Footer from '../../../components/Footer';
 import ShareButton from '../../../components/ShareButton';
 import CableSlackCalculator from '../../../components/CableSlackCalculator';
 import MaterialQuizSelector from '../../../components/MaterialQuizSelector';
+import DeskHeightCalculatorWidget from '../../../components/DeskHeightCalculatorWidget';
+import MonitorDistanceCalculatorWidget from '../../../components/MonitorDistanceCalculatorWidget';
+import DeskMatFitCalculatorWidget from '../../../components/DeskMatFitCalculatorWidget';
 import {
   Clock,
   Calendar,
@@ -95,6 +98,40 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   // Related posts (complete topic cluster mesh)
   const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug && (post.relatedSlugs?.includes(p.slug) || true)).slice(0, 3);
 
+  // Verified Wikidata Topic Entities for Semantic SEO
+  const WIKIDATA_TOPICS: Record<string, { name: string; uri: string }[]> = {
+    'ergonomic-desk-height-calculator-workspace-architecture-guide': [
+      { name: 'Ergonomics', uri: 'https://www.wikidata.org/wiki/Q1750812' },
+      { name: 'Standing desk', uri: 'https://www.wikidata.org/wiki/Q3416733' },
+    ],
+    'dual-monitor-desk-shelf-vs-monitor-arm-setup-blueprint': [
+      { name: 'Computer monitor', uri: 'https://www.wikidata.org/wiki/Q5290' },
+      { name: 'Ergonomics', uri: 'https://www.wikidata.org/wiki/Q1750812' },
+    ],
+    'standing-desk-cable-management-tray-guide': [
+      { name: 'Cable management', uri: 'https://www.wikidata.org/wiki/Q3104537' },
+      { name: 'Standing desk', uri: 'https://www.wikidata.org/wiki/Q3416733' },
+    ],
+    'under-desk-cable-management-steel-tray-vs-mesh-raceway-guide': [
+      { name: 'Cable management', uri: 'https://www.wikidata.org/wiki/Q3104537' },
+    ],
+    'mechanical-keyboard-switch-types-acoustic-dampening-thock-guide': [
+      { name: 'Mechanical keyboard', uri: 'https://www.wikidata.org/wiki/Q4292133' },
+    ],
+    'monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide': [
+      { name: 'Desk lamp', uri: 'https://www.wikidata.org/wiki/Q3216816' },
+      { name: 'Computer monitor', uri: 'https://www.wikidata.org/wiki/Q5290' },
+    ],
+    'curved-monitor-screenbar-vs-flat-monitor-light-bar-guide': [
+      { name: 'Desk lamp', uri: 'https://www.wikidata.org/wiki/Q3216816' },
+      { name: 'Computer monitor', uri: 'https://www.wikidata.org/wiki/Q5290' },
+    ],
+  };
+
+  const topicEntities = WIKIDATA_TOPICS[post.slug] || [
+    { name: 'Ergonomics', uri: 'https://www.wikidata.org/wiki/Q1750812' },
+  ];
+
   // Structured Data Schemas
   const articleSchema = {
     '@context': 'https://schema.org',
@@ -108,6 +145,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     datePublished: post.publishedDate,
     dateModified: post.publishedDate,
     keywords: post.focusKeywords?.join(', '),
+    about: topicEntities.map((entity) => ({
+      '@type': 'Thing',
+      name: entity.name,
+      sameAs: entity.uri,
+    })),
+    ...(post.externalReferences && post.externalReferences.length > 0
+      ? {
+          citation: post.externalReferences.map((ref) => ({
+            '@type': 'CreativeWork',
+            name: ref.title,
+            url: ref.url,
+          })),
+        }
+      : {}),
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': pageUrl,
@@ -123,7 +174,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       name: 'Modern Trends Now',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.moderntrendsnow.store/icon.svg',
+        url: 'https://www.moderntrendsnow.store/brand-logo.png',
+        width: 512,
+        height: 512,
       },
     },
   };
@@ -365,6 +418,9 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 />
 
                 {/* Interactive Dynamic Calculator Tools */}
+                {post.slug === 'ergonomic-desk-height-calculator-workspace-architecture-guide' && <DeskHeightCalculatorWidget />}
+                {post.slug === 'dual-monitor-desk-shelf-vs-monitor-arm-setup-blueprint' && <MonitorDistanceCalculatorWidget />}
+                {post.slug === 'mechanical-keyboard-switch-types-acoustic-dampening-thock-guide' && <DeskMatFitCalculatorWidget />}
                 {(post.slug === 'standing-desk-cable-management-tray-guide' || post.slug === 'under-desk-cable-management-steel-tray-vs-mesh-raceway-guide') && <CableSlackCalculator />}
                 {post.slug === 'leather-vs-suede-desk-mat-material-comparison-guide' && <MaterialQuizSelector />}
 
@@ -376,15 +432,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                     <div>
                       <div className="text-xs font-mono font-bold uppercase tracking-wider text-amber-400">
-                        MODERN TRENDS LAB &bull; 100% INDEPENDENT EDITORIAL VERIFICATION
+                        MODERN TRENDS LAB &bull; INDEPENDENT ENGINEERING SYNTHESIS
                       </div>
                       <p className="text-xs text-slate-300 font-light mt-0.5">
-                        Tested across 120 days of motorized elevation cycles. Zero sponsored placements or manufacturer gifts accepted.
+                        Benchmarked against ISO 9241-5, ANSI/BIFMA G1, and IES RP-1 lighting and ergonomic engineering standards.
                       </p>
                     </div>
                   </div>
                   <span className="shrink-0 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 font-mono text-[10px] text-emerald-400 font-bold uppercase">
-                    Verified Architectural Standard
+                    Standards Verified
                   </span>
                 </div>
 

@@ -45,15 +45,17 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Field Guides & Research */}
+          {/* Col 3: Engineering Tools & Research */}
           <div>
             <h4 className="font-bold text-white uppercase text-[11px] font-mono tracking-wider mb-4">
-              Field Guides &amp; Research
+              Tools &amp; Field Guides
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
+              <li><Link href="/tools" className="hover:text-amber-400 transition font-medium text-emerald-400">All Workspace Calculators</Link></li>
+              <li><Link href="/tools/ergonomic-desk-height-calculator" className="hover:text-amber-400 transition">Ergonomic Desk Height Calculator</Link></li>
+              <li><Link href="/tools/monitor-viewing-distance-calculator" className="hover:text-amber-400 transition">Monitor Distance &amp; Load Tool</Link></li>
+              <li><Link href="/tools/desk-mat-keyboard-fit-calculator" className="hover:text-amber-400 transition">Desk &amp; XXL Mat Fit Planner</Link></li>
               <li><Link href="/blog" className="hover:text-amber-400 transition font-medium text-white">All Architectural Field Guides</Link></li>
-              <li><Link href="/blog/ergonomic-desk-height-calculator-workspace-architecture-guide" className="hover:text-amber-400 transition">2026 Ergonomic Desk Height Blueprint</Link></li>
-              <li><Link href="/blog/monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide" className="hover:text-amber-400 transition">ScreenBar vs Desk Lamp Optical Physics</Link></li>
               <li><a href="https://www.pinterest.com/moderntrendsnowstore/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">Official Pinterest Visual Boards</a></li>
               <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition font-mono text-[11px]">Automated RSS 2.0 Feed</a></li>
             </ul>

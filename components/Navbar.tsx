@@ -111,6 +111,12 @@ export default function Navbar({
               <span>Setup Studio</span>
             </a>
             <Link
+              href="/tools"
+              className="text-emerald-300 hover:text-emerald-200 transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider font-bold"
+            >
+              <span>Calculators</span>
+            </Link>
+            <Link
               href="/blog"
               className="text-slate-400 hover:text-white transition-colors py-1 flex items-center gap-1 font-mono text-[11px] uppercase tracking-wider"
             >
@@ -184,6 +190,14 @@ export default function Navbar({
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-400/20 text-amber-300">Interactive</span>
             </a>
+            <Link
+              href="/tools"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full text-left px-3 py-2.5 rounded-lg text-sm font-medium transition text-emerald-300 hover:bg-emerald-400/10 flex items-center justify-between"
+            >
+              <span>Workspace Calculators</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-400/20 text-emerald-300">Tools</span>
+            </Link>
             <Link
               href="/blog"
               onClick={() => setMobileMenuOpen(false)}

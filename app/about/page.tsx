@@ -91,7 +91,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Mail className="h-3.5 w-3.5 text-amber-400" />
-                    <span>naveed@smartratecalcs.com</span>
+                    <span>support@moderntrendsnow.store</span>
                   </div>
                 </div>
               </div>

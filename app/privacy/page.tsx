@@ -141,7 +141,7 @@ export default function PrivacyPage() {
                 </p>
                 <div className="p-4 rounded-xl border border-white/10 bg-[#0c0f18] text-xs font-mono space-y-1">
                   <div>Modern Trends Now Editorial Studio</div>
-                  <div>Email: support@moderntrendsnow.store | naveed@smartratecalcs.com</div>
+                  <div>Email: support@moderntrendsnow.store</div>
                   <div>Location: Latifabad, Hyderabad, Sindh, Pakistan</div>
                 </div>
               </section>

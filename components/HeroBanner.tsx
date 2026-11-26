@@ -23,8 +23,8 @@ const HERO_HIGHLIGHTS = [
     imageUrl: 'https://m.media-amazon.com/images/I/71+ykdh2v7L._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=3+in+1+magsafe+charging+station&tag=moderntren08b-20',
     tags: ['CNC 6063 Aluminum', '15W Fast Qi Coils', 'Weighted Anti-Slip Base'],
-    reviewer: 'Marcus V. : Austin, TX',
-    reviewQuote: 'The weighted CNC aluminum base stays completely grounded when grabbing your iPhone. Zero wobble, zero heat throttle during overnight StandBy charging.',
+    reviewer: 'Editorial Engineering Note',
+    reviewQuote: 'Weighted CNC aluminum chassis resists lifting during one-handed magnetic detachment while supporting horizontal StandBy display positioning.',
   },
   {
     id: 'screenbar-monitor-light',
@@ -38,8 +38,8 @@ const HERO_HIGHLIGHTS = [
     imageUrl: 'https://m.media-amazon.com/images/I/51p1Ui5sa7L._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=monitor+screenbar+light&tag=moderntren08b-20',
     tags: ['Anti-Reflective Optics', 'Stepless Color Temp', 'USB-C Powered'],
-    reviewer: 'David K. : Denver, CO',
-    reviewQuote: 'Working 10-hour coding shifts was giving me severe eye fatigue. This casts light only on my keyboard and documents without reflecting off the monitor.',
+    reviewer: 'Optical Benchmark Note',
+    reviewQuote: 'Asymmetric downward beam directs illumination onto the keyboard and desk pad surface with zero direct reflection off glossy display glass.',
   },
   {
     id: 'flame-aroma-diffuser',
@@ -53,8 +53,8 @@ const HERO_HIGHLIGHTS = [
     imageUrl: 'https://m.media-amazon.com/images/I/71tYIoCqXtL._AC_SL1000_.jpg',
     amazonUrl: 'https://www.amazon.com/s?k=flame+air+diffuser+humidifier&tag=moderntren08b-20',
     tags: ['Dual Amber/Blue Flame', 'Ultra-Quiet 20dB', '8-Hour Auto-Off'],
-    reviewer: 'Sarah L. : Seattle, WA',
-    reviewQuote: 'The flame illusion is shockingly convincing in a dim room. Ultrasonic cool mist keeps the air comfortable without any burning hazard.',
+    reviewer: 'Acoustic & Humidity Note',
+    reviewQuote: 'Cold-mist ultrasonic atomization simulates warm ambient flame acoustics without thermal heat hazard beside monitors or laptops.',
   },
 ];
 
@@ -141,11 +141,18 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
               <a
                 href={currentHero.amazonUrl}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="nofollow sponsored noopener noreferrer"
                 className="px-5 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs sm:text-sm font-mono text-slate-200 transition-all flex items-center gap-2"
               >
-                <span>Buy Featured on Amazon</span>
+                <span>Check Featured on Amazon</span>
                 <ExternalLink className="h-3.5 w-3.5 text-amber-400" />
+              </a>
+              <a
+                href="/tools"
+                className="px-5 py-3.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-400/30 text-xs sm:text-sm font-mono font-bold text-emerald-300 transition-all flex items-center gap-2"
+              >
+                <span>Free Desk Calculators</span>
+                <ArrowRight className="h-3.5 w-3.5" />
               </a>
             </div>
 
@@ -229,7 +236,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
               {/* Price & Direct Buy Button */}
               <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                 <div>
-                  <div className="text-[10px] font-mono text-slate-400 uppercase">Prime Price</div>
+                  <div className="text-[10px] font-mono text-slate-400 uppercase">Ref. Est. Price</div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl font-black text-white">${currentHero.price.toFixed(2)}</span>
                     <span className="text-xs text-slate-500 line-through">${currentHero.compareAtPrice.toFixed(2)}</span>
@@ -239,7 +246,7 @@ export default function HeroBanner({ onShopClick }: HeroBannerProps) {
                 <a
                   href={currentHero.amazonUrl}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow sponsored noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs font-mono flex items-center gap-1.5 shadow-lg shadow-amber-500/20 active:scale-95 transition-all"
                 >
                   <span>Check on Amazon</span>

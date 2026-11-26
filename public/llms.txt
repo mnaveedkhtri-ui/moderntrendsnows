@@ -1,20 +1,26 @@
 # ModernTrendsNow
 
-> ModernTrendsNow is an editorial research and product intelligence archive dedicated to minimalist workspace technology, ergonomic desk setups, and acoustic mechanical keyboard peripherals.
+> ModernTrendsNow is an independent editorial research studio and interactive workspace engineering platform dedicated to ergonomic desk setups, asymmetric monitor lighting, cable architecture, and acoustic mechanical keyboards.
 
 ## Platform Overview
-ModernTrendsNow evaluates workspace productivity hardware through empirical testing, ergonomic posture guidelines, and durability metrics. All product recommendations are independently researched and curated with real-time Amazon affiliate availability.
+ModernTrendsNow provides free interactive workstation geometry calculators paired with curated desk hardware evaluations linked to Amazon fulfillment.
+
+## Interactive Workspace Engineering Calculators
+- [Workspace Calculators Hub](https://www.moderntrendsnow.store/tools): Interactive ISO 9241-5 and ANSI/BIFMA desk geometry utilities.
+- [Ergonomic Desk Height & Eye-Level Calculator](https://www.moderntrendsnow.store/tools/ergonomic-desk-height-calculator): Exact sitting desk height (`height * 0.252 + elbow clearance`), standing desk height (`height * 0.618`), chair pan height, and monitor riser clearance.
+- [Monitor Viewing Distance, PPI & Desk Load Calculator](https://www.moderntrendsnow.store/tools/monitor-viewing-distance-calculator): Optical Retina threshold (`3438 / PPI`), field-of-view distance, and C-clamp load safety on hardwood, MDF, and honeycomb desks.
+- [Desk Width, Keyboard & XXL Mat Fit Planner](https://www.moderntrendsnow.store/tools/desk-mat-keyboard-fit-calculator): Millimeter clearance modeling across 40" to 72" desks for 60%, 75%, TKL, and full keyboards plus studio speakers and vertical laptop docks.
 
 ## Curated Authority Workspace Guides
-- [Leather vs Suede Desk Mat Material Guide](https://www.moderntrendsnow.store/blog/leather-vs-suede-desk-mat-material-comparison-guide): Comparative friction coefficients, optical mouse sensor tracking accuracy, spill resistance, and maintenance protocols for workstation surfaces.
-- [Standing Desk Cable Management Tray Blueprint](https://www.moderntrendsnow.store/blog/standing-desk-cable-management-tray-guide): How to route power and data with zero sag at full 48-inch height using heavy steel wire mesh trays and articulated magnetic spines.
-- [Minimalist Desk Setup Gift Guide 2026](https://www.moderntrendsnow.store/blog/black-friday-cyber-monday-desk-setup-gift-guide-2026): Comprehensive evaluation of top workspace productivity gifts, acoustic accessories, and cable organizers.
-- [Dual Monitor Desk Shelf vs Monitor Arm](https://www.moderntrendsnow.store/blog/dual-monitor-desk-shelf-vs-monitor-arm-setup-blueprint): Deep ergonomic comparison between solid hardwood desk risers and gas-spring dynamic monitor arms.
-- [Mechanical Keyboard Switch Acoustics Guide](https://www.moderntrendsnow.store/blog/mechanical-keyboard-switch-types-acoustic-dampening-thock-guide): Comprehensive analysis of linear, tactile, and clicky switch acoustic signatures, plate materials, and workplace sound levels.
-- [Curved Monitor ScreenBar Light Guide](https://www.moderntrendsnow.store/blog/curved-monitor-screenbar-vs-flat-monitor-light-bar-guide): Empirical optical review of asymmetric front-projection desk light bars, CRI 95 color rendering, and eye strain mitigation.
-- [Under-Desk Cable Management Tray Guide](https://www.moderntrendsnow.store/blog/under-desk-cable-management-steel-tray-vs-mesh-raceway-guide): Structural review of steel mesh no-drill clamp trays, power brick thermal dissipation, and high-load safety standards.
 - [Ergonomic Desk Height Architecture Blueprint](https://www.moderntrendsnow.store/blog/ergonomic-desk-height-calculator-workspace-architecture-guide): Anthropometric sitting and standing height formulas, 90-degree elbow angles, and neutral wrist tendon alignment.
+- [Dual Monitor Desk Shelf vs Monitor Arm](https://www.moderntrendsnow.store/blog/dual-monitor-desk-shelf-vs-monitor-arm-setup-blueprint): Structural engineering comparison between solid hardwood desk risers and gas-spring monitor arms.
+- [Leather vs Suede Desk Mat Material Guide](https://www.moderntrendsnow.store/blog/leather-vs-suede-desk-mat-material-comparison-guide): Comparative friction coefficients, optical mouse sensor tracking accuracy, spill resistance, and maintenance protocols.
+- [Standing Desk Cable Management Tray Blueprint](https://www.moderntrendsnow.store/blog/standing-desk-cable-management-tray-guide): How to route power and data with zero sag at full 48-inch height using steel wire mesh trays and articulated magnetic spines.
+- [Minimalist Desk Setup Gift Guide 2026](https://www.moderntrendsnow.store/blog/black-friday-cyber-monday-desk-setup-gift-guide-2026): Comprehensive evaluation of top workspace productivity gifts, acoustic accessories, and cable organizers.
+- [Mechanical Keyboard Switch Acoustics Guide](https://www.moderntrendsnow.store/blog/mechanical-keyboard-switch-types-acoustic-dampening-thock-guide): Analysis of linear, tactile, and clicky switch acoustic signatures, plate materials, and workplace sound levels.
+- [Curved Monitor ScreenBar Light Guide](https://www.moderntrendsnow.store/blog/curved-monitor-screenbar-vs-flat-monitor-light-bar-guide): Optical evaluation of asymmetric front-projection desk light bars, CRI 95 color rendering, and eye strain mitigation.
+- [Under-Desk Cable Management Tray Guide](https://www.moderntrendsnow.store/blog/under-desk-cable-management-steel-tray-vs-mesh-raceway-guide): Structural review of steel mesh no-drill clamp trays, power brick thermal dissipation, and high-load safety standards.
 - [Monitor Light Bar vs Desk Lamp Eye Strain Guide](https://www.moderntrendsnow.store/blog/monitor-light-bar-vs-desk-lamp-eye-strain-optical-guide): Illuminance, glare angles, and spatial optical comparisons for zero screen reflections.
 
 ## Editorial Standards & Affiliate Disclosure
-ModernTrendsNow participates in the Amazon Services LLC Associates Program. When readers purchase through our verified product links, we may earn an affiliate commission at no additional cost to the buyer (Tracking ID: moderntren08b-20). Recommendations are never influenced by manufacturer sponsorship.
+ModernTrendsNow participates in the Amazon Services LLC Associates Program. When readers purchase through our verified `rel="nofollow sponsored"` outbound links, we may earn an affiliate commission at no additional cost to the buyer (Tracking ID: moderntren08b-20). Pricing displayed on-site is a reference estimate and should always be verified directly on Amazon.
