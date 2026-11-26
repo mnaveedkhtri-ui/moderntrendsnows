@@ -62,6 +62,13 @@ const toolPins = [
     desc: 'Plan desk width, 75% mechanical keyboards, vertical laptop docks, and XXL leather/felt desk mats using our interactive desk footprint calculator. #minimalistworkspace #deskmat #mechanicalkeyboard #deskgoals',
     link: 'https://www.moderntrendsnow.store/tools/desk-mat-keyboard-fit-calculator',
   },
+  {
+    title: 'Standing Desk Cable Routing Math + Free Slack Calculator',
+    img: 'https://www.moderntrendsnow.store/blog/cable-slack-architecture-diagram.png',
+    board: 'Aesthetic Desk Setup 2026',
+    desc: 'Calculate exact cord travel length and articulated cable spine vertebrae for standing desks up to 52 inches with our free interactive calculator. #standingdesk #cablemanagement #desksetup',
+    link: 'https://www.moderntrendsnow.store/tools/standing-desk-cable-slack-calculator',
+  },
 ];
 
 toolPins.forEach((pin) => {

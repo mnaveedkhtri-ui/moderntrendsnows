@@ -10,6 +10,7 @@ ModernTrendsNow provides free interactive workstation geometry calculators paire
 - [Ergonomic Desk Height & Eye-Level Calculator](https://www.moderntrendsnow.store/tools/ergonomic-desk-height-calculator): Exact sitting desk height (`height * 0.252 + elbow clearance`), standing desk height (`height * 0.618`), chair pan height, and monitor riser clearance.
 - [Monitor Viewing Distance, PPI & Desk Load Calculator](https://www.moderntrendsnow.store/tools/monitor-viewing-distance-calculator): Optical Retina threshold (`3438 / PPI`), field-of-view distance, and C-clamp load safety on hardwood, MDF, and honeycomb desks.
 - [Desk Width, Keyboard & XXL Mat Fit Planner](https://www.moderntrendsnow.store/tools/desk-mat-keyboard-fit-calculator): Millimeter clearance modeling across 40" to 72" desks for 60%, 75%, TKL, and full keyboards plus studio speakers and vertical laptop docks.
+- [Dynamic Standing Desk Cable Slack Calculator](https://www.moderntrendsnow.store/tools/standing-desk-cable-slack-calculator): Computes exact cord length, articulated spine modules, and 14 AWG surge specs for sit-stand desks up to 52 inches.
 
 ## Curated Authority Workspace Guides
 - [Ergonomic Desk Height Architecture Blueprint](https://www.moderntrendsnow.store/blog/ergonomic-desk-height-calculator-workspace-architecture-guide): Anthropometric sitting and standing height formulas, 90-degree elbow angles, and neutral wrist tendon alignment.

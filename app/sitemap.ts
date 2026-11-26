@@ -38,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/tools/standing-desk-cable-slack-calculator`,
+      lastModified: coreUpdateDate,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: coreUpdateDate,
       changeFrequency: 'weekly',

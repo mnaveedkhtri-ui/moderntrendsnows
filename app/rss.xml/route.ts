@@ -36,6 +36,12 @@ export async function GET() {
       desc: 'Plan horizontal desktop clearance across 40 to 72-inch desks with 60%, 75%, TKL, and full keyboards plus XXL leather/felt mats.',
       img: `${baseUrl}/blog/desk-mat-fit-blueprint.png`,
     },
+    {
+      title: 'Dynamic Standing Desk Cable Slack Calculator',
+      url: `${baseUrl}/tools/standing-desk-cable-slack-calculator`,
+      desc: 'Calculate exact power cord travel length, spine vertebrae modules, and 14 AWG surge capacity for snag-free standing desk elevation.',
+      img: `${baseUrl}/blog/cable-slack-architecture-diagram.png`,
+    },
   ];
 
   const toolItemsXml = toolsList.map((tool) => {

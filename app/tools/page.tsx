@@ -50,7 +50,7 @@ const TOOLS = [
     guideLabel: 'Read Desk Mat Material Guide',
   },
   {
-    slug: '/blog/standing-desk-cable-management-tray-guide',
+    slug: '/tools/standing-desk-cable-slack-calculator',
     badge: 'Sit-Stand Cord Math',
     title: 'Dynamic Standing Desk Cable Slack Calculator',
     desc: 'Calculate exact power cord travel length and articulated magnetic spine vertebrae needed so cables never snag at full 48" elevation.',
