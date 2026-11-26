@@ -107,7 +107,7 @@ export default async function Image() {
             fontSize: '16px',
           }}
         >
-          <span>https://moderntrendsnow.store</span>
+          <span>https://www.moderntrendsnow.store</span>
           <span style={{ color: '#f59e0b', fontWeight: '700' }}>Amazon Prime Verified Curation</span>
         </div>
       </div>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import DeskMatFitCalculatorWidget from '../../../components/DeskMatFitCalculatorWidget';
-import { ChevronRight, BookOpen, ArrowRight, HelpCircle } from 'lucide-react';
+import { ChevronRight, BookOpen, ArrowRight, HelpCircle, Calculator } from 'lucide-react';
 
 const PAGE_URL = 'https://www.moderntrendsnow.store/tools/desk-mat-keyboard-fit-calculator';
 
@@ -35,11 +35,23 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: 'What desk mat size fits a 75% mechanical keyboard plus mouse?',
-    a: 'A 35.4 x 15.7 inch (900 x 400 mm) XXL desk mat easily holds a 12.6-inch 75% mechanical keyboard like the NuPhy Air75 v2 or Aula F75 alongside a 14+ inch horizontal mouse sweep zone.',
+    a: 'A 35.4 x 15.7 inch (900 x 400 mm) XXL desk mat easily holds a 12.6-inch 75% mechanical keyboard alongside a generous 14+ inch horizontal mouse sweep zone without crowding desk edge accessories.',
   },
   {
     q: 'How do I fit dual monitors and speakers on a compact 48-inch desk?',
-    a: 'Use a CNC vertical laptop dock (reclaims ~10.5 inches compared to keeping your laptop flat open), switch from a full 100% keyboard to a compact 75% layout, and swap base desk lamps for a clamp-on monitor ScreenBar light.',
+    a: 'Dock your laptop in a CNC vertical aluminum stand (saves 10.5 inches vs keeping it open flat), step down from a full 100% keyboard to a compact 75% board, and swap desk lamp bases for a clamp-on ScreenBar light.',
+  },
+  {
+    q: 'Does desk mat thickness change mechanical keyboard sound?',
+    a: 'Yes. A dense 4mm leather-and-felt mat decouples the keyboard housing from resonant wood or laminate desk tops, trimming sharp metallic chatter by 4-7 dB.',
+  },
+  {
+    q: 'Is 24-inch desk depth deep enough for an XXL desk pad?',
+    a: 'Most XXL mats measure 15.7 inches front-to-back, leaving 8.3 inches along the rear of a 24-inch desk for a monitor base or compact shelf.',
+  },
+  {
+    q: 'Why do engineers prefer 75% layouts over Full-Size 100% boards?',
+    a: 'Eliminating the right-side number pad pulls your mouse hand roughly 5 inches closer to your body centerline, reducing external shoulder rotation pain during long coding sprints.',
   },
 ];
 
@@ -54,9 +66,31 @@ export default function DeskMatFitToolPage() {
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
   };
 
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: FAQS.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.moderntrendsnow.store' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://www.moderntrendsnow.store/tools' },
+      { '@type': 'ListItem', position: 3, name: 'Desk & Mat Fit Planner', item: PAGE_URL },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#07090e] text-slate-100 selection:bg-amber-400 selection:text-black">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <Navbar />
 
@@ -73,33 +107,69 @@ export default function DeskMatFitToolPage() {
           </div>
         </div>
 
-        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 text-left">
-          <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
-            Desk Width, Keyboard Size &amp; XXL Desk Mat Fit Planner
-          </h1>
-          <p className="text-sm sm:text-base text-slate-300 max-w-3xl font-light mb-6">
-            Measure horizontal desktop occupancy across 40&quot; to 72&quot; desks before ordering a mechanical keyboard, acoustic desk mat, or studio monitor speaker stands.
-          </p>
+        <section className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 text-left space-y-10">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-3">
+              Desk Width, Keyboard Size &amp; XXL Desk Mat Fit Planner
+            </h1>
+            <p className="text-sm sm:text-base text-slate-300 max-w-3xl font-light">
+              Measure horizontal desktop occupancy across 40&quot; to 72&quot; desks before ordering a mechanical keyboard, acoustic desk mat, vertical laptop stand, or studio monitor speaker stands.
+            </p>
+          </div>
 
           <DeskMatFitCalculatorWidget />
 
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-white/10 bg-[#0c0f18] p-6">
-              <h2 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+          {/* Spatial Sizing Matrix */}
+          <div className="rounded-2xl border border-white/10 bg-[#0c0f18] p-6 sm:p-8">
+            <h2 className="text-xl sm:text-2xl font-black text-white mb-2">
+              Standard Desk Width vs Hardware Capacity Matrix
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-400 mb-5 font-light">
+              Compare how horizontal inches distribute between input zones, audio hardware, and laptop docking bays across common desk lengths.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs font-mono border border-white/10 rounded-xl overflow-hidden">
+                <thead className="bg-[#121624] text-amber-400 uppercase">
+                  <tr>
+                    <th className="p-3 border-b border-white/10">Desk Width</th>
+                    <th className="p-3 border-b border-white/10">Ideal Keyboard</th>
+                    <th className="p-3 border-b border-white/10">Recommended Mat</th>
+                    <th className="p-3 border-b border-white/10">Laptop Docking</th>
+                    <th className="p-3 border-b border-white/10">Speakers Fit</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/05 text-slate-300 bg-[#07090f]">
+                  <tr><td className="p-3 font-bold text-white">40&quot; Compact (100 cm)</td><td className="p-3">60% or 75%</td><td className="p-3 text-amber-400">31.5&quot; x 11.8&quot;</td><td className="p-3 text-emerald-400">Vertical Stand Required</td><td className="p-3">Under-shelf or wall mount</td></tr>
+                  <tr><td className="p-3 font-bold text-white">48&quot; Standard (120 cm)</td><td className="p-3">75% Tactile</td><td className="p-3 text-amber-400">35.4&quot; x 15.7&quot; XXL</td><td className="p-3 text-emerald-400">Vertical Dock saves 10.5&quot;</td><td className="p-3">Clean fit w/ 75% board</td></tr>
+                  <tr><td className="p-3 font-bold text-white">55&quot; Creator (140 cm)</td><td className="p-3">75% or TKL 80%</td><td className="p-3 text-amber-400">35.4&quot; x 15.7&quot; XXL</td><td className="p-3">Vertical or Riser bay</td><td className="p-3 text-emerald-400">Spacious + 14&quot; mouse pad</td></tr>
+                  <tr><td className="p-3 font-bold text-white">60&quot; Studio (152 cm)</td><td className="p-3">Any Layout</td><td className="p-3 text-amber-400">35.4&quot;+ XXL / Dual</td><td className="p-3">Horizontal or Vertical</td><td className="p-3 text-emerald-400">Supports Decoupled Stands</td></tr>
+                  <tr><td className="p-3 font-bold text-white">72&quot; Executive (183 cm)</td><td className="p-3">Any Layout</td><td className="p-3 text-amber-400">47.2&quot; x 23.6&quot; Studio</td><td className="p-3">Full Workstation Bay</td><td className="p-3 text-emerald-400">Full Studio Monitors + Amp</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-white/10 bg-[#0c0f18] p-6 space-y-4">
+              <h2 className="text-lg font-bold text-white flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-amber-400" />
-                <span>Related Material &amp; Keyboard Guides</span>
+                <span>Related Material, Keyboard &amp; Desk Tools</span>
               </h2>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4 font-light">
-                Compare leather vs felt friction coefficients, optical mouse tracking accuracy, and gasket-mounted keyboard acoustics in our studio research guides.
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light">
+                Compare leather vs suede desk pad friction coefficients, acoustic keyboard dampening, or run monitor viewing distance and height checks.
               </p>
               <div className="flex flex-col gap-2 text-xs font-mono font-bold text-amber-400">
                 <Link href="/blog/leather-vs-suede-desk-mat-material-comparison-guide" className="hover:underline inline-flex items-center gap-1">
-                  <span>Leather vs Suede Desk Mat Guide</span>
+                  <span>Leather vs Suede Desk Mat Material Guide</span>
                   <ArrowRight className="h-3 w-3" />
                 </Link>
                 <Link href="/blog/mechanical-keyboard-switch-types-acoustic-dampening-thock-guide" className="hover:underline inline-flex items-center gap-1">
                   <span>Mechanical Switch Acoustic Thock Guide</span>
                   <ArrowRight className="h-3 w-3" />
+                </Link>
+                <Link href="/tools/ergonomic-desk-height-calculator" className="text-emerald-300 hover:underline inline-flex items-center gap-1">
+                  <Calculator className="h-3 w-3" />
+                  <span>Ergonomic Desk Height Calculator</span>
                 </Link>
               </div>
             </div>

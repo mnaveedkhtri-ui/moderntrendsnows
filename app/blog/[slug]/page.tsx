@@ -95,8 +95,16 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     return acc;
   }, []);
 
-  // Related posts (complete topic cluster mesh)
-  const relatedPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug && (post.relatedSlugs?.includes(p.slug) || true)).slice(0, 3);
+  // Related posts (honor relatedSlugs first, then rotate across topic cluster so all 9 guides get internal links)
+  const explicitRelated = (post.relatedSlugs || [])
+    .map((s) => BLOG_POSTS.find((p) => p.slug === s))
+    .filter((p): p is BlogPost => Boolean(p && p.slug !== post.slug));
+  const curIdx = BLOG_POSTS.findIndex((p) => p.slug === post.slug);
+  const rotatedFallback = [
+    ...BLOG_POSTS.slice(curIdx + 1),
+    ...BLOG_POSTS.slice(0, curIdx),
+  ].filter((p) => p.slug !== post.slug && !explicitRelated.some((er) => er.slug === p.slug));
+  const relatedPosts = [...explicitRelated, ...rotatedFallback].slice(0, 4);
 
   // Verified Wikidata Topic Entities for Semantic SEO
   const WIKIDATA_TOPICS: Record<string, { name: string; uri: string }[]> = {
@@ -646,21 +654,35 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     <ShareButton url={pageUrl} />
                   </div>
 
-                  {/* Quick Setup Studio CTA */}
-                  <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-400/20 text-left">
-                    <div className="text-[11px] font-mono text-amber-400 font-bold mb-1">
-                      Interactive Studio
+                  {/* Quick Calculators & Setup Studio CTA */}
+                  <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-amber-500/10 to-transparent border border-amber-400/20 text-left space-y-3">
+                    <div>
+                      <div className="text-[11px] font-mono text-emerald-400 font-bold mb-1">
+                        Free Engineering Calculators
+                      </div>
+                      <p className="text-xs text-slate-300 mb-2 font-light">
+                        Model exact desk height, monitor load, mat sizing, and standing cable slack.
+                      </p>
+                      <Link
+                        href="/tools"
+                        className="inline-flex items-center gap-1 text-xs font-mono font-bold text-emerald-300 hover:text-emerald-200"
+                      >
+                        <span>Open All 4 Desk Calculators</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
                     </div>
-                    <p className="text-xs text-slate-300 mb-3 font-light">
-                      Mix &amp; match these physical objects with our live 3-piece setup calculator.
-                    </p>
-                    <Link
-                      href="/#setup-builder"
-                      className="inline-flex items-center gap-1 text-xs font-mono font-bold text-white hover:text-amber-300"
-                    >
-                      <span>Launch Setup Studio</span>
-                      <ArrowRight className="h-3 w-3" />
-                    </Link>
+                    <div className="pt-3 border-t border-white/10">
+                      <div className="text-[11px] font-mono text-amber-400 font-bold mb-1">
+                        Interactive Studio
+                      </div>
+                      <Link
+                        href="/#setup-builder"
+                        className="inline-flex items-center gap-1 text-xs font-mono font-bold text-white hover:text-amber-300"
+                      >
+                        <span>Launch 3-Piece Setup Studio</span>
+                        <ArrowRight className="h-3 w-3" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
 
