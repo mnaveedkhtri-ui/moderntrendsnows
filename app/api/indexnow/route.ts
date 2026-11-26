@@ -3,7 +3,7 @@ import { BLOG_POSTS } from '@/data/blog-posts';
 
 export const dynamic = 'force-dynamic';
 
-const INDEXNOW_KEY = 'moderntrendsnow_index_2026';
+const INDEXNOW_KEY = 'moderntrendsnow-index-2026';
 const HOST = 'www.moderntrendsnow.store';
 const KEY_LOCATION = `https://${HOST}/${INDEXNOW_KEY}.txt`;
 
