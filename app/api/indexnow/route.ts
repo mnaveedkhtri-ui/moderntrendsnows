@@ -14,6 +14,7 @@ const STATIC_URLS = [
   `https://${HOST}/tools/monitor-viewing-distance-calculator`,
   `https://${HOST}/tools/desk-mat-keyboard-fit-calculator`,
   `https://${HOST}/tools/standing-desk-cable-slack-calculator`,
+  `https://${HOST}/research/2026-ergonomic-desk-standards`,
   `https://${HOST}/blog`,
   `https://${HOST}/about`,
   `https://${HOST}/contact`,

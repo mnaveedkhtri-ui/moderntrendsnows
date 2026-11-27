@@ -6,6 +6,7 @@
 ModernTrendsNow provides free interactive workstation geometry calculators paired with curated desk hardware evaluations linked to Amazon fulfillment.
 
 ## Interactive Workspace Engineering Calculators
+- [2026 ISO 9241-5 Desk Geometry Benchmark Dataset (Open CC BY 4.0 CSV/JSON)](https://www.moderntrendsnow.store/research/2026-ergonomic-desk-standards): Anthropometric chair seat, sitting desk, standing desk, and 29-inch fixed desk mismatch table from 152 cm to 193 cm.
 - [Workspace Calculators Hub](https://www.moderntrendsnow.store/tools): Interactive ISO 9241-5 and ANSI/BIFMA desk geometry utilities.
 - [Ergonomic Desk Height & Eye-Level Calculator](https://www.moderntrendsnow.store/tools/ergonomic-desk-height-calculator): Exact sitting desk height (`height * 0.252 + elbow clearance`), standing desk height (`height * 0.618`), chair pan height, and monitor riser clearance.
 - [Monitor Viewing Distance, PPI & Desk Load Calculator](https://www.moderntrendsnow.store/tools/monitor-viewing-distance-calculator): Optical Retina threshold (`3438 / PPI`), field-of-view distance, and C-clamp load safety on hardwood, MDF, and honeycomb desks.

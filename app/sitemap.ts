@@ -50,6 +50,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/research/2026-ergonomic-desk-standards`,
+      lastModified: new Date('2026-11-27T00:00:00Z'),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/about`,
       lastModified: coreUpdateDate,
       changeFrequency: 'monthly',

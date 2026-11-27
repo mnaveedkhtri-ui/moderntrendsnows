@@ -20,7 +20,26 @@ export function getStructuredData() {
       email: 'support@moderntrendsnow.store',
       contactType: 'customer support',
     },
-    sameAs: ['https://www.pinterest.com/moderntrendsnowstore/'],
+    sameAs: [
+      'https://www.pinterest.com/moderntrendsnowstore/',
+      'https://github.com/mnaveedkhtri-ui/2026-fee-and-ergonomics-formulas',
+      'https://mnaveedkhtri-ui.github.io/2026-fee-and-ergonomics-formulas/',
+      'https://naveedkhtri.medium.com/why-a-standard-29-inch-desk-hurts-your-wrists-and-the-exact-iso-math-to-fix-it-e3132c6391ef',
+      'https://peerlist.io/naveedkhtri7',
+      'https://www.moderntrendsnow.store/research/2026-ergonomic-desk-standards',
+    ],
+    founder: {
+      '@type': 'Person',
+      name: 'Muhammad Naveed Khatri',
+      alternateName: 'Naveed Khatri',
+      url: 'https://www.moderntrendsnow.store/about',
+      sameAs: [
+        'https://github.com/mnaveedkhtri-ui',
+        'https://naveedkhtri.medium.com',
+        'https://peerlist.io/naveedkhtri7',
+        'https://www.smartratecalcs.com/about',
+      ],
+    },
   };
 
   const websiteSchema = {

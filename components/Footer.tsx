@@ -55,6 +55,7 @@ export default function Footer() {
               <li><Link href="/tools/ergonomic-desk-height-calculator" className="hover:text-amber-400 transition">Ergonomic Desk Height Calculator</Link></li>
               <li><Link href="/tools/monitor-viewing-distance-calculator" className="hover:text-amber-400 transition">Monitor Distance &amp; Load Tool</Link></li>
               <li><Link href="/tools/desk-mat-keyboard-fit-calculator" className="hover:text-amber-400 transition">Desk &amp; XXL Mat Fit Planner</Link></li>
+              <li><Link href="/research/2026-ergonomic-desk-standards" className="hover:text-amber-400 transition font-bold text-amber-400">2026 Ergonomic Benchmark Dataset</Link></li>
               <li><Link href="/blog" className="hover:text-amber-400 transition font-medium text-white">All Architectural Field Guides</Link></li>
               <li><a href="https://www.pinterest.com/moderntrendsnowstore/" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition">Official Pinterest Visual Boards</a></li>
               <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition font-mono text-[11px]">Automated RSS 2.0 Feed</a></li>
