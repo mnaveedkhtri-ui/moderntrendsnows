@@ -166,6 +166,29 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Published Research & External Entities */}
+        <section className="py-12 border-b border-white/10 bg-[#06080f] text-left">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-xl font-bold text-white mb-4">
+              Published Ergonomics Notes &amp; Open-Source Specifications
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
+              <a href="https://naveedkhtri.medium.com/why-a-standard-29-inch-desk-hurts-your-wrists-and-the-exact-iso-math-to-fix-it-e3132c6391ef" target="_blank" rel="noopener noreferrer" className="p-3.5 rounded-xl border border-white/10 bg-[#0c0f18] text-amber-300 hover:border-amber-400/50 transition">
+                Medium: Why a Standard 29-Inch Desk Hurts Your Wrists (ISO Math)
+              </a>
+              <a href="https://github.com/mnaveedkhtri-ui/2026-fee-and-ergonomics-formulas" target="_blank" rel="noopener noreferrer" className="p-3.5 rounded-xl border border-white/10 bg-[#0c0f18] text-amber-300 hover:border-amber-400/50 transition">
+                GitHub: Open-Source ISO 9241-5 Desk &amp; Cable Slack Formulas
+              </a>
+              <a href="https://mnaveedkhtri-ui.github.io/2026-fee-and-ergonomics-formulas/" target="_blank" rel="noopener noreferrer" className="p-3.5 rounded-xl border border-white/10 bg-[#0c0f18] text-amber-300 hover:border-amber-400/50 transition">
+                GitHub Pages: Interactive Spec &amp; Equations Reference
+              </a>
+              <a href="https://peerlist.io/naveedkhtri7" target="_blank" rel="noopener noreferrer" className="p-3.5 rounded-xl border border-white/10 bg-[#0c0f18] text-amber-300 hover:border-amber-400/50 transition">
+                Peerlist: Founder Engineering &amp; Project Showcase
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* CTA to Explore Blog & Catalog */}
         <section className="py-16 bg-[#080b12] text-center">
           <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -186,7 +209,7 @@ export default function AboutPage() {
                 href="/#catalog"
                 className="px-5 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white font-mono text-xs uppercase tracking-wider hover:bg-white/10 transition"
               >
-                Explore 38+ Objects
+                Explore 50 Curated Objects
               </Link>
             </div>
           </div>
