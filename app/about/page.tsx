@@ -209,7 +209,7 @@ export default function AboutPage() {
                 href="/#catalog"
                 className="px-5 py-2.5 rounded-xl border border-white/20 bg-white/5 text-white font-mono text-xs uppercase tracking-wider hover:bg-white/10 transition"
               >
-                Explore 50 Curated Objects
+                Explore 58 Curated Objects
               </Link>
             </div>
           </div>

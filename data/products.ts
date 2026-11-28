@@ -809,6 +809,174 @@ export const PRODUCTS: Product[] = [
       "Dual Flat Crevice & Brush Nozzles",
       "Washable Reusable HEPA Filter"
     ]
+  },
+  {
+    "id": "ergonomic-mesh-chair-footrest",
+    "title": "High-Back Ergonomic Mesh Office Chair with Retractable Footrest",
+    "category": "Workspace",
+    "tagline": "Synchronized 135-degree recline ergonomic chair with dual-rail stowable padded leg rest.",
+    "description": "Engineered for 8-to-12-hour deep work sessions and zero-gravity afternoon recovery. Features breathable ElastoMesh tension weave, dynamic 2-zone lumbar support, BIFMA Class 4 gas cylinder, and a steel dual-rail padded footrest that tucks invisibly beneath the seat pan.",
+    "price": 229.99,
+    "compareAtPrice": 329.99,
+    "rating": 4.9,
+    "reviewsCount": 1480,
+    "imageUrl": "https://www.moderntrendsnow.store/products/ergonomic-chair-footrest.jpg",
+    "amazonUrl": "https://www.amazon.com/s?k=ergonomic+mesh+office+chair+retractable+footrest&tag=moderntren08b-20",
+    "badge": "Best Seller",
+    "isBestSeller": true,
+    "specs": [
+      "90-135 Degree Locking Backrest Tilt",
+      "Dual Steel-Rail Retractable Padded Footrest",
+      "ANSI/BIFMA Class 4 Heavy Gas Cylinder",
+      "3D Adjustable Armrests & Dynamic Lumbar"
+    ]
+  },
+  {
+    "id": "tilting-under-desk-footrest",
+    "title": "CNC Aluminum Rocking Ergonomic Under-Desk Footrest",
+    "category": "Workspace",
+    "tagline": "Non-slip 0 to 25-degree tilting calf & heel platform for fixed 29-inch desks.",
+    "description": "Solves dangling legs and hamstring compression at standard 29-inch fixed desks. Anodized brushed aluminum frame supports active ankle rocking motion to stimulate lower-leg circulation while keeping knees cleanly aligned per ISO 9241-5 posture math.",
+    "price": 44.99,
+    "compareAtPrice": 64.0,
+    "rating": 4.8,
+    "reviewsCount": 760,
+    "imageUrl": "https://www.moderntrendsnow.store/products/under-desk-footrest.jpg",
+    "amazonUrl": "https://www.amazon.com/s?k=adjustable+ergonomic+under+desk+footrest+rocking&tag=moderntren08b-20",
+    "badge": "Posture Essential",
+    "isBestSeller": true,
+    "specs": [
+      "Brushed CNC Aluminum Side Frame",
+      "Textured Non-Slip Massage Grip Deck",
+      "0 to 25 Degree Dynamic Rocking Tilt",
+      "Zero-Skid Silicone Floor Anchors"
+    ]
+  },
+  {
+    "id": "heavy-duty-gas-monitor-arm",
+    "title": "Heavy-Duty Aluminum Gas-Spring Ultrawide Monitor Arm",
+    "category": "Workspace",
+    "tagline": "Zero-sag VESA articulated arm rated up to 49-inch ultrawide and 44 lb displays.",
+    "description": "Free up deep desktop space and dial display top bezels to exact eye level in seconds. Features internal concealed cable routing channels, reinforcing top-mount C-clamp, and calibrated spring tension for zero display droop.",
+    "price": 89.95,
+    "compareAtPrice": 129.0,
+    "rating": 4.9,
+    "reviewsCount": 1120,
+    "imageUrl": "https://images.unsplash.com/photo-1593062096033-9a26b09da705?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=heavy+duty+gas+spring+monitor+arm+ultrawide+49&tag=moderntren08b-20",
+    "badge": "Studio Standard",
+    "isBestSeller": false,
+    "specs": [
+      "Supports 24in to 49in Screens (Up to 44 lbs)",
+      "VESA 75x75 and 100x100 Quick-Release",
+      "Hidden Internal Display Cable Channel",
+      "Top-Tightening C-Clamp & Grommet Kit"
+    ]
+  },
+  {
+    "id": "clamp-metal-desk-pegboard",
+    "title": "Clamp-On Matte Black Steel Desk Pegboard Organizer",
+    "category": "Workspace",
+    "tagline": "No-drill vertical modular wall panel for headphones, keyboards, controllers, and EDC gear.",
+    "description": "Eliminate horizontal desk scatter without putting holes in your wall. Heavy powder-coated steel pegboard clamps securely to any desk edge up to 2.4 inches thick and keeps audio gear and notebooks neatly suspended.",
+    "price": 46.5,
+    "compareAtPrice": 68.0,
+    "rating": 4.8,
+    "reviewsCount": 640,
+    "imageUrl": "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=clamp+on+desk+pegboard+metal+organizer&tag=moderntren08b-20",
+    "badge": "Viral Organizer",
+    "isBestSeller": false,
+    "specs": [
+      "Heavy Gauge Powder-Coated Carbon Steel",
+      "Magnetic Accessory Hooks & Cup Tray",
+      "No-Drill Padded Dual Desk Clamps",
+      "Can Mount Above or Under Desktop"
+    ]
+  },
+  {
+    "id": "hidden-under-desk-drawer",
+    "title": "Hidden Slide-Out Steel Under-Desk Storage Drawer",
+    "category": "Workspace",
+    "tagline": "Zero-profile clamp or screw-mount tray for SSDs, notebooks, pens, and dongles.",
+    "description": "Keep your minimalist desktop visually spotless while storing daily essentials inches away. Ball-bearing whisper glide rails support 15 lbs cleanly without rattling during motorized standing desk movement.",
+    "price": 34.99,
+    "compareAtPrice": 49.99,
+    "rating": 4.7,
+    "reviewsCount": 510,
+    "imageUrl": "https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=under+desk+slide+out+steel+storage+drawer&tag=moderntren08b-20",
+    "badge": "Clean Desk Mod",
+    "isBestSeller": false,
+    "specs": [
+      "1.9-Inch Slim Clearance Above Knees",
+      "Smooth Steel Ball-Bearing Glide Rails",
+      "Removable Non-Slip EVA Felt Liner",
+      "Clamp-On or Under-Mount Hardware"
+    ]
+  },
+  {
+    "id": "true-6500k-bias-backlight",
+    "title": "CRI 95+ D65 6500K Monitor Bias Lighting LED Strip",
+    "category": "Lighting",
+    "tagline": "Color-accurate daylight reference halo behind screens to cut nighttime eye strain.",
+    "description": "Unlike harsh blue-tinted RGB strips, calibrated D65 6500K bias lighting raises perceived monitor contrast ratios while relaxing iris constriction during late-night editing and coding sessions.",
+    "price": 26.95,
+    "compareAtPrice": 39.0,
+    "rating": 4.9,
+    "reviewsCount": 890,
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=6500k+cri+95+monitor+bias+lighting+strip&tag=moderntren08b-20",
+    "badge": "Optical Comfort",
+    "isBestSeller": false,
+    "specs": [
+      "Color Rendering Index CRI 95+ (D65 6500K)",
+      "Zero-Flicker USB-Powered Dimmer Inline",
+      "Genuine 3M VHB Rear Bezel Adhesive",
+      "Fits Single 24in to 49in Ultrawide Monitors"
+    ]
+  },
+  {
+    "id": "coiled-aviator-usb-c-cable",
+    "title": "Double-Sleeved Coiled USB-C Aviator Mechanical Cable",
+    "category": "Gadgets",
+    "tagline": "Tight reverse-coiled Techflex cord with CNC GX16 detachable metal aviator connector.",
+    "description": "Upgrade any mechanical keyboard setup with a taut, spring-back double-sleeved USB-C cable. Custom GX16 metallic aviator connector lets you hot-swap boards cleanly while maintaining spotless desk geometry.",
+    "price": 24.99,
+    "compareAtPrice": 36.0,
+    "rating": 4.8,
+    "reviewsCount": 1030,
+    "imageUrl": "https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=coiled+aviator+usb+c+mechanical+keyboard+cable&tag=moderntren08b-20",
+    "badge": "Keyboard Essential",
+    "isBestSeller": false,
+    "specs": [
+      "Paracord + Tight Techflex Double Sleeve",
+      "Detachable CNC 5-Pin GX16 Aviator",
+      "Supports High-Speed USB-C QMK/VIA Boards",
+      "Zero-Memory Spring-Back Coiled Segment"
+    ]
+  },
+  {
+    "id": "cnc-rotary-volume-controller",
+    "title": "Machined Aluminum USB-C Desktop Volume & Media Knob",
+    "category": "Gadgets",
+    "tagline": "Weighted solid-metal rotary encoder dial for instant OS volume, play/pause, and scrubbing.",
+    "description": "Reclaim tactile hardware control beside your keyboard. CNC machined aluminum dial with smooth magnetic detent encoding gives effortless one-finger volume attenuation during calls and studio work.",
+    "price": 32.99,
+    "compareAtPrice": 48.0,
+    "rating": 4.8,
+    "reviewsCount": 420,
+    "imageUrl": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?auto=format&fit=crop&w=1000&q=85",
+    "amazonUrl": "https://www.amazon.com/s?k=usb+desktop+volume+control+knob+metal&tag=moderntren08b-20",
+    "badge": "Tactile Desk Hero",
+    "isBestSeller": false,
+    "specs": [
+      "Weighted Non-Slip CNC Aluminum Chassis",
+      "Plug-and-Play USB-C (macOS & Windows)",
+      "Push-to-Mute Tactile Micro Switch",
+      "360-Degree Stepless Optical Encoder"
+    ]
   }
 ];
 

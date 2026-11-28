@@ -13,6 +13,7 @@ import MaterialQuizSelector from '../../../components/MaterialQuizSelector';
 import DeskHeightCalculatorWidget from '../../../components/DeskHeightCalculatorWidget';
 import MonitorDistanceCalculatorWidget from '../../../components/MonitorDistanceCalculatorWidget';
 import DeskMatFitCalculatorWidget from '../../../components/DeskMatFitCalculatorWidget';
+import ChairFootrestCalculatorWidget from '../../../components/ChairFootrestCalculatorWidget';
 import {
   Clock,
   Calendar,
@@ -429,6 +430,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 {post.slug === 'ergonomic-desk-height-calculator-workspace-architecture-guide' && <DeskHeightCalculatorWidget />}
                 {post.slug === 'dual-monitor-desk-shelf-vs-monitor-arm-setup-blueprint' && <MonitorDistanceCalculatorWidget />}
                 {post.slug === 'mechanical-keyboard-switch-types-acoustic-dampening-thock-guide' && <DeskMatFitCalculatorWidget />}
+                {post.slug === 'office-chair-with-footrest-ergonomic-guide' && <ChairFootrestCalculatorWidget />}
                 {(post.slug === 'standing-desk-cable-management-tray-guide' || post.slug === 'under-desk-cable-management-steel-tray-vs-mesh-raceway-guide') && <CableSlackCalculator />}
                 {post.slug === 'leather-vs-suede-desk-mat-material-comparison-guide' && <MaterialQuizSelector />}
 

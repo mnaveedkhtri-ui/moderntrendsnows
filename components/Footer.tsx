@@ -37,10 +37,10 @@ export default function Footer() {
               Curated Collections
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-400">
-              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Workspace Essentials (15 Objects)</Link></li>
-              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Ambient &amp; Smart Lighting (8 Objects)</Link></li>
-              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Cozy Living &amp; Atmosphere (8 Objects)</Link></li>
-              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Tactile Everyday Gadgets (7 Objects)</Link></li>
+              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Workspace Essentials (23 Objects)</Link></li>
+              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Ambient &amp; Smart Lighting (11 Objects)</Link></li>
+              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Cozy Living &amp; Atmosphere (11 Objects)</Link></li>
+              <li><Link href="/#catalog" className="hover:text-amber-400 transition">Tactile Everyday Gadgets (13 Objects)</Link></li>
               <li><Link href="/#setup-builder" className="hover:text-amber-400 transition text-amber-400/90 font-mono">⚡ Interactive 3-Piece Setup Studio</Link></li>
             </ul>
           </div>
@@ -53,6 +53,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs text-slate-400">
               <li><Link href="/tools" className="hover:text-amber-400 transition font-medium text-emerald-400">All Workspace Calculators</Link></li>
               <li><Link href="/tools/ergonomic-desk-height-calculator" className="hover:text-amber-400 transition">Ergonomic Desk Height Calculator</Link></li>
+              <li><Link href="/tools/chair-footrest-height-calculator" className="hover:text-amber-400 transition">Chair &amp; Footrest Height Calculator</Link></li>
               <li><Link href="/tools/monitor-viewing-distance-calculator" className="hover:text-amber-400 transition">Monitor Distance &amp; Load Tool</Link></li>
               <li><Link href="/tools/desk-mat-keyboard-fit-calculator" className="hover:text-amber-400 transition">Desk &amp; XXL Mat Fit Planner</Link></li>
               <li><Link href="/research/2026-ergonomic-desk-standards" className="hover:text-amber-400 transition font-bold text-amber-400">2026 Ergonomic Benchmark Dataset</Link></li>

@@ -44,6 +44,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${baseUrl}/tools/chair-footrest-height-calculator`,
+      lastModified: new Date('2026-11-28T00:00:00Z'),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/blog`,
       lastModified: coreUpdateDate,
       changeFrequency: 'weekly',

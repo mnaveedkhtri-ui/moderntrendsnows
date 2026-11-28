@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
-import { Ruler, Monitor, Keyboard, Cable, ArrowRight, Sparkles, ChevronRight, Calculator } from 'lucide-react';
+import { Ruler, Monitor, Keyboard, Cable, Armchair, ArrowRight, Sparkles, ChevronRight, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Workspace Engineering Calculators & Desk Setup Tools | Modern Trends Now',
@@ -57,6 +57,15 @@ const TOOLS = [
     icon: Cable,
     guideLink: '/blog/under-desk-cable-management-steel-tray-vs-mesh-raceway-guide',
     guideLabel: 'Read Under-Desk Steel Tray Guide',
+  },
+  {
+    slug: '/tools/chair-footrest-height-calculator',
+    badge: 'Popliteal & Lumbar Fit',
+    title: 'Ergonomic Office Chair & Footrest Height Calculator',
+    desc: 'Compute natural popliteal seat height, fixed 29" desk chair lift, exact footrest thickness, and built-in retractable vs under-desk footrest verdicts.',
+    icon: Armchair,
+    guideLink: '/blog/office-chair-with-footrest-ergonomic-guide',
+    guideLabel: 'Read Office Chair with Footrest Guide',
   },
 ];
 

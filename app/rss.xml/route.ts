@@ -48,10 +48,17 @@ function resolveImageMeta(rawUrl: string): { url: string; type: string; length: 
 }
 
 export async function GET() {
-  const anchorTime = new Date('2026-11-27T12:00:00Z').getTime();
+  const anchorTime = new Date('2026-11-28T08:15:00Z').getTime();
 
   // 0. Open Benchmark Hub & Bespoke Pinterest Vertical Infographics for Tools
   const toolsAndResearch = [
+    {
+      title: 'Ergonomic Office Chair & Footrest Height Calculator (2026 Posture Tool)',
+      url: `${BASE_URL}/tools/chair-footrest-height-calculator`,
+      desc: 'Calculate exact natural seat height, fixed 29-inch desk chair lift, required under-desk footrest elevation, and built-in retractable footrest vs floor platform fit. #officechair #ergonomics #footrest #desksetup #homeoffice',
+      category: 'Workspace Calculators',
+      img: `${BASE_URL}/blog/pin-office-chair-footrest-cheat-sheet.png`,
+    },
     {
       title: '2026 ISO 9241-5 & ANSI/BIFMA Ergonomic Desk Height Benchmark Dataset',
       url: `${BASE_URL}/research/2026-ergonomic-desk-standards`,
@@ -113,8 +120,8 @@ export async function GET() {
     </item>`;
   }).join('\n');
 
-  // 1. Authority Workspace Guides (with proper MIME detection & unclamped clean titles)
-  const blogItemsXml = BLOG_POSTS.map((post, idx) => {
+  // 1. Authority Workspace Guides (newest first, with proper MIME detection & unclamped clean titles)
+  const blogItemsXml = [...BLOG_POSTS].reverse().map((post, idx) => {
     const pubDate = new Date(new Date(post.publishedDate).getTime() || anchorTime - (idx + 8) * 3600 * 1000 * 24).toUTCString();
     const title = clampPinTitle(post.title.replace(/&/g, 'and'));
     const safeDesc = post.metaDescription.replace(/&/g, 'and');
@@ -133,8 +140,8 @@ export async function GET() {
     </item>`;
   }).join('\n');
 
-  // 2. Curated Desk Objects (deterministic timestamps, clean Pinterest formatting)
-  const productItemsXml = PRODUCTS.map((product, index) => {
+  // 2. Curated Desk Objects (newest additions first, deterministic timestamps)
+  const productItemsXml = [...PRODUCTS].reverse().map((product, index) => {
     const date = new Date(anchorTime - (index + 24) * 3600 * 1000 * 6).toUTCString();
     const title = clampPinTitle(product.title.replace(/&/g, 'and'));
     const safeTagline = product.tagline.replace(/&/g, 'and');
