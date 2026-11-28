@@ -7,8 +7,12 @@ class SoundSystem {
 
   constructor() {
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('mtn_sound_muted');
-      this.isMuted = stored === 'true';
+      try {
+        const stored = window.localStorage?.getItem('mtn_sound_muted');
+        this.isMuted = stored === 'true';
+      } catch {
+        this.isMuted = false;
+      }
     }
   }
 
@@ -27,7 +31,11 @@ class SoundSystem {
   public toggleMute(): boolean {
     this.isMuted = !this.isMuted;
     if (typeof window !== 'undefined') {
-      localStorage.setItem('mtn_sound_muted', this.isMuted ? 'true' : 'false');
+      try {
+        window.localStorage?.setItem('mtn_sound_muted', this.isMuted ? 'true' : 'false');
+      } catch {
+        // Storage restricted in privacy/stateless browser modes
+      }
     }
     if (!this.isMuted) {
       this.playPop();

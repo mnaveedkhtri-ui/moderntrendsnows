@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import { getStructuredData } from '../lib/structuredData';
 
 export const metadata: Metadata = {
@@ -52,17 +53,6 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="dark scroll-smooth">
-      <head>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtm.js?id=GTM-PC36SCLK"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());`,
-          }}
-        />
-      </head>
       <body className="min-h-screen bg-[#08090d] text-slate-100 antialiased selection:bg-amber-400 selection:text-black">
         {structuredData.map((schema, index) => (
           <script
@@ -71,6 +61,18 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           />
         ))}
+        <Script
+          id="google-tag-gtm"
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-PC36SCLK"
+          strategy="afterInteractive"
+        />
+        <Script id="google-tag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
         {children}
       </body>
     </html>
